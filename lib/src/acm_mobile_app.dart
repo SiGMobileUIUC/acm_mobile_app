@@ -36,7 +36,7 @@ class _ACMMobileAppState extends State<ACMMobileApp> {
           DefaultWidgetsLocalizations.delegate,
           DefaultCupertinoLocalizations.delegate,
         ],
-        title: "Bus App",
+        title: "ACM Mobile App",
         home: const HomeScreen(),
         material: (_, __) => MaterialAppData(
           theme: ThemeData(

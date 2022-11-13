@@ -17,6 +17,7 @@ class HomeScreen extends StatelessWidget {
               'assets/images/acm-logo.svg',
               height: 170.0,
             ),
+            Text("data"),
             const Spacer(),
             Padding(
               padding: const EdgeInsets.all(8.0),

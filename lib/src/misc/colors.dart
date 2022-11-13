@@ -19,5 +19,4 @@ const kPrimaryGradient = LinearGradient(
   end: Alignment.centerRight,
 );
 
-
-//Color for ACM Logo background HEX #394260
+//Color for ACM logo background HEX #394260

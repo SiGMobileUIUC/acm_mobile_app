@@ -56,7 +56,7 @@ class _ACMMobileAppState extends State<ACMMobileApp> {
           ),
           darkTheme: ThemeData(
             brightness: Brightness.dark,
-            scaffoldBackgroundColor: Colors.black,
+            scaffoldBackgroundColor: Color.fromARGB(255, 34, 34, 34),
             backgroundColor: Colors.black,
             colorScheme: const ColorScheme.dark(),
             canvasColor: Colors.black,
@@ -72,7 +72,9 @@ class _ACMMobileAppState extends State<ACMMobileApp> {
           themeMode: ThemeMode.system,
         ),
         cupertino: (_, __) => CupertinoAppData(
-          theme: MediaQuery.of(context).platformBrightness == Brightness.light ? lightTheme : darkTheme,
+          theme: MediaQuery.of(context).platformBrightness == Brightness.light
+              ? lightTheme
+              : darkTheme,
         ),
       ),
     );

@@ -11,8 +11,9 @@ class AppColors {
 
 const kPrimaryGradient = LinearGradient(
   colors: [
-    Color.fromARGB(255, 147, 20, 215),
-    Color.fromARGB(255, 238, 27, 157),
+    Color.fromARGB(255, 36, 64, 150),
+    Color.fromARGB(43, 36, 64, 150),
+    Color.fromARGB(255, 36, 64, 150),
   ],
   begin: Alignment.centerLeft,
   end: Alignment.centerRight,

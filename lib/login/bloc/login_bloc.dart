@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'login_event.dart';
@@ -10,9 +11,15 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     on<LoginEvent>((event, emit) {
       event.map(
         started: (_) {},
-        loginAsGuestClicked: (_) {},
-        loginWithGoogleClicked: (_) {},
-        loginWithLinkedInClicked: (_) {},
+        loginAsGuestClicked: (_) async {
+          emit(const LoginState.loggedInAsGuest());
+        },
+        loginWithGoogleClicked: (_) {
+          emit(const LoginState.loading());
+        },
+        loginWithLinkedInClicked: (_) {
+          emit(const LoginState.loading());
+        },
       );
     });
   }

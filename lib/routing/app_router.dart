@@ -1,3 +1,4 @@
+import 'package:acm_mobile_app/home/home.dart';
 import 'package:acm_mobile_app/login/login.dart';
 import 'package:acm_mobile_app/splash/splash.dart';
 import 'package:auto_route/auto_route.dart';
@@ -10,5 +11,6 @@ class AppRouter extends _$AppRouter {
   List<AutoRoute> get routes => [
         AutoRoute(page: SplashRoute.page, initial: true),
         AutoRoute(page: LoginRoute.page),
+        AutoRoute(page: HomeRoute.page),
       ];
 }

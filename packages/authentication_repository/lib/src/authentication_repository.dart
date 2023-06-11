@@ -29,6 +29,10 @@ class AuthenticationRepository {
     );
   }
 
+  Future<void> logInAsGuest() async {
+    _controller.add(AuthenticationStatus.authenticated);
+  }
+
   void logOut() {
     _controller.add(AuthenticationStatus.unauthenticated);
   }

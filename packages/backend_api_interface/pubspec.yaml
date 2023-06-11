@@ -8,6 +8,8 @@ environment:
 
 dependencies:
   dartz: ^0.10.1
+  failure_models:
+    path: ../failure_models
   freezed_annotation: ^2.2.0
   json_annotation: ^4.8.1
   modddels_annotation_dartz: ^0.1.0

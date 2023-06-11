@@ -1,10 +1,14 @@
 name: sig_repository
-description: Repositor to manage the SIG domain
+description: Repository to manage the SIG domain
 version: 0.1.0+1
 publish_to: none
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  backend_api_interface:
+    path: ../backend_api_interface
 
 dev_dependencies:
   mocktail: ^0.3.0

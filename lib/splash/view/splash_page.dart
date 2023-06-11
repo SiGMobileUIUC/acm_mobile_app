@@ -1,12 +1,52 @@
+import 'dart:developer';
+
+import 'package:acm_mobile_app/authentication/bloc/authentication_bloc.dart';
+import 'package:acm_mobile_app/routing/app_router.dart';
+import 'package:authentication_repository/authentication_repository.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 @RoutePage()
-class SplashPage extends StatelessWidget {
+class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
 
   @override
+  State<SplashPage> createState() => _SplashPageState();
+}
+
+class _SplashPageState extends State<SplashPage> {
+  @override
+  void initState() {
+    super.initState();
+    // TODO: Change this to actually check the authentication and navigate correctly
+    context.read<AuthenticationBloc>().add(
+          const AuthenticationEvent.authenticationStatusChanged(
+            status: AuthenticationStatus.authenticated,
+          ),
+        );
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return BlocListener<AuthenticationBloc, AuthenticationState>(
+      listener: (context, state) {
+        log('State: $state');
+        state.map(
+          unknown: (_) {},
+          authenticated: (_) {
+            context.pushRoute(const HomeRoute());
+          },
+          unauthenticated: (_) {
+            context.pushRoute(const LoginRoute());
+          },
+        );
+      },
+      child: const Scaffold(
+        body: Center(
+          child: Icon(Icons.abc),
+        ),
+      ),
+    );
   }
 }

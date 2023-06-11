@@ -24,9 +24,9 @@ class BackendApiDio implements BackendApiInterface {
       ),
     );
 
-  @override
-  Future<Either<NetworkFailure, List<Event>>> getAllEvents() async {
-    // TODO: implement getAllEvents
+  Future<Either<NetworkFailure, List<T>>> _getListRequest<T>(
+    T Function(Map<String, dynamic>) fromJson,
+  ) async {
     try {
       final response = await _dio.get<Map<String, dynamic>>('/all-events');
       if (response.statusCode != 200) {
@@ -46,7 +46,7 @@ class BackendApiDio implements BackendApiInterface {
       return right(
         (response.data! as List)
             .cast<Map<String, dynamic>>()
-            .map(Event.fromJson)
+            .map(fromJson)
             .toList(),
       );
     } catch (e) {
@@ -54,21 +54,50 @@ class BackendApiDio implements BackendApiInterface {
     }
   }
 
+  Future<Either<NetworkFailure, T>> _getRequest<T>(
+    T Function(Map<String, dynamic>) fromJson,
+  ) async {
+    try {
+      final response = await _dio.get<Map<String, dynamic>>('/all-events');
+      if (response.statusCode != 200) {
+        return left(
+          NetworkFailure(
+            message: 'The response status code was not OK (200): $response',
+          ),
+        );
+      }
+      if (response.data == null) {
+        return left(
+          NetworkFailure(
+            message: 'The response data was null: $response',
+          ),
+        );
+      }
+      return right(
+        fromJson(response.data!),
+      );
+    } catch (e) {
+      return left(NetworkFailure(message: 'Network error encountered: $e'));
+    }
+  }
+
+  @override
+  Future<Either<NetworkFailure, List<Event>>> getAllEvents() async {
+    return _getListRequest<Event>(Event.fromJson);
+  }
+
   @override
   Future<Either<NetworkFailure, List<SIG>>> getAllSIGs() {
-    // TODO: implement getAllSIGs
-    throw UnimplementedError();
+    return _getListRequest<SIG>(SIG.fromJson);
   }
 
   @override
   Future<Either<NetworkFailure, Event>> getEvent(EventId eventId) {
-    // TODO: implement getEvent
-    throw UnimplementedError();
+    return _getRequest<Event>(Event.fromJson);
   }
 
   @override
   Future<Either<NetworkFailure, SIG>> getSIG(SIGId sigId) {
-    // TODO: implement getSIG
-    throw UnimplementedError();
+    return _getRequest<SIG>(SIG.fromJson);
   }
 }

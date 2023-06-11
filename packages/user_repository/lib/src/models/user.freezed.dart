@@ -15,7 +15,46 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$User {}
+mixin _$User {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function() $default, {
+    required TResult Function() guest,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function()? $default, {
+    TResult? Function()? guest,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function()? $default, {
+    TResult Function()? guest,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_User value) $default, {
+    required TResult Function(_UserGuest value) guest,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_User value)? $default, {
+    TResult? Function(_UserGuest value)? guest,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_User value)? $default, {
+    TResult Function(_UserGuest value)? guest,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+}
 
 /// @nodoc
 abstract class $UserCopyWith<$Res> {
@@ -65,8 +104,172 @@ class _$_User implements _User {
 
   @override
   int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function() $default, {
+    required TResult Function() guest,
+  }) {
+    return $default();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function()? $default, {
+    TResult? Function()? guest,
+  }) {
+    return $default?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function()? $default, {
+    TResult Function()? guest,
+    required TResult orElse(),
+  }) {
+    if ($default != null) {
+      return $default();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_User value) $default, {
+    required TResult Function(_UserGuest value) guest,
+  }) {
+    return $default(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_User value)? $default, {
+    TResult? Function(_UserGuest value)? guest,
+  }) {
+    return $default?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_User value)? $default, {
+    TResult Function(_UserGuest value)? guest,
+    required TResult orElse(),
+  }) {
+    if ($default != null) {
+      return $default(this);
+    }
+    return orElse();
+  }
 }
 
 abstract class _User implements User {
   factory _User() = _$_User;
+}
+
+/// @nodoc
+abstract class _$$_UserGuestCopyWith<$Res> {
+  factory _$$_UserGuestCopyWith(
+          _$_UserGuest value, $Res Function(_$_UserGuest) then) =
+      __$$_UserGuestCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_UserGuestCopyWithImpl<$Res>
+    extends _$UserCopyWithImpl<$Res, _$_UserGuest>
+    implements _$$_UserGuestCopyWith<$Res> {
+  __$$_UserGuestCopyWithImpl(
+      _$_UserGuest _value, $Res Function(_$_UserGuest) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_UserGuest implements _UserGuest {
+  _$_UserGuest();
+
+  @override
+  String toString() {
+    return 'User.guest()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_UserGuest);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function() $default, {
+    required TResult Function() guest,
+  }) {
+    return guest();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function()? $default, {
+    TResult? Function()? guest,
+  }) {
+    return guest?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function()? $default, {
+    TResult Function()? guest,
+    required TResult orElse(),
+  }) {
+    if (guest != null) {
+      return guest();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_User value) $default, {
+    required TResult Function(_UserGuest value) guest,
+  }) {
+    return guest(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_User value)? $default, {
+    TResult? Function(_UserGuest value)? guest,
+  }) {
+    return guest?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_User value)? $default, {
+    TResult Function(_UserGuest value)? guest,
+    required TResult orElse(),
+  }) {
+    if (guest != null) {
+      return guest(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UserGuest implements User {
+  factory _UserGuest() = _$_UserGuest;
 }

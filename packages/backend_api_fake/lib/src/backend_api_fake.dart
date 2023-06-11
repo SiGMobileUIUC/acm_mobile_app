@@ -16,7 +16,14 @@ class BackendApiFake implements BackendApiInterface {
 
   @override
   Future<Either<NetworkFailure, List<SIGDto>>> getAllSIGs() async {
-    return right([SIGDto()]);
+    return right([
+      SIGDto(
+        name: 'SIGMobile',
+        smallDescription: '',
+        description: '',
+        imageUrl: '',
+      ),
+    ]);
   }
 
   @override
@@ -26,6 +33,13 @@ class BackendApiFake implements BackendApiInterface {
 
   @override
   Future<Either<NetworkFailure, SIGDto>> getSIG(SIGId sigId) async {
-    return right(SIGDto());
+    return right(
+      SIGDto(
+        name: 'SIGMobile',
+        smallDescription: '',
+        description: '',
+        imageUrl: '',
+      ),
+    );
   }
 }

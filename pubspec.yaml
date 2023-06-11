@@ -7,8 +7,11 @@ environment:
   sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
+  authentication_repository:
+    path: packages/authentication_repository
   auto_route: ^7.4.0
   bloc: ^8.1.2
+  dartz: ^0.10.1
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.3
@@ -16,6 +19,8 @@ dependencies:
     sdk: flutter
   freezed_annotation: ^2.2.0
   intl: ^0.18.0
+  user_repository:
+    path: packages/user_repository
 
 dev_dependencies:
   auto_route_generator: ^7.1.1

@@ -1,6 +1,7 @@
 import 'package:backend_api_interface/backend_api_interface.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
+import 'package:failure_models/failure_models.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 /// {@template backend_api_dio}
@@ -82,22 +83,22 @@ class BackendApiDio implements BackendApiInterface {
   }
 
   @override
-  Future<Either<NetworkFailure, List<Event>>> getAllEvents() async {
-    return _getListRequest<Event>(Event.fromJson);
+  Future<Either<NetworkFailure, List<EventDto>>> getAllEvents() async {
+    return _getListRequest<EventDto>(EventDto.fromJson);
   }
 
   @override
-  Future<Either<NetworkFailure, List<SIG>>> getAllSIGs() {
-    return _getListRequest<SIG>(SIG.fromJson);
+  Future<Either<NetworkFailure, List<SIGDto>>> getAllSIGs() {
+    return _getListRequest<SIGDto>(SIGDto.fromJson);
   }
 
   @override
-  Future<Either<NetworkFailure, Event>> getEvent(EventId eventId) {
-    return _getRequest<Event>(Event.fromJson);
+  Future<Either<NetworkFailure, EventDto>> getEvent(EventId eventId) {
+    return _getRequest<EventDto>(EventDto.fromJson);
   }
 
   @override
-  Future<Either<NetworkFailure, SIG>> getSIG(SIGId sigId) {
-    return _getRequest<SIG>(SIG.fromJson);
+  Future<Either<NetworkFailure, SIGDto>> getSIG(SIGId sigId) {
+    return _getRequest<SIGDto>(SIGDto.fromJson);
   }
 }

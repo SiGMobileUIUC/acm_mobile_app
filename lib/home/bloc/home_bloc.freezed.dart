@@ -40,7 +40,7 @@ mixin _$HomeEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_SigsBottomNavItemClicked value)
+    required TResult Function(_SIGsBottomNavItemClicked value)
         sigsBottomNavItemClicked,
     required TResult Function(_EventsBottomNavItemClicked value)
         eventsBottomNavItemClicked,
@@ -50,7 +50,7 @@ mixin _$HomeEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_SigsBottomNavItemClicked value)?
+    TResult? Function(_SIGsBottomNavItemClicked value)?
         sigsBottomNavItemClicked,
     TResult? Function(_EventsBottomNavItemClicked value)?
         eventsBottomNavItemClicked,
@@ -60,7 +60,7 @@ mixin _$HomeEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_SigsBottomNavItemClicked value)? sigsBottomNavItemClicked,
+    TResult Function(_SIGsBottomNavItemClicked value)? sigsBottomNavItemClicked,
     TResult Function(_EventsBottomNavItemClicked value)?
         eventsBottomNavItemClicked,
     TResult Function(_ProfileBottomNavItemClicked value)?
@@ -88,26 +88,26 @@ class _$HomeEventCopyWithImpl<$Res, $Val extends HomeEvent>
 }
 
 /// @nodoc
-abstract class _$$_SigsBottomNavItemClickedCopyWith<$Res> {
-  factory _$$_SigsBottomNavItemClickedCopyWith(
-          _$_SigsBottomNavItemClicked value,
-          $Res Function(_$_SigsBottomNavItemClicked) then) =
-      __$$_SigsBottomNavItemClickedCopyWithImpl<$Res>;
+abstract class _$$_SIGsBottomNavItemClickedCopyWith<$Res> {
+  factory _$$_SIGsBottomNavItemClickedCopyWith(
+          _$_SIGsBottomNavItemClicked value,
+          $Res Function(_$_SIGsBottomNavItemClicked) then) =
+      __$$_SIGsBottomNavItemClickedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_SigsBottomNavItemClickedCopyWithImpl<$Res>
-    extends _$HomeEventCopyWithImpl<$Res, _$_SigsBottomNavItemClicked>
-    implements _$$_SigsBottomNavItemClickedCopyWith<$Res> {
-  __$$_SigsBottomNavItemClickedCopyWithImpl(_$_SigsBottomNavItemClicked _value,
-      $Res Function(_$_SigsBottomNavItemClicked) _then)
+class __$$_SIGsBottomNavItemClickedCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$_SIGsBottomNavItemClicked>
+    implements _$$_SIGsBottomNavItemClickedCopyWith<$Res> {
+  __$$_SIGsBottomNavItemClickedCopyWithImpl(_$_SIGsBottomNavItemClicked _value,
+      $Res Function(_$_SIGsBottomNavItemClicked) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_SigsBottomNavItemClicked implements _SigsBottomNavItemClicked {
-  const _$_SigsBottomNavItemClicked();
+class _$_SIGsBottomNavItemClicked implements _SIGsBottomNavItemClicked {
+  const _$_SIGsBottomNavItemClicked();
 
   @override
   String toString() {
@@ -118,7 +118,7 @@ class _$_SigsBottomNavItemClicked implements _SigsBottomNavItemClicked {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SigsBottomNavItemClicked);
+            other is _$_SIGsBottomNavItemClicked);
   }
 
   @override
@@ -161,7 +161,7 @@ class _$_SigsBottomNavItemClicked implements _SigsBottomNavItemClicked {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_SigsBottomNavItemClicked value)
+    required TResult Function(_SIGsBottomNavItemClicked value)
         sigsBottomNavItemClicked,
     required TResult Function(_EventsBottomNavItemClicked value)
         eventsBottomNavItemClicked,
@@ -174,7 +174,7 @@ class _$_SigsBottomNavItemClicked implements _SigsBottomNavItemClicked {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_SigsBottomNavItemClicked value)?
+    TResult? Function(_SIGsBottomNavItemClicked value)?
         sigsBottomNavItemClicked,
     TResult? Function(_EventsBottomNavItemClicked value)?
         eventsBottomNavItemClicked,
@@ -187,7 +187,7 @@ class _$_SigsBottomNavItemClicked implements _SigsBottomNavItemClicked {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_SigsBottomNavItemClicked value)? sigsBottomNavItemClicked,
+    TResult Function(_SIGsBottomNavItemClicked value)? sigsBottomNavItemClicked,
     TResult Function(_EventsBottomNavItemClicked value)?
         eventsBottomNavItemClicked,
     TResult Function(_ProfileBottomNavItemClicked value)?
@@ -201,8 +201,8 @@ class _$_SigsBottomNavItemClicked implements _SigsBottomNavItemClicked {
   }
 }
 
-abstract class _SigsBottomNavItemClicked implements HomeEvent {
-  const factory _SigsBottomNavItemClicked() = _$_SigsBottomNavItemClicked;
+abstract class _SIGsBottomNavItemClicked implements HomeEvent {
+  const factory _SIGsBottomNavItemClicked() = _$_SIGsBottomNavItemClicked;
 }
 
 /// @nodoc
@@ -280,7 +280,7 @@ class _$_EventsBottomNavItemClicked implements _EventsBottomNavItemClicked {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_SigsBottomNavItemClicked value)
+    required TResult Function(_SIGsBottomNavItemClicked value)
         sigsBottomNavItemClicked,
     required TResult Function(_EventsBottomNavItemClicked value)
         eventsBottomNavItemClicked,
@@ -293,7 +293,7 @@ class _$_EventsBottomNavItemClicked implements _EventsBottomNavItemClicked {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_SigsBottomNavItemClicked value)?
+    TResult? Function(_SIGsBottomNavItemClicked value)?
         sigsBottomNavItemClicked,
     TResult? Function(_EventsBottomNavItemClicked value)?
         eventsBottomNavItemClicked,
@@ -306,7 +306,7 @@ class _$_EventsBottomNavItemClicked implements _EventsBottomNavItemClicked {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_SigsBottomNavItemClicked value)? sigsBottomNavItemClicked,
+    TResult Function(_SIGsBottomNavItemClicked value)? sigsBottomNavItemClicked,
     TResult Function(_EventsBottomNavItemClicked value)?
         eventsBottomNavItemClicked,
     TResult Function(_ProfileBottomNavItemClicked value)?
@@ -399,7 +399,7 @@ class _$_ProfileBottomNavItemClicked implements _ProfileBottomNavItemClicked {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_SigsBottomNavItemClicked value)
+    required TResult Function(_SIGsBottomNavItemClicked value)
         sigsBottomNavItemClicked,
     required TResult Function(_EventsBottomNavItemClicked value)
         eventsBottomNavItemClicked,
@@ -412,7 +412,7 @@ class _$_ProfileBottomNavItemClicked implements _ProfileBottomNavItemClicked {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_SigsBottomNavItemClicked value)?
+    TResult? Function(_SIGsBottomNavItemClicked value)?
         sigsBottomNavItemClicked,
     TResult? Function(_EventsBottomNavItemClicked value)?
         eventsBottomNavItemClicked,
@@ -425,7 +425,7 @@ class _$_ProfileBottomNavItemClicked implements _ProfileBottomNavItemClicked {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_SigsBottomNavItemClicked value)? sigsBottomNavItemClicked,
+    TResult Function(_SIGsBottomNavItemClicked value)? sigsBottomNavItemClicked,
     TResult Function(_EventsBottomNavItemClicked value)?
         eventsBottomNavItemClicked,
     TResult Function(_ProfileBottomNavItemClicked value)?
@@ -470,21 +470,21 @@ mixin _$HomeState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_SigsTabOpen value) sigsTabOpen,
+    required TResult Function(_SIGsTabOpen value) sigsTabOpen,
     required TResult Function(_EventsTabOpen value) eventsTabOpen,
     required TResult Function(_ProfileTabOpen value) profileTabOpen,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_SigsTabOpen value)? sigsTabOpen,
+    TResult? Function(_SIGsTabOpen value)? sigsTabOpen,
     TResult? Function(_EventsTabOpen value)? eventsTabOpen,
     TResult? Function(_ProfileTabOpen value)? profileTabOpen,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_SigsTabOpen value)? sigsTabOpen,
+    TResult Function(_SIGsTabOpen value)? sigsTabOpen,
     TResult Function(_EventsTabOpen value)? eventsTabOpen,
     TResult Function(_ProfileTabOpen value)? profileTabOpen,
     required TResult orElse(),
@@ -529,22 +529,22 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
 }
 
 /// @nodoc
-abstract class _$$_SigsTabOpenCopyWith<$Res>
+abstract class _$$_SIGsTabOpenCopyWith<$Res>
     implements $HomeStateCopyWith<$Res> {
-  factory _$$_SigsTabOpenCopyWith(
-          _$_SigsTabOpen value, $Res Function(_$_SigsTabOpen) then) =
-      __$$_SigsTabOpenCopyWithImpl<$Res>;
+  factory _$$_SIGsTabOpenCopyWith(
+          _$_SIGsTabOpen value, $Res Function(_$_SIGsTabOpen) then) =
+      __$$_SIGsTabOpenCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int pageIndex});
 }
 
 /// @nodoc
-class __$$_SigsTabOpenCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$_SigsTabOpen>
-    implements _$$_SigsTabOpenCopyWith<$Res> {
-  __$$_SigsTabOpenCopyWithImpl(
-      _$_SigsTabOpen _value, $Res Function(_$_SigsTabOpen) _then)
+class __$$_SIGsTabOpenCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$_SIGsTabOpen>
+    implements _$$_SIGsTabOpenCopyWith<$Res> {
+  __$$_SIGsTabOpenCopyWithImpl(
+      _$_SIGsTabOpen _value, $Res Function(_$_SIGsTabOpen) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -552,7 +552,7 @@ class __$$_SigsTabOpenCopyWithImpl<$Res>
   $Res call({
     Object? pageIndex = null,
   }) {
-    return _then(_$_SigsTabOpen(
+    return _then(_$_SIGsTabOpen(
       pageIndex: null == pageIndex
           ? _value.pageIndex
           : pageIndex // ignore: cast_nullable_to_non_nullable
@@ -563,8 +563,8 @@ class __$$_SigsTabOpenCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SigsTabOpen implements _SigsTabOpen {
-  const _$_SigsTabOpen({this.pageIndex = 0});
+class _$_SIGsTabOpen implements _SIGsTabOpen {
+  const _$_SIGsTabOpen({this.pageIndex = 0});
 
   @override
   @JsonKey()
@@ -579,7 +579,7 @@ class _$_SigsTabOpen implements _SigsTabOpen {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SigsTabOpen &&
+            other is _$_SIGsTabOpen &&
             (identical(other.pageIndex, pageIndex) ||
                 other.pageIndex == pageIndex));
   }
@@ -590,8 +590,8 @@ class _$_SigsTabOpen implements _SigsTabOpen {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SigsTabOpenCopyWith<_$_SigsTabOpen> get copyWith =>
-      __$$_SigsTabOpenCopyWithImpl<_$_SigsTabOpen>(this, _$identity);
+  _$$_SIGsTabOpenCopyWith<_$_SIGsTabOpen> get copyWith =>
+      __$$_SIGsTabOpenCopyWithImpl<_$_SIGsTabOpen>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -630,7 +630,7 @@ class _$_SigsTabOpen implements _SigsTabOpen {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_SigsTabOpen value) sigsTabOpen,
+    required TResult Function(_SIGsTabOpen value) sigsTabOpen,
     required TResult Function(_EventsTabOpen value) eventsTabOpen,
     required TResult Function(_ProfileTabOpen value) profileTabOpen,
   }) {
@@ -640,7 +640,7 @@ class _$_SigsTabOpen implements _SigsTabOpen {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_SigsTabOpen value)? sigsTabOpen,
+    TResult? Function(_SIGsTabOpen value)? sigsTabOpen,
     TResult? Function(_EventsTabOpen value)? eventsTabOpen,
     TResult? Function(_ProfileTabOpen value)? profileTabOpen,
   }) {
@@ -650,7 +650,7 @@ class _$_SigsTabOpen implements _SigsTabOpen {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_SigsTabOpen value)? sigsTabOpen,
+    TResult Function(_SIGsTabOpen value)? sigsTabOpen,
     TResult Function(_EventsTabOpen value)? eventsTabOpen,
     TResult Function(_ProfileTabOpen value)? profileTabOpen,
     required TResult orElse(),
@@ -662,14 +662,14 @@ class _$_SigsTabOpen implements _SigsTabOpen {
   }
 }
 
-abstract class _SigsTabOpen implements HomeState {
-  const factory _SigsTabOpen({final int pageIndex}) = _$_SigsTabOpen;
+abstract class _SIGsTabOpen implements HomeState {
+  const factory _SIGsTabOpen({final int pageIndex}) = _$_SIGsTabOpen;
 
   @override
   int get pageIndex;
   @override
   @JsonKey(ignore: true)
-  _$$_SigsTabOpenCopyWith<_$_SigsTabOpen> get copyWith =>
+  _$$_SIGsTabOpenCopyWith<_$_SIGsTabOpen> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -775,7 +775,7 @@ class _$_EventsTabOpen implements _EventsTabOpen {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_SigsTabOpen value) sigsTabOpen,
+    required TResult Function(_SIGsTabOpen value) sigsTabOpen,
     required TResult Function(_EventsTabOpen value) eventsTabOpen,
     required TResult Function(_ProfileTabOpen value) profileTabOpen,
   }) {
@@ -785,7 +785,7 @@ class _$_EventsTabOpen implements _EventsTabOpen {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_SigsTabOpen value)? sigsTabOpen,
+    TResult? Function(_SIGsTabOpen value)? sigsTabOpen,
     TResult? Function(_EventsTabOpen value)? eventsTabOpen,
     TResult? Function(_ProfileTabOpen value)? profileTabOpen,
   }) {
@@ -795,7 +795,7 @@ class _$_EventsTabOpen implements _EventsTabOpen {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_SigsTabOpen value)? sigsTabOpen,
+    TResult Function(_SIGsTabOpen value)? sigsTabOpen,
     TResult Function(_EventsTabOpen value)? eventsTabOpen,
     TResult Function(_ProfileTabOpen value)? profileTabOpen,
     required TResult orElse(),
@@ -920,7 +920,7 @@ class _$_ProfileTabOpen implements _ProfileTabOpen {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_SigsTabOpen value) sigsTabOpen,
+    required TResult Function(_SIGsTabOpen value) sigsTabOpen,
     required TResult Function(_EventsTabOpen value) eventsTabOpen,
     required TResult Function(_ProfileTabOpen value) profileTabOpen,
   }) {
@@ -930,7 +930,7 @@ class _$_ProfileTabOpen implements _ProfileTabOpen {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_SigsTabOpen value)? sigsTabOpen,
+    TResult? Function(_SIGsTabOpen value)? sigsTabOpen,
     TResult? Function(_EventsTabOpen value)? eventsTabOpen,
     TResult? Function(_ProfileTabOpen value)? profileTabOpen,
   }) {
@@ -940,7 +940,7 @@ class _$_ProfileTabOpen implements _ProfileTabOpen {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_SigsTabOpen value)? sigsTabOpen,
+    TResult Function(_SIGsTabOpen value)? sigsTabOpen,
     TResult Function(_EventsTabOpen value)? eventsTabOpen,
     TResult Function(_ProfileTabOpen value)? profileTabOpen,
     required TResult orElse(),

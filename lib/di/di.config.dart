@@ -16,8 +16,8 @@ import 'package:acm_mobile_app/events/bloc/events_bloc.dart' as _i5;
 import 'package:acm_mobile_app/home/bloc/home_bloc.dart' as _i6;
 import 'package:acm_mobile_app/login/bloc/login_bloc.dart' as _i7;
 import 'package:acm_mobile_app/profile/bloc/profile_bloc.dart' as _i8;
-import 'package:acm_mobile_app/settings/bloc/settings_bloc.dart' as _i9;
-import 'package:acm_mobile_app/sigs/bloc/sigs_bloc.dart' as _i10;
+import 'package:acm_mobile_app/settings/bloc/settings_bloc.dart' as _i10;
+import 'package:acm_mobile_app/sigs/bloc/sigs_bloc.dart' as _i9;
 import 'package:authentication_repository/authentication_repository.dart'
     as _i3;
 import 'package:get_it/get_it.dart' as _i1;
@@ -44,8 +44,8 @@ extension GetItInjectableX on _i1.GetIt {
     gh.lazySingleton<_i6.HomeBloc>(() => _i6.HomeBloc());
     gh.lazySingleton<_i7.LoginBloc>(() => _i7.LoginBloc());
     gh.lazySingleton<_i8.ProfileBloc>(() => _i8.ProfileBloc());
-    gh.lazySingleton<_i9.SettingsBloc>(() => _i9.SettingsBloc());
-    gh.lazySingleton<_i10.SigsBloc>(() => _i10.SigsBloc());
+    gh.lazySingleton<_i9.SIGsBloc>(() => _i9.SIGsBloc());
+    gh.lazySingleton<_i10.SettingsBloc>(() => _i10.SettingsBloc());
     gh.singleton<_i11.UserRepository>(registerModule.userRepository);
     gh.singleton<_i12.AuthenticationBloc>(
       _i12.AuthenticationBloc(

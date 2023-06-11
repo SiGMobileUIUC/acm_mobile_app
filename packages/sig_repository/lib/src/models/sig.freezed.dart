@@ -14,14 +14,8 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-SIG _$SIGFromJson(Map<String, dynamic> json) {
-  return _SIG.fromJson(json);
-}
-
 /// @nodoc
-mixin _$SIG {
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-}
+mixin _$SIG {}
 
 /// @nodoc
 abstract class $SIGCopyWith<$Res> {
@@ -53,11 +47,9 @@ class __$$_SIGCopyWithImpl<$Res> extends _$SIGCopyWithImpl<$Res, _$_SIG>
 }
 
 /// @nodoc
-@JsonSerializable()
+
 class _$_SIG implements _SIG {
   _$_SIG();
-
-  factory _$_SIG.fromJson(Map<String, dynamic> json) => _$$_SIGFromJson(json);
 
   @override
   String toString() {
@@ -70,20 +62,10 @@ class _$_SIG implements _SIG {
         (other.runtimeType == runtimeType && other is _$_SIG);
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SIGToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SIG implements SIG {
   factory _SIG() = _$_SIG;
-
-  factory _SIG.fromJson(Map<String, dynamic> json) = _$_SIG.fromJson;
 }

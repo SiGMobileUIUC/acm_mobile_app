@@ -1,11 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'sig.dart';
+part of 'sig_dto.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SIG _$$_SIGFromJson(Map<String, dynamic> json) => _$_SIG();
+_$_SIGDto _$$_SIGDtoFromJson(Map<String, dynamic> json) => _$_SIGDto();
 
-Map<String, dynamic> _$$_SIGToJson(_$_SIG instance) => <String, dynamic>{};
+Map<String, dynamic> _$$_SIGDtoToJson(_$_SIGDto instance) =>
+    <String, dynamic>{};

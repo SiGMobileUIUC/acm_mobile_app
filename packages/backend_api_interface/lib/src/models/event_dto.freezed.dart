@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'event.dart';
+part of 'event_dto.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,25 +14,25 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-Event _$EventFromJson(Map<String, dynamic> json) {
-  return _Event.fromJson(json);
+EventDto _$EventDtoFromJson(Map<String, dynamic> json) {
+  return _EventDto.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Event {
+mixin _$EventDto {
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $EventCopyWith<$Res> {
-  factory $EventCopyWith(Event value, $Res Function(Event) then) =
-      _$EventCopyWithImpl<$Res, Event>;
+abstract class $EventDtoCopyWith<$Res> {
+  factory $EventDtoCopyWith(EventDto value, $Res Function(EventDto) then) =
+      _$EventDtoCopyWithImpl<$Res, EventDto>;
 }
 
 /// @nodoc
-class _$EventCopyWithImpl<$Res, $Val extends Event>
-    implements $EventCopyWith<$Res> {
-  _$EventCopyWithImpl(this._value, this._then);
+class _$EventDtoCopyWithImpl<$Res, $Val extends EventDto>
+    implements $EventDtoCopyWith<$Res> {
+  _$EventDtoCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -41,35 +41,38 @@ class _$EventCopyWithImpl<$Res, $Val extends Event>
 }
 
 /// @nodoc
-abstract class _$$_EventCopyWith<$Res> {
-  factory _$$_EventCopyWith(_$_Event value, $Res Function(_$_Event) then) =
-      __$$_EventCopyWithImpl<$Res>;
+abstract class _$$_EventDtoCopyWith<$Res> {
+  factory _$$_EventDtoCopyWith(
+          _$_EventDto value, $Res Function(_$_EventDto) then) =
+      __$$_EventDtoCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_EventCopyWithImpl<$Res> extends _$EventCopyWithImpl<$Res, _$_Event>
-    implements _$$_EventCopyWith<$Res> {
-  __$$_EventCopyWithImpl(_$_Event _value, $Res Function(_$_Event) _then)
+class __$$_EventDtoCopyWithImpl<$Res>
+    extends _$EventDtoCopyWithImpl<$Res, _$_EventDto>
+    implements _$$_EventDtoCopyWith<$Res> {
+  __$$_EventDtoCopyWithImpl(
+      _$_EventDto _value, $Res Function(_$_EventDto) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_Event implements _Event {
-  _$_Event();
+class _$_EventDto implements _EventDto {
+  _$_EventDto();
 
-  factory _$_Event.fromJson(Map<String, dynamic> json) =>
-      _$$_EventFromJson(json);
+  factory _$_EventDto.fromJson(Map<String, dynamic> json) =>
+      _$$_EventDtoFromJson(json);
 
   @override
   String toString() {
-    return 'Event()';
+    return 'EventDto()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Event);
+        (other.runtimeType == runtimeType && other is _$_EventDto);
   }
 
   @JsonKey(ignore: true)
@@ -78,14 +81,14 @@ class _$_Event implements _Event {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EventToJson(
+    return _$$_EventDtoToJson(
       this,
     );
   }
 }
 
-abstract class _Event implements Event {
-  factory _Event() = _$_Event;
+abstract class _EventDto implements EventDto {
+  factory _EventDto() = _$_EventDto;
 
-  factory _Event.fromJson(Map<String, dynamic> json) = _$_Event.fromJson;
+  factory _EventDto.fromJson(Map<String, dynamic> json) = _$_EventDto.fromJson;
 }

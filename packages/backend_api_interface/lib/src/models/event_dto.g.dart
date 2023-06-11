@@ -1,11 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'event.dart';
+part of 'event_dto.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Event _$$_EventFromJson(Map<String, dynamic> json) => _$_Event();
+_$_EventDto _$$_EventDtoFromJson(Map<String, dynamic> json) => _$_EventDto();
 
-Map<String, dynamic> _$$_EventToJson(_$_Event instance) => <String, dynamic>{};
+Map<String, dynamic> _$$_EventDtoToJson(_$_EventDto instance) =>
+    <String, dynamic>{};

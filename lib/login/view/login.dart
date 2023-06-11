@@ -1,4 +1,4 @@
-import 'package:acm_mobile_app/core/widgets/loading_progress_indicator.dart';
+import 'package:acm_mobile_app/common/widgets/loading_progress_indicator.dart';
 import 'package:acm_mobile_app/login/bloc/login_bloc.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';

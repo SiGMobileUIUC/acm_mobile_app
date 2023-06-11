@@ -10,6 +10,12 @@ dependencies:
   authentication_repository:
     path: packages/authentication_repository
   auto_route: ^7.4.0
+  backend_api_dio:
+    path: packages/backend_api_dio
+  backend_api_fake:
+    path: packages/backend_api_fake
+  backend_api_interface:
+    path: packages/backend_api_interface
   bloc: ^8.1.2
   dartz: ^0.10.1
   failure_models:

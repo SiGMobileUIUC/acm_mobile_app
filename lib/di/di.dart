@@ -7,4 +7,5 @@ import 'di.config.dart';
 final getIt = GetIt.instance;
 
 @InjectableInit()
-void configureDependencies() => getIt.init();
+void configureDependencies({required String environment}) =>
+    getIt.init(environment: environment);

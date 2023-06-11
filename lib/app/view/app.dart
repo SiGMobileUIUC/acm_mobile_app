@@ -1,5 +1,6 @@
 import 'package:acm_mobile_app/authentication/bloc/authentication_bloc.dart';
 import 'package:acm_mobile_app/di/di.dart';
+import 'package:acm_mobile_app/home/bloc/home_bloc.dart';
 import 'package:acm_mobile_app/l10n/l10n.dart';
 import 'package:acm_mobile_app/routing/app_router.dart';
 import 'package:flutter/material.dart';
@@ -14,9 +15,8 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(
-          create: (_) => getIt<AuthenticationBloc>(),
-        ),
+        BlocProvider(create: (_) => getIt<AuthenticationBloc>()),
+        BlocProvider(create: (_) => getIt<HomeBloc>()),
       ],
       child: MaterialApp.router(
         routerConfig: _appRouter.config(),

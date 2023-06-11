@@ -8,9 +8,19 @@ part 'home_bloc.freezed.dart';
 
 @lazySingleton
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
-  HomeBloc() : super(_Initial()) {
+  HomeBloc() : super(const HomeState.sigsTabOpen()) {
     on<HomeEvent>((event, emit) {
-      // TODO: implement event handler
+      event.map(
+        sigsBottomNavItemClicked: (_) {
+          emit(const HomeState.sigsTabOpen());
+        },
+        eventsBottomNavItemClicked: (_) {
+          emit(const HomeState.eventsTabOpen());
+        },
+        profileBottomNavItemClicked: (_) {
+          emit(const HomeState.profileTabOpen());
+        },
+      );
     });
   }
 }

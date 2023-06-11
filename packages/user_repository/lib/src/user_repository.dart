@@ -13,9 +13,6 @@ class UserRepository {
   Future<Option<User>> getUser() async {
     if (_user.isSome()) return _user;
 
-    return Future.delayed(
-      const Duration(milliseconds: 300),
-      () => _user = some(User()),
-    );
+    return Future.microtask(() => _user = some(User.guest()));
   }
 }

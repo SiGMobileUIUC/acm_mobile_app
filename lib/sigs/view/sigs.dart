@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:acm_mobile_app/common/widgets/loading_progress_indicator.dart';
 import 'package:acm_mobile_app/sigs/bloc/sigs_bloc.dart';
 import 'package:acm_mobile_app/sigs/view/sig_card.dart';

@@ -5,7 +5,19 @@ part 'sig.freezed.dart';
 
 @freezed
 class SIG with _$SIG {
-  factory SIG() = _SIG;
+  factory SIG({
+    required String name,
+    required String smallDescription,
+    required String description,
+    required String imageUrl,
+    @Default(false) bool favorite,
+    @Default(false) bool notificationsEnabled,
+  }) = _SIG;
 
-  factory SIG.fromDto(SIGDto dto) => SIG();
+  factory SIG.fromDto(SIGDto dto) => SIG(
+        name: dto.name,
+        smallDescription: dto.smallDescription,
+        description: dto.description,
+        imageUrl: dto.imageUrl,
+      );
 }

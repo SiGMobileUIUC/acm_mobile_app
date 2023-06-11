@@ -5,7 +5,12 @@ part 'sig_dto.g.dart';
 
 @freezed
 class SIGDto with _$SIGDto {
-  factory SIGDto() = _SIGDto;
+  factory SIGDto({
+    required String name,
+    required String smallDescription,
+    required String description,
+    required String imageUrl,
+  }) = _SIGDto;
 
   factory SIGDto.fromJson(Map<String, dynamic> json) => _$SIGDtoFromJson(json);
 }

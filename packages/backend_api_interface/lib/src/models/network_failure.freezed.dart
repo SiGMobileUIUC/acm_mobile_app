@@ -20,7 +20,12 @@ NetworkFailure _$NetworkFailureFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$NetworkFailure {
+  String get message => throw _privateConstructorUsedError;
+
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $NetworkFailureCopyWith<NetworkFailure> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -28,6 +33,8 @@ abstract class $NetworkFailureCopyWith<$Res> {
   factory $NetworkFailureCopyWith(
           NetworkFailure value, $Res Function(NetworkFailure) then) =
       _$NetworkFailureCopyWithImpl<$Res, NetworkFailure>;
+  @useResult
+  $Res call({String message});
 }
 
 /// @nodoc
@@ -39,13 +46,30 @@ class _$NetworkFailureCopyWithImpl<$Res, $Val extends NetworkFailure>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_value.copyWith(
+      message: null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
 }
 
 /// @nodoc
-abstract class _$$_NetworkFailureCopyWith<$Res> {
+abstract class _$$_NetworkFailureCopyWith<$Res>
+    implements $NetworkFailureCopyWith<$Res> {
   factory _$$_NetworkFailureCopyWith(
           _$_NetworkFailure value, $Res Function(_$_NetworkFailure) then) =
       __$$_NetworkFailureCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String message});
 }
 
 /// @nodoc
@@ -55,30 +79,54 @@ class __$$_NetworkFailureCopyWithImpl<$Res>
   __$$_NetworkFailureCopyWithImpl(
       _$_NetworkFailure _value, $Res Function(_$_NetworkFailure) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$_NetworkFailure(
+      message: null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$_NetworkFailure implements _NetworkFailure {
-  _$_NetworkFailure();
+  _$_NetworkFailure({required this.message});
 
   factory _$_NetworkFailure.fromJson(Map<String, dynamic> json) =>
       _$$_NetworkFailureFromJson(json);
 
   @override
+  final String message;
+
+  @override
   String toString() {
-    return 'NetworkFailure()';
+    return 'NetworkFailure(message: $message)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_NetworkFailure);
+        (other.runtimeType == runtimeType &&
+            other is _$_NetworkFailure &&
+            (identical(other.message, message) || other.message == message));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_NetworkFailureCopyWith<_$_NetworkFailure> get copyWith =>
+      __$$_NetworkFailureCopyWithImpl<_$_NetworkFailure>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -89,8 +137,15 @@ class _$_NetworkFailure implements _NetworkFailure {
 }
 
 abstract class _NetworkFailure implements NetworkFailure {
-  factory _NetworkFailure() = _$_NetworkFailure;
+  factory _NetworkFailure({required final String message}) = _$_NetworkFailure;
 
   factory _NetworkFailure.fromJson(Map<String, dynamic> json) =
       _$_NetworkFailure.fromJson;
+
+  @override
+  String get message;
+  @override
+  @JsonKey(ignore: true)
+  _$$_NetworkFailureCopyWith<_$_NetworkFailure> get copyWith =>
+      throw _privateConstructorUsedError;
 }

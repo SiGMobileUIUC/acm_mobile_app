@@ -7,7 +7,11 @@ part of 'network_failure.dart';
 // **************************************************************************
 
 _$_NetworkFailure _$$_NetworkFailureFromJson(Map<String, dynamic> json) =>
-    _$_NetworkFailure();
+    _$_NetworkFailure(
+      message: json['message'] as String,
+    );
 
 Map<String, dynamic> _$$_NetworkFailureToJson(_$_NetworkFailure instance) =>
-    <String, dynamic>{};
+    <String, dynamic>{
+      'message': instance.message,
+    };

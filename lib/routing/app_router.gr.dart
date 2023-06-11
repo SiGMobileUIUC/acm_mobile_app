@@ -39,6 +39,16 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const LoginPage(),
       );
     },
+    SIGDetailsRoute.name: (routeData) {
+      final args = routeData.argsAs<SIGDetailsRouteArgs>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: SIGDetailsPage(
+          sig: args.sig,
+          key: args.key,
+        ),
+      );
+    },
   };
 }
 
@@ -96,4 +106,42 @@ class LoginRoute extends PageRouteInfo<void> {
   static const String name = 'LoginRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [SIGDetailsPage]
+class SIGDetailsRoute extends PageRouteInfo<SIGDetailsRouteArgs> {
+  SIGDetailsRoute({
+    required SIG sig,
+    Key? key,
+    List<PageRouteInfo>? children,
+  }) : super(
+          SIGDetailsRoute.name,
+          args: SIGDetailsRouteArgs(
+            sig: sig,
+            key: key,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'SIGDetailsRoute';
+
+  static const PageInfo<SIGDetailsRouteArgs> page =
+      PageInfo<SIGDetailsRouteArgs>(name);
+}
+
+class SIGDetailsRouteArgs {
+  const SIGDetailsRouteArgs({
+    required this.sig,
+    this.key,
+  });
+
+  final SIG sig;
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'SIGDetailsRouteArgs{sig: $sig, key: $key}';
+  }
 }

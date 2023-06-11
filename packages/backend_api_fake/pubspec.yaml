@@ -1,5 +1,5 @@
-name: backend_api_mock
-description: Fake mock implementation of the backend API interface
+name: backend_api_fake
+description: Fake implementation of the backend API interface
 version: 0.1.0+1
 publish_to: none
 

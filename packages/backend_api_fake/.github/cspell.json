@@ -16,6 +16,6 @@
   ],
   "useGitignore": true,
   "words": [
-    "backend_api_mock"
+    "backend_api_fake"
   ]
 }

@@ -1,10 +1,14 @@
 name: backend_api_dio
-description: Implemention of the backend API interface using Dio for HTTP requests
+description: Implementation of the backend API interface using Dio for HTTP requests
 version: 0.1.0+1
 publish_to: none
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
+
+dependencies: 
+  backend_api_interface:
+    path: ../backend_api_interface
 
 dev_dependencies:
   mocktail: ^0.3.0

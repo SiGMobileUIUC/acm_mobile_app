@@ -1,5 +1,5 @@
 name: authentication_repository
-description: Rw
+description: Repository to manage the authentication domain
 version: 0.1.0+1
 publish_to: none
 

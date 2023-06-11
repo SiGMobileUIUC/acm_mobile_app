@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:user_repository/src/models/models.dart';
 
 /// {@template user_repository}
-/// Package to manage the user domain
+/// Repository to manage the user domain
 /// {@endtemplate}
 class UserRepository {
   /// {@macro user_repository}

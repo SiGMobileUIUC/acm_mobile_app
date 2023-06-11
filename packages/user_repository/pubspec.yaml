@@ -1,5 +1,5 @@
 name: user_repository
-description: Package to manage the user domain
+description: Repository to manage the user domain
 version: 0.1.0+1
 publish_to: none
 

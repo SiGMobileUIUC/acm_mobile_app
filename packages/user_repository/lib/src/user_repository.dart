@@ -1,3 +1,4 @@
+import 'package:dartz/dartz.dart';
 import 'package:user_repository/src/models/models.dart';
 
 /// {@template user_repository}
@@ -7,14 +8,14 @@ class UserRepository {
   /// {@macro user_repository}
   UserRepository();
 
-  User? _user;
+  Option<User> _user = none();
 
-  Future<User?> getUser() async {
-    if (_user != null) return _user;
+  Future<Option<User>> getUser() async {
+    if (_user.isSome()) return _user;
 
     return Future.delayed(
       const Duration(milliseconds: 300),
-      () => _user = User(),
+      () => _user = some(User()),
     );
   }
 }

@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:acm_mobile_app/authentication/bloc/authentication_bloc.dart';
 import 'package:acm_mobile_app/routing/app_router.dart';
+import 'package:acm_mobile_app/sigs/bloc/sigs_bloc.dart';
 import 'package:authentication_repository/authentication_repository.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
@@ -36,6 +37,7 @@ class _SplashPageState extends State<SplashPage> {
           unknown: (_) {},
           authenticated: (_) {
             context.pushRoute(const HomeRoute());
+            context.read<SIGsBloc>().add(const SIGsEvent.loadSIGs());
           },
           unauthenticated: (_) {
             context.pushRoute(const LoginRoute());

@@ -14,6 +14,7 @@ class SIGCard extends StatelessWidget {
     return Card(
       child: Container(
         color: Colors.blue,
+        height: 100,
       ),
     );
   }

@@ -10,26 +10,22 @@ class BackendApiFake implements BackendApiInterface {
   const BackendApiFake();
 
   @override
-  Future<Either<NetworkFailure, List<EventDto>>> getAllEvents() {
-    // TODO: implement getAllEvents
-    throw UnimplementedError();
+  Future<Either<NetworkFailure, List<EventDto>>> getAllEvents() async {
+    return right([EventDto()]);
   }
 
   @override
-  Future<Either<NetworkFailure, List<SIGDto>>> getAllSIGs() {
-    // TODO: implement getAllSIGs
-    throw UnimplementedError();
+  Future<Either<NetworkFailure, List<SIGDto>>> getAllSIGs() async {
+    return right([SIGDto()]);
   }
 
   @override
-  Future<Either<NetworkFailure, EventDto>> getEvent(EventId eventId) {
-    // TODO: implement getEvent
-    throw UnimplementedError();
+  Future<Either<NetworkFailure, EventDto>> getEvent(EventId eventId) async {
+    return right(EventDto());
   }
 
   @override
-  Future<Either<NetworkFailure, SIGDto>> getSIG(SIGId sigId) {
-    // TODO: implement getSIG
-    throw UnimplementedError();
+  Future<Either<NetworkFailure, SIGDto>> getSIG(SIGId sigId) async {
+    return right(SIGDto());
   }
 }

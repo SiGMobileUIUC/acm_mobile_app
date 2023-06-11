@@ -11,10 +11,9 @@ part 'sigs_bloc.freezed.dart';
 @lazySingleton
 class SIGsBloc extends Bloc<SIGsEvent, SIGsState> {
   SIGsBloc({required SIGRepository sigRepository})
-      : super(const SIGsState.loading()) {
+      : super(const SIGsState.initial()) {
     on<SIGsEvent>((event, emit) {
       event.map(
-        initial: (_) {},
         loadSIGs: (_) async {
           emit(const SIGsState.loading());
           final failureOrSIGs = await sigRepository.getAllSIGs();

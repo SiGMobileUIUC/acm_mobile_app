@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
-class SIGTab extends StatelessWidget {
-  const SIGTab({super.key});
+class SIGsTab extends StatelessWidget {
+  const SIGsTab({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Container(
+      color: Colors.red,
+    );
   }
 }

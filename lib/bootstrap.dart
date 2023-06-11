@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:developer';
 
+import 'package:acm_mobile_app/di/di.dart';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/widgets.dart';
 
@@ -28,6 +29,6 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
   Bloc.observer = const AppBlocObserver();
 
   // Add cross-flavor configuration here
-
+  configureDependencies();
   runApp(await builder());
 }

@@ -18,6 +18,268 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$SIGsEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadSIGs,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadSIGs,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadSIGs,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadSIGs value) loadSIGs,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadSIGs value)? loadSIGs,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadSIGs value)? loadSIGs,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $SIGsEventCopyWith<$Res> {
+  factory $SIGsEventCopyWith(SIGsEvent value, $Res Function(SIGsEvent) then) =
+      _$SIGsEventCopyWithImpl<$Res, SIGsEvent>;
+}
+
+/// @nodoc
+class _$SIGsEventCopyWithImpl<$Res, $Val extends SIGsEvent>
+    implements $SIGsEventCopyWith<$Res> {
+  _$SIGsEventCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+}
+
+/// @nodoc
+abstract class _$$_InitialCopyWith<$Res> {
+  factory _$$_InitialCopyWith(
+          _$_Initial value, $Res Function(_$_Initial) then) =
+      __$$_InitialCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_InitialCopyWithImpl<$Res>
+    extends _$SIGsEventCopyWithImpl<$Res, _$_Initial>
+    implements _$$_InitialCopyWith<$Res> {
+  __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_Initial implements _Initial {
+  const _$_Initial();
+
+  @override
+  String toString() {
+    return 'SIGsEvent.initial()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_Initial);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadSIGs,
+  }) {
+    return initial();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadSIGs,
+  }) {
+    return initial?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadSIGs,
+    required TResult orElse(),
+  }) {
+    if (initial != null) {
+      return initial();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadSIGs value) loadSIGs,
+  }) {
+    return initial(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadSIGs value)? loadSIGs,
+  }) {
+    return initial?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadSIGs value)? loadSIGs,
+    required TResult orElse(),
+  }) {
+    if (initial != null) {
+      return initial(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Initial implements SIGsEvent {
+  const factory _Initial() = _$_Initial;
+}
+
+/// @nodoc
+abstract class _$$_LoadSIGsCopyWith<$Res> {
+  factory _$$_LoadSIGsCopyWith(
+          _$_LoadSIGs value, $Res Function(_$_LoadSIGs) then) =
+      __$$_LoadSIGsCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_LoadSIGsCopyWithImpl<$Res>
+    extends _$SIGsEventCopyWithImpl<$Res, _$_LoadSIGs>
+    implements _$$_LoadSIGsCopyWith<$Res> {
+  __$$_LoadSIGsCopyWithImpl(
+      _$_LoadSIGs _value, $Res Function(_$_LoadSIGs) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_LoadSIGs implements _LoadSIGs {
+  const _$_LoadSIGs();
+
+  @override
+  String toString() {
+    return 'SIGsEvent.loadSIGs()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_LoadSIGs);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadSIGs,
+  }) {
+    return loadSIGs();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadSIGs,
+  }) {
+    return loadSIGs?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadSIGs,
+    required TResult orElse(),
+  }) {
+    if (loadSIGs != null) {
+      return loadSIGs();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadSIGs value) loadSIGs,
+  }) {
+    return loadSIGs(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadSIGs value)? loadSIGs,
+  }) {
+    return loadSIGs?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadSIGs value)? loadSIGs,
+    required TResult orElse(),
+  }) {
+    if (loadSIGs != null) {
+      return loadSIGs(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadSIGs implements SIGsEvent {
+  const factory _LoadSIGs() = _$_LoadSIGs;
+}
+
+/// @nodoc
+mixin _$SIGsState {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
     required TResult Function() loading,
     required TResult Function(List<SIG> sigs) loaded,
     required TResult Function(NetworkFailure failure) error,
@@ -63,15 +325,15 @@ mixin _$SIGsEvent {
 }
 
 /// @nodoc
-abstract class $SIGsEventCopyWith<$Res> {
-  factory $SIGsEventCopyWith(SIGsEvent value, $Res Function(SIGsEvent) then) =
-      _$SIGsEventCopyWithImpl<$Res, SIGsEvent>;
+abstract class $SIGsStateCopyWith<$Res> {
+  factory $SIGsStateCopyWith(SIGsState value, $Res Function(SIGsState) then) =
+      _$SIGsStateCopyWithImpl<$Res, SIGsState>;
 }
 
 /// @nodoc
-class _$SIGsEventCopyWithImpl<$Res, $Val extends SIGsEvent>
-    implements $SIGsEventCopyWith<$Res> {
-  _$SIGsEventCopyWithImpl(this._value, this._then);
+class _$SIGsStateCopyWithImpl<$Res, $Val extends SIGsState>
+    implements $SIGsStateCopyWith<$Res> {
+  _$SIGsStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -88,7 +350,7 @@ abstract class _$$_LoadingCopyWith<$Res> {
 
 /// @nodoc
 class __$$_LoadingCopyWithImpl<$Res>
-    extends _$SIGsEventCopyWithImpl<$Res, _$_Loading>
+    extends _$SIGsStateCopyWithImpl<$Res, _$_Loading>
     implements _$$_LoadingCopyWith<$Res> {
   __$$_LoadingCopyWithImpl(_$_Loading _value, $Res Function(_$_Loading) _then)
       : super(_value, _then);
@@ -101,7 +363,7 @@ class _$_Loading implements _Loading {
 
   @override
   String toString() {
-    return 'SIGsEvent.loading()';
+    return 'SIGsState.loading()';
   }
 
   @override
@@ -182,7 +444,7 @@ class _$_Loading implements _Loading {
   }
 }
 
-abstract class _Loading implements SIGsEvent {
+abstract class _Loading implements SIGsState {
   const factory _Loading() = _$_Loading;
 }
 
@@ -196,7 +458,7 @@ abstract class _$$_LoadedCopyWith<$Res> {
 
 /// @nodoc
 class __$$_LoadedCopyWithImpl<$Res>
-    extends _$SIGsEventCopyWithImpl<$Res, _$_Loaded>
+    extends _$SIGsStateCopyWithImpl<$Res, _$_Loaded>
     implements _$$_LoadedCopyWith<$Res> {
   __$$_LoadedCopyWithImpl(_$_Loaded _value, $Res Function(_$_Loaded) _then)
       : super(_value, _then);
@@ -230,7 +492,7 @@ class _$_Loaded implements _Loaded {
 
   @override
   String toString() {
-    return 'SIGsEvent.loaded(sigs: $sigs)';
+    return 'SIGsState.loaded(sigs: $sigs)';
   }
 
   @override
@@ -320,7 +582,7 @@ class _$_Loaded implements _Loaded {
   }
 }
 
-abstract class _Loaded implements SIGsEvent {
+abstract class _Loaded implements SIGsState {
   const factory _Loaded({required final List<SIG> sigs}) = _$_Loaded;
 
   List<SIG> get sigs;
@@ -341,7 +603,7 @@ abstract class _$$_ErrorCopyWith<$Res> {
 
 /// @nodoc
 class __$$_ErrorCopyWithImpl<$Res>
-    extends _$SIGsEventCopyWithImpl<$Res, _$_Error>
+    extends _$SIGsStateCopyWithImpl<$Res, _$_Error>
     implements _$$_ErrorCopyWith<$Res> {
   __$$_ErrorCopyWithImpl(_$_Error _value, $Res Function(_$_Error) _then)
       : super(_value, _then);
@@ -378,7 +640,7 @@ class _$_Error implements _Error {
 
   @override
   String toString() {
-    return 'SIGsEvent.error(failure: $failure)';
+    return 'SIGsState.error(failure: $failure)';
   }
 
   @override
@@ -467,159 +729,11 @@ class _$_Error implements _Error {
   }
 }
 
-abstract class _Error implements SIGsEvent {
+abstract class _Error implements SIGsState {
   const factory _Error({required final NetworkFailure failure}) = _$_Error;
 
   NetworkFailure get failure;
   @JsonKey(ignore: true)
   _$$_ErrorCopyWith<_$_Error> get copyWith =>
       throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-mixin _$SIGsState {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $SIGsStateCopyWith<$Res> {
-  factory $SIGsStateCopyWith(SIGsState value, $Res Function(SIGsState) then) =
-      _$SIGsStateCopyWithImpl<$Res, SIGsState>;
-}
-
-/// @nodoc
-class _$SIGsStateCopyWithImpl<$Res, $Val extends SIGsState>
-    implements $SIGsStateCopyWith<$Res> {
-  _$SIGsStateCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-}
-
-/// @nodoc
-abstract class _$$_InitialCopyWith<$Res> {
-  factory _$$_InitialCopyWith(
-          _$_Initial value, $Res Function(_$_Initial) then) =
-      __$$_InitialCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$_InitialCopyWithImpl<$Res>
-    extends _$SIGsStateCopyWithImpl<$Res, _$_Initial>
-    implements _$$_InitialCopyWith<$Res> {
-  __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$_Initial implements _Initial {
-  const _$_Initial();
-
-  @override
-  String toString() {
-    return 'SIGsState.initial()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Initial);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-  }) {
-    return initial();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-  }) {
-    return initial?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-  }) {
-    return initial?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Initial implements SIGsState {
-  const factory _Initial() = _$_Initial;
 }

@@ -3,6 +3,7 @@ import 'package:acm_mobile_app/di/di.dart';
 import 'package:acm_mobile_app/home/bloc/home_bloc.dart';
 import 'package:acm_mobile_app/l10n/l10n.dart';
 import 'package:acm_mobile_app/routing/app_router.dart';
+import 'package:acm_mobile_app/sigs/bloc/sigs_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -17,6 +18,7 @@ class App extends StatelessWidget {
       providers: [
         BlocProvider(create: (_) => getIt<AuthenticationBloc>()),
         BlocProvider(create: (_) => getIt<HomeBloc>()),
+        BlocProvider(create: (_) => getIt<SIGsBloc>())
       ],
       child: MaterialApp.router(
         routerConfig: _appRouter.config(),

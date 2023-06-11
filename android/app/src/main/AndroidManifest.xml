@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.illinois.acm.acm_mobile_app">
+    package="edu.illinois.acm.app">
    <application
         android:label="${appName}"
         android:name="${applicationName}"

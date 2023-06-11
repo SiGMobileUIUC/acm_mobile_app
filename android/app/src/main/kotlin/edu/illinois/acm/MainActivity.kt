@@ -1,4 +1,4 @@
-package edu.illinois.acm.acm_mobile_app
+package edu.illinois.acm.app
 
 import io.flutter.embedding.android.FlutterActivity
 

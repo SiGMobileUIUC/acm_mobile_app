@@ -8,6 +8,6 @@ import 'package:failure_models/failure_models.dart';
 abstract interface class BackendApiInterface {
   Future<Either<NetworkFailure, List<SIGDto>>> getAllSIGs();
   Future<Either<NetworkFailure, List<EventDto>>> getAllEvents();
-  Future<Either<NetworkFailure, EventDto>> getEvent(EventId eventId);
-  Future<Either<NetworkFailure, SIGDto>> getSIG(SIGId sigId);
+  Future<Either<NetworkFailure, EventDto>> getEvent(String eventId);
+  Future<Either<NetworkFailure, SIGDto>> getSIG(String sigId);
 }

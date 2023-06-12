@@ -25,11 +25,12 @@ class BackendApiDio implements BackendApiInterface {
       ),
     );
 
-  Future<Either<NetworkFailure, List<T>>> _getListRequest<T>(
-    T Function(Map<String, dynamic>) fromJson,
-  ) async {
+  Future<Either<NetworkFailure, List<T>>> _getListRequest<T>({
+    required String endpoint,
+    required T Function(Map<String, dynamic>) fromJson,
+  }) async {
     try {
-      final response = await _dio.get<Map<String, dynamic>>('/all-events');
+      final response = await _dio.get<Map<String, dynamic>>(endpoint);
       if (response.statusCode != 200) {
         return left(
           NetworkFailure(
@@ -55,11 +56,16 @@ class BackendApiDio implements BackendApiInterface {
     }
   }
 
-  Future<Either<NetworkFailure, T>> _getRequest<T>(
-    T Function(Map<String, dynamic>) fromJson,
-  ) async {
+  Future<Either<NetworkFailure, T>> _getRequest<T>({
+    required String endpoint,
+    required Map<String, dynamic> queryParameters,
+    required T Function(Map<String, dynamic>) fromJson,
+  }) async {
     try {
-      final response = await _dio.get<Map<String, dynamic>>('/all-events');
+      final response = await _dio.get<Map<String, dynamic>>(
+        endpoint,
+        queryParameters: queryParameters,
+      );
       if (response.statusCode != 200) {
         return left(
           NetworkFailure(
@@ -84,21 +90,39 @@ class BackendApiDio implements BackendApiInterface {
 
   @override
   Future<Either<NetworkFailure, List<EventDto>>> getAllEvents() async {
-    return _getListRequest<EventDto>(EventDto.fromJson);
+    return _getListRequest<EventDto>(
+      endpoint: '/all-events',
+      fromJson: EventDto.fromJson,
+    );
   }
 
   @override
   Future<Either<NetworkFailure, List<SIGDto>>> getAllSIGs() {
-    return _getListRequest<SIGDto>(SIGDto.fromJson);
+    return _getListRequest<SIGDto>(
+      endpoint: '/all-sigs',
+      fromJson: SIGDto.fromJson,
+    );
   }
 
   @override
-  Future<Either<NetworkFailure, EventDto>> getEvent(EventId eventId) {
-    return _getRequest<EventDto>(EventDto.fromJson);
+  Future<Either<NetworkFailure, EventDto>> getEvent(String eventId) {
+    return _getRequest<EventDto>(
+      endpoint: '/event',
+      queryParameters: {
+        'eventId': eventId,
+      },
+      fromJson: EventDto.fromJson,
+    );
   }
 
   @override
-  Future<Either<NetworkFailure, SIGDto>> getSIG(SIGId sigId) {
-    return _getRequest<SIGDto>(SIGDto.fromJson);
+  Future<Either<NetworkFailure, SIGDto>> getSIG(String sigId) {
+    return _getRequest<SIGDto>(
+      endpoint: '/sig',
+      queryParameters: {
+        'sigId': sigId,
+      },
+      fromJson: SIGDto.fromJson,
+    );
   }
 }

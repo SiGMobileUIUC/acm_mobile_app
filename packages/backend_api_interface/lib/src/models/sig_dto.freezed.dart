@@ -20,6 +20,7 @@ SIGDto _$SIGDtoFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SIGDto {
+  String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get smallDescription => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
@@ -36,7 +37,8 @@ abstract class $SIGDtoCopyWith<$Res> {
       _$SIGDtoCopyWithImpl<$Res, SIGDto>;
   @useResult
   $Res call(
-      {String name,
+      {String id,
+      String name,
       String smallDescription,
       String description,
       String imageUrl});
@@ -55,12 +57,17 @@ class _$SIGDtoCopyWithImpl<$Res, $Val extends SIGDto>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? name = null,
     Object? smallDescription = null,
     Object? description = null,
     Object? imageUrl = null,
   }) {
     return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -88,7 +95,8 @@ abstract class _$$_SIGDtoCopyWith<$Res> implements $SIGDtoCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String name,
+      {String id,
+      String name,
       String smallDescription,
       String description,
       String imageUrl});
@@ -104,12 +112,17 @@ class __$$_SIGDtoCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? name = null,
     Object? smallDescription = null,
     Object? description = null,
     Object? imageUrl = null,
   }) {
     return _then(_$_SIGDto(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -134,7 +147,8 @@ class __$$_SIGDtoCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SIGDto implements _SIGDto {
   _$_SIGDto(
-      {required this.name,
+      {required this.id,
+      required this.name,
       required this.smallDescription,
       required this.description,
       required this.imageUrl});
@@ -142,6 +156,8 @@ class _$_SIGDto implements _SIGDto {
   factory _$_SIGDto.fromJson(Map<String, dynamic> json) =>
       _$$_SIGDtoFromJson(json);
 
+  @override
+  final String id;
   @override
   final String name;
   @override
@@ -153,7 +169,7 @@ class _$_SIGDto implements _SIGDto {
 
   @override
   String toString() {
-    return 'SIGDto(name: $name, smallDescription: $smallDescription, description: $description, imageUrl: $imageUrl)';
+    return 'SIGDto(id: $id, name: $name, smallDescription: $smallDescription, description: $description, imageUrl: $imageUrl)';
   }
 
   @override
@@ -161,6 +177,7 @@ class _$_SIGDto implements _SIGDto {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SIGDto &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.smallDescription, smallDescription) ||
                 other.smallDescription == smallDescription) &&
@@ -172,8 +189,8 @@ class _$_SIGDto implements _SIGDto {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, name, smallDescription, description, imageUrl);
+  int get hashCode => Object.hash(
+      runtimeType, id, name, smallDescription, description, imageUrl);
 
   @JsonKey(ignore: true)
   @override
@@ -191,13 +208,16 @@ class _$_SIGDto implements _SIGDto {
 
 abstract class _SIGDto implements SIGDto {
   factory _SIGDto(
-      {required final String name,
+      {required final String id,
+      required final String name,
       required final String smallDescription,
       required final String description,
       required final String imageUrl}) = _$_SIGDto;
 
   factory _SIGDto.fromJson(Map<String, dynamic> json) = _$_SIGDto.fromJson;
 
+  @override
+  String get id;
   @override
   String get name;
   @override

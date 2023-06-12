@@ -16,6 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$SIG {
+  String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get smallDescription => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
@@ -33,7 +34,8 @@ abstract class $SIGCopyWith<$Res> {
       _$SIGCopyWithImpl<$Res, SIG>;
   @useResult
   $Res call(
-      {String name,
+      {String id,
+      String name,
       String smallDescription,
       String description,
       String imageUrl,
@@ -53,6 +55,7 @@ class _$SIGCopyWithImpl<$Res, $Val extends SIG> implements $SIGCopyWith<$Res> {
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? name = null,
     Object? smallDescription = null,
     Object? description = null,
@@ -61,6 +64,10 @@ class _$SIGCopyWithImpl<$Res, $Val extends SIG> implements $SIGCopyWith<$Res> {
     Object? notificationsEnabled = null,
   }) {
     return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -96,7 +103,8 @@ abstract class _$$_SIGCopyWith<$Res> implements $SIGCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String name,
+      {String id,
+      String name,
       String smallDescription,
       String description,
       String imageUrl,
@@ -113,6 +121,7 @@ class __$$_SIGCopyWithImpl<$Res> extends _$SIGCopyWithImpl<$Res, _$_SIG>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? name = null,
     Object? smallDescription = null,
     Object? description = null,
@@ -121,6 +130,10 @@ class __$$_SIGCopyWithImpl<$Res> extends _$SIGCopyWithImpl<$Res, _$_SIG>
     Object? notificationsEnabled = null,
   }) {
     return _then(_$_SIG(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -153,13 +166,16 @@ class __$$_SIGCopyWithImpl<$Res> extends _$SIGCopyWithImpl<$Res, _$_SIG>
 
 class _$_SIG implements _SIG {
   _$_SIG(
-      {required this.name,
+      {required this.id,
+      required this.name,
       required this.smallDescription,
       required this.description,
       required this.imageUrl,
       this.favorite = false,
       this.notificationsEnabled = false});
 
+  @override
+  final String id;
   @override
   final String name;
   @override
@@ -177,7 +193,7 @@ class _$_SIG implements _SIG {
 
   @override
   String toString() {
-    return 'SIG(name: $name, smallDescription: $smallDescription, description: $description, imageUrl: $imageUrl, favorite: $favorite, notificationsEnabled: $notificationsEnabled)';
+    return 'SIG(id: $id, name: $name, smallDescription: $smallDescription, description: $description, imageUrl: $imageUrl, favorite: $favorite, notificationsEnabled: $notificationsEnabled)';
   }
 
   @override
@@ -185,6 +201,7 @@ class _$_SIG implements _SIG {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SIG &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.smallDescription, smallDescription) ||
                 other.smallDescription == smallDescription) &&
@@ -199,7 +216,7 @@ class _$_SIG implements _SIG {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, name, smallDescription,
+  int get hashCode => Object.hash(runtimeType, id, name, smallDescription,
       description, imageUrl, favorite, notificationsEnabled);
 
   @JsonKey(ignore: true)
@@ -211,13 +228,16 @@ class _$_SIG implements _SIG {
 
 abstract class _SIG implements SIG {
   factory _SIG(
-      {required final String name,
+      {required final String id,
+      required final String name,
       required final String smallDescription,
       required final String description,
       required final String imageUrl,
       final bool favorite,
       final bool notificationsEnabled}) = _$_SIG;
 
+  @override
+  String get id;
   @override
   String get name;
   @override

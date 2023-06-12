@@ -6,6 +6,7 @@ part 'sig.freezed.dart';
 @freezed
 class SIG with _$SIG {
   factory SIG({
+    required String id,
     required String name,
     required String smallDescription,
     required String description,
@@ -15,6 +16,7 @@ class SIG with _$SIG {
   }) = _SIG;
 
   factory SIG.fromDto(SIGDto dto) => SIG(
+        id: dto.id,
         name: dto.name,
         smallDescription: dto.smallDescription,
         description: dto.description,

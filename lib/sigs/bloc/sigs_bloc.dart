@@ -22,6 +22,12 @@ class SIGsBloc extends Bloc<SIGsEvent, SIGsState> {
             (sigs) => emit(SIGsState.loaded(sigs: sigs)),
           );
         },
+        favoriteSIGClicked: (event) {
+          sigRepository.toggleFavorite(sig: event.sig);
+        },
+        toggleNotificationsClicked: (event) {
+          sigRepository.toggleNotifications(sig: event.sig);
+        },
       );
     });
   }

@@ -29,6 +29,10 @@ dependencies:
   get_it: ^7.6.0
   injectable: ^2.1.2
   intl: ^0.18.0
+  local_storage_hive:
+    path: packages/local_storage_hive
+  local_storage_interface:
+    path: packages/local_storage_interface
   sig_repository:
     path: packages/sig_repository
   user_repository:

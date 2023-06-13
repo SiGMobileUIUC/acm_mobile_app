@@ -6,11 +6,16 @@ import 'package:backend_api_dio/backend_api_dio.dart';
 import 'package:backend_api_fake/backend_api_fake.dart';
 import 'package:backend_api_interface/backend_api_interface.dart';
 import 'package:injectable/injectable.dart' hide dev, prod;
+import 'package:local_storage_hive/local_storage_hive.dart';
+import 'package:local_storage_interface/local_storage_interface.dart';
 import 'package:sig_repository/sig_repository.dart';
 import 'package:user_repository/user_repository.dart';
 
 @module
 abstract class RegisterModule {
+  @Singleton(as: LocalStorageInterface)
+  LocalStorageHive get localStorageHive;
+
   @staging
   @prod
   @Singleton(as: BackendApiInterface)

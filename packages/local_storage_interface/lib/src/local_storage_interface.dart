@@ -8,6 +8,6 @@ abstract interface class LocalStorageInterface {
   void unfavoriteSIG(String sigId);
 
   List<String> getNotificationEnabledSIGs();
-  void enableNotifications(String sigId);
-  void disableNotifications(String sigId);
+  void enableNotificationsForSIG(String sigId);
+  void disableNotificationsForSIG(String sigId);
 }

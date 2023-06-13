@@ -37,9 +37,9 @@ class SIGRepository {
 
   void toggleNotifications({required SIG sig}) {
     if (sig.favorite) {
-      _localStorageInterface.favoriteSIG(sig.id);
+      _localStorageInterface.enableNotificationsForSIG(sig.id);
     } else {
-      _localStorageInterface.unfavoriteSIG(sig.id);
+      _localStorageInterface.disableNotificationsForSIG(sig.id);
     }
   }
 }

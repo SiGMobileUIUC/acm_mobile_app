@@ -5,7 +5,7 @@ part 'sig_dto.g.dart';
 
 @freezed
 class SIGDto with _$SIGDto {
-  factory SIGDto({
+  const factory SIGDto({
     required String id,
     required String name,
     required String smallDescription,

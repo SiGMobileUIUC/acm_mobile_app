@@ -146,7 +146,7 @@ class __$$_SIGDtoCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SIGDto implements _SIGDto {
-  _$_SIGDto(
+  const _$_SIGDto(
       {required this.id,
       required this.name,
       required this.smallDescription,
@@ -207,7 +207,7 @@ class _$_SIGDto implements _SIGDto {
 }
 
 abstract class _SIGDto implements SIGDto {
-  factory _SIGDto(
+  const factory _SIGDto(
       {required final String id,
       required final String name,
       required final String smallDescription,

@@ -6,7 +6,23 @@ part of 'event_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_EventDto _$$_EventDtoFromJson(Map<String, dynamic> json) => _$_EventDto();
+_$_EventDto _$$_EventDtoFromJson(Map<String, dynamic> json) => _$_EventDto(
+      id: json['id'] as String,
+      name: json['name'] as String,
+      description: json['description'] as String,
+      location: json['location'] as String,
+      organizationId: json['organizationId'] as String,
+      startTime: DateTime.parse(json['startTime'] as String),
+      endTime: DateTime.parse(json['endTime'] as String),
+    );
 
 Map<String, dynamic> _$$_EventDtoToJson(_$_EventDto instance) =>
-    <String, dynamic>{};
+    <String, dynamic>{
+      'id': instance.id,
+      'name': instance.name,
+      'description': instance.description,
+      'location': instance.location,
+      'organizationId': instance.organizationId,
+      'startTime': instance.startTime.toIso8601String(),
+      'endTime': instance.endTime.toIso8601String(),
+    };

@@ -7,41 +7,43 @@ import 'package:failure_models/failure_models.dart';
 /// {@endtemplate}
 class BackendApiFake implements BackendApiInterface {
   /// {@macro backend_api_fake}
-  const BackendApiFake();
+  BackendApiFake();
+
+  static const _fakeSIGDto = SIGDto(
+    id: 'id',
+    name: 'SIGMobile',
+    smallDescription: '',
+    description: '',
+    imageUrl: '',
+  );
+
+  final _fakeEventDto = EventDto(
+    id: 'id',
+    name: 'name',
+    description: 'description',
+    location: 'location',
+    organizationId: 'organizationId',
+    startTime: DateTime.now(),
+    endTime: DateTime.now().add(const Duration(hours: 1)),
+  );
 
   @override
   Future<Either<NetworkFailure, List<EventDto>>> getAllEvents() async {
-    return right([EventDto()]);
+    return right([_fakeEventDto]);
   }
 
   @override
   Future<Either<NetworkFailure, List<SIGDto>>> getAllSIGs() async {
-    return right([
-      SIGDto(
-        id: 'id',
-        name: 'SIGMobile',
-        smallDescription: '',
-        description: '',
-        imageUrl: '',
-      ),
-    ]);
+    return right([_fakeSIGDto]);
   }
 
   @override
   Future<Either<NetworkFailure, EventDto>> getEvent(String eventId) async {
-    return right(EventDto());
+    return right(_fakeEventDto);
   }
 
   @override
   Future<Either<NetworkFailure, SIGDto>> getSIG(String sigId) async {
-    return right(
-      SIGDto(
-        id: sigId,
-        name: 'SIGMobile',
-        smallDescription: '',
-        description: '',
-        imageUrl: '',
-      ),
-    );
+    return right(_fakeSIGDto);
   }
 }

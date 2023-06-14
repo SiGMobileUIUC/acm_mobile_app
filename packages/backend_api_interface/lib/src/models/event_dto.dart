@@ -5,7 +5,15 @@ part 'event_dto.g.dart';
 
 @freezed
 class EventDto with _$EventDto {
-  factory EventDto() = _EventDto;
+  const factory EventDto({
+    required String id,
+    required String name,
+    required String description,
+    required String location,
+    required String organizationId,
+    required DateTime startTime,
+    required DateTime endTime,
+  }) = _EventDto;
 
   factory EventDto.fromJson(Map<String, dynamic> json) =>
       _$EventDtoFromJson(json);

@@ -97,7 +97,7 @@ class __$$_NetworkFailureCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_NetworkFailure implements _NetworkFailure {
-  _$_NetworkFailure({required this.message});
+  const _$_NetworkFailure({required this.message});
 
   factory _$_NetworkFailure.fromJson(Map<String, dynamic> json) =>
       _$$_NetworkFailureFromJson(json);
@@ -137,7 +137,8 @@ class _$_NetworkFailure implements _NetworkFailure {
 }
 
 abstract class _NetworkFailure implements NetworkFailure {
-  factory _NetworkFailure({required final String message}) = _$_NetworkFailure;
+  const factory _NetworkFailure({required final String message}) =
+      _$_NetworkFailure;
 
   factory _NetworkFailure.fromJson(Map<String, dynamic> json) =
       _$_NetworkFailure.fromJson;

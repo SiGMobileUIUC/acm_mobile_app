@@ -165,7 +165,7 @@ class __$$_SIGCopyWithImpl<$Res> extends _$SIGCopyWithImpl<$Res, _$_SIG>
 /// @nodoc
 
 class _$_SIG implements _SIG {
-  _$_SIG(
+  const _$_SIG(
       {required this.id,
       required this.name,
       required this.smallDescription,
@@ -227,7 +227,7 @@ class _$_SIG implements _SIG {
 }
 
 abstract class _SIG implements SIG {
-  factory _SIG(
+  const factory _SIG(
       {required final String id,
       required final String name,
       required final String smallDescription,

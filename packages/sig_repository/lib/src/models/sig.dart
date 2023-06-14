@@ -5,7 +5,7 @@ part 'sig.freezed.dart';
 
 @freezed
 class SIG with _$SIG {
-  factory SIG({
+  const factory SIG({
     required String id,
     required String name,
     required String smallDescription,

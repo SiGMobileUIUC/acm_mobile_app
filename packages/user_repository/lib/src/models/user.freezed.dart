@@ -18,19 +18,25 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$User {
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function() $default, {
+    TResult Function(String id, String name, List<Event> eventsAttended,
+            List<SIG> favoriteSIGs)
+        $default, {
     required TResult Function() guest,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function()? $default, {
+    TResult? Function(String id, String name, List<Event> eventsAttended,
+            List<SIG> favoriteSIGs)?
+        $default, {
     TResult? Function()? guest,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function()? $default, {
+    TResult Function(String id, String name, List<Event> eventsAttended,
+            List<SIG> favoriteSIGs)?
+        $default, {
     TResult Function()? guest,
     required TResult orElse(),
   }) =>
@@ -77,6 +83,12 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
 abstract class _$$_UserCopyWith<$Res> {
   factory _$$_UserCopyWith(_$_User value, $Res Function(_$_User) then) =
       __$$_UserCopyWithImpl<$Res>;
+  @useResult
+  $Res call(
+      {String id,
+      String name,
+      List<Event> eventsAttended,
+      List<SIG> favoriteSIGs});
 }
 
 /// @nodoc
@@ -84,54 +96,134 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_User>
     implements _$$_UserCopyWith<$Res> {
   __$$_UserCopyWithImpl(_$_User _value, $Res Function(_$_User) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? name = null,
+    Object? eventsAttended = null,
+    Object? favoriteSIGs = null,
+  }) {
+    return _then(_$_User(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      eventsAttended: null == eventsAttended
+          ? _value._eventsAttended
+          : eventsAttended // ignore: cast_nullable_to_non_nullable
+              as List<Event>,
+      favoriteSIGs: null == favoriteSIGs
+          ? _value._favoriteSIGs
+          : favoriteSIGs // ignore: cast_nullable_to_non_nullable
+              as List<SIG>,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$_User implements _User {
-  _$_User();
+  const _$_User(
+      {required this.id,
+      required this.name,
+      final List<Event> eventsAttended = const [],
+      final List<SIG> favoriteSIGs = const []})
+      : _eventsAttended = eventsAttended,
+        _favoriteSIGs = favoriteSIGs;
+
+  @override
+  final String id;
+  @override
+  final String name;
+  final List<Event> _eventsAttended;
+  @override
+  @JsonKey()
+  List<Event> get eventsAttended {
+    if (_eventsAttended is EqualUnmodifiableListView) return _eventsAttended;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_eventsAttended);
+  }
+
+  final List<SIG> _favoriteSIGs;
+  @override
+  @JsonKey()
+  List<SIG> get favoriteSIGs {
+    if (_favoriteSIGs is EqualUnmodifiableListView) return _favoriteSIGs;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_favoriteSIGs);
+  }
 
   @override
   String toString() {
-    return 'User()';
+    return 'User(id: $id, name: $name, eventsAttended: $eventsAttended, favoriteSIGs: $favoriteSIGs)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_User);
+        (other.runtimeType == runtimeType &&
+            other is _$_User &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.name, name) || other.name == name) &&
+            const DeepCollectionEquality()
+                .equals(other._eventsAttended, _eventsAttended) &&
+            const DeepCollectionEquality()
+                .equals(other._favoriteSIGs, _favoriteSIGs));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      name,
+      const DeepCollectionEquality().hash(_eventsAttended),
+      const DeepCollectionEquality().hash(_favoriteSIGs));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_UserCopyWith<_$_User> get copyWith =>
+      __$$_UserCopyWithImpl<_$_User>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function() $default, {
+    TResult Function(String id, String name, List<Event> eventsAttended,
+            List<SIG> favoriteSIGs)
+        $default, {
     required TResult Function() guest,
   }) {
-    return $default();
+    return $default(id, name, eventsAttended, favoriteSIGs);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function()? $default, {
+    TResult? Function(String id, String name, List<Event> eventsAttended,
+            List<SIG> favoriteSIGs)?
+        $default, {
     TResult? Function()? guest,
   }) {
-    return $default?.call();
+    return $default?.call(id, name, eventsAttended, favoriteSIGs);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function()? $default, {
+    TResult Function(String id, String name, List<Event> eventsAttended,
+            List<SIG> favoriteSIGs)?
+        $default, {
     TResult Function()? guest,
     required TResult orElse(),
   }) {
     if ($default != null) {
-      return $default();
+      return $default(id, name, eventsAttended, favoriteSIGs);
     }
     return orElse();
   }
@@ -169,7 +261,18 @@ class _$_User implements _User {
 }
 
 abstract class _User implements User {
-  factory _User() = _$_User;
+  const factory _User(
+      {required final String id,
+      required final String name,
+      final List<Event> eventsAttended,
+      final List<SIG> favoriteSIGs}) = _$_User;
+
+  String get id;
+  String get name;
+  List<Event> get eventsAttended;
+  List<SIG> get favoriteSIGs;
+  @JsonKey(ignore: true)
+  _$$_UserCopyWith<_$_User> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -210,7 +313,9 @@ class _$_UserGuest implements _UserGuest {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
-    TResult Function() $default, {
+    TResult Function(String id, String name, List<Event> eventsAttended,
+            List<SIG> favoriteSIGs)
+        $default, {
     required TResult Function() guest,
   }) {
     return guest();
@@ -219,7 +324,9 @@ class _$_UserGuest implements _UserGuest {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult? Function()? $default, {
+    TResult? Function(String id, String name, List<Event> eventsAttended,
+            List<SIG> favoriteSIGs)?
+        $default, {
     TResult? Function()? guest,
   }) {
     return guest?.call();
@@ -228,7 +335,9 @@ class _$_UserGuest implements _UserGuest {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
-    TResult Function()? $default, {
+    TResult Function(String id, String name, List<Event> eventsAttended,
+            List<SIG> favoriteSIGs)?
+        $default, {
     TResult Function()? guest,
     required TResult orElse(),
   }) {

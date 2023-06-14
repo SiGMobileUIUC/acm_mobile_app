@@ -15,16 +15,24 @@ class EventsBloc extends Bloc<EventsEvent, EventsState> {
   }) : super(const EventsState.initial()) {
     on<EventsEvent>((event, emit) {
       event.map(
-        loadEvents: (_) {},
-        toggleNotificationsClicked: (state) async {
+        loadEvents: (_) async {
           emit(const EventsState.loading());
           final failureOrEvents = await eventsRepository.getAllEvents();
-          failureOrEvents.fold(
-            (failure) => emit(EventsState.error(failure: failure)),
-            (events) => EventsState.loaded(events: events),
+          emit(
+            failureOrEvents.fold(
+              (failure) => EventsState.error(failure: failure),
+              (events) => EventsState.loaded(events: events),
+            ),
           );
+        },
+        toggleNotificationsClicked: (state) {
+          eventsRepository.toggleNotifications(event: state.event);
         },
       );
     });
+  }
+
+  void loadIfNecessary() {
+    if (state is! _Loaded) add(const EventsEvent.loadEvents());
   }
 }

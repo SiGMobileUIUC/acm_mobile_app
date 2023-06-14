@@ -13,4 +13,6 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
       // TODO: implement event handler
     });
   }
+
+  void loadIfNecessary() {}
 }

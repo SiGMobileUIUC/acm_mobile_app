@@ -4,8 +4,19 @@ import 'package:acm_mobile_app/events/view/event_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class EventsPage extends StatelessWidget {
+class EventsPage extends StatefulWidget {
   const EventsPage({super.key});
+
+  @override
+  State<EventsPage> createState() => _EventsPageState();
+}
+
+class _EventsPageState extends State<EventsPage> {
+  @override
+  void initState() {
+    super.initState();
+    context.read<EventsBloc>().loadIfNecessary();
+  }
 
   @override
   Widget build(BuildContext context) {

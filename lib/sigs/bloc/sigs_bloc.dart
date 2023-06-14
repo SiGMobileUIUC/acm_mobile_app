@@ -17,9 +17,11 @@ class SigsBloc extends Bloc<SigsEvent, SigsState> {
         loadSigs: (_) async {
           emit(const SigsState.loading());
           final failureOrSigs = await sigRepository.getAllSigs();
-          failureOrSigs.fold(
-            (failure) => emit(SigsState.error(failure: failure)),
-            (sigs) => emit(SigsState.loaded(sigs: sigs)),
+          emit(
+            failureOrSigs.fold(
+              (failure) => SigsState.error(failure: failure),
+              (sigs) => SigsState.loaded(sigs: sigs),
+            ),
           );
         },
         favoriteSigClicked: (event) {
@@ -30,5 +32,9 @@ class SigsBloc extends Bloc<SigsEvent, SigsState> {
         },
       );
     });
+  }
+
+  void loadIfNecessary() {
+    if (state is! _Loaded) add(const SigsEvent.loadSigs());
   }
 }

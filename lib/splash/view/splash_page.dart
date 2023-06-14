@@ -37,7 +37,6 @@ class _SplashScreenState extends State<SplashScreen> {
           unknown: (_) {},
           authenticated: (_) {
             context.replaceRoute(const HomeRoute());
-            context.read<SigsBloc>().add(const SigsEvent.loadSigs());
           },
           unauthenticated: (_) {
             context.replaceRoute(const LoginRoute());

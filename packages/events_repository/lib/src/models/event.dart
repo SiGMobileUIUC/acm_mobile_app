@@ -1,3 +1,4 @@
+import 'package:backend_api_interface/backend_api_interface.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'event.freezed.dart';
@@ -14,4 +15,13 @@ class Event with _$Event {
     @Default(false) bool notificationsEnabled,
     @Default(false) bool favoritedEvent,
   }) = _Event;
+
+  factory Event.fromDto(EventDto dto) => Event(
+        id: dto.id,
+        name: dto.name,
+        description: dto.description,
+        organizationId: dto.organizationId,
+        startTime: dto.startTime,
+        endTime: dto.endTime,
+      );
 }

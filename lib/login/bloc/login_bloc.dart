@@ -9,7 +9,7 @@ part 'login_bloc.freezed.dart';
 
 @lazySingleton
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
-  LoginBloc() : super(const _Initial()) {
+  LoginBloc() : super(const LoginState.initial()) {
     on<LoginEvent>((event, emit) {
       event.map(
         started: (_) {},

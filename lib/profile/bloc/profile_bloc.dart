@@ -8,7 +8,7 @@ part 'profile_bloc.freezed.dart';
 
 @lazySingleton
 class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
-  ProfileBloc() : super(_Initial()) {
+  ProfileBloc() : super(const ProfileState.initial()) {
     on<ProfileEvent>((event, emit) {
       // TODO: implement event handler
     });

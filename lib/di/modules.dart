@@ -33,7 +33,7 @@ abstract class RegisterModule {
   UserRepository get userRepository;
 
   @singleton
-  SIGRepository get sigRepository;
+  SigRepository get sigRepository;
 
   @singleton
   EventsRepository get eventsRepository;

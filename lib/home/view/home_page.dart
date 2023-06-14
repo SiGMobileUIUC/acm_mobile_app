@@ -66,7 +66,7 @@ class _HomePageState extends State<HomePage> {
               });
             },
             children: const [
-              SIGsTab(),
+              SigsTab(),
               EventsTab(),
               ProfileTab(),
             ],

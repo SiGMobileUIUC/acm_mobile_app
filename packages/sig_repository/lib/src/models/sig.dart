@@ -4,8 +4,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'sig.freezed.dart';
 
 @freezed
-class SIG with _$SIG {
-  const factory SIG({
+class Sig with _$Sig {
+  const factory Sig({
     required String id,
     required String name,
     required String smallDescription,
@@ -13,9 +13,9 @@ class SIG with _$SIG {
     required String imageUrl,
     @Default(false) bool favorite,
     @Default(false) bool notificationsEnabled,
-  }) = _SIG;
+  }) = _Sig;
 
-  factory SIG.fromDto(SIGDto dto) => SIG(
+  factory Sig.fromDto(SigDto dto) => Sig(
         id: dto.id,
         name: dto.name,
         smallDescription: dto.smallDescription,

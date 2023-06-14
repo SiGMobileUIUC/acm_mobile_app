@@ -16,8 +16,8 @@ import 'package:acm_mobile_app/events/bloc/events_bloc.dart' as _i16;
 import 'package:acm_mobile_app/home/bloc/home_bloc.dart' as _i6;
 import 'package:acm_mobile_app/login/bloc/login_bloc.dart' as _i8;
 import 'package:acm_mobile_app/profile/bloc/profile_bloc.dart' as _i9;
-import 'package:acm_mobile_app/settings/bloc/settings_bloc.dart' as _i12;
-import 'package:acm_mobile_app/sigs/bloc/sigs_bloc.dart' as _i11;
+import 'package:acm_mobile_app/settings/bloc/settings_bloc.dart' as _i10;
+import 'package:acm_mobile_app/sigs/bloc/sigs_bloc.dart' as _i12;
 import 'package:authentication_repository/authentication_repository.dart'
     as _i3;
 import 'package:backend_api_dio/backend_api_dio.dart' as _i18;
@@ -28,7 +28,7 @@ import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 import 'package:local_storage_hive/local_storage_hive.dart' as _i17;
 import 'package:local_storage_interface/local_storage_interface.dart' as _i7;
-import 'package:sig_repository/sig_repository.dart' as _i10;
+import 'package:sig_repository/sig_repository.dart' as _i11;
 import 'package:user_repository/user_repository.dart' as _i13;
 
 const String _staging = 'staging';
@@ -66,10 +66,10 @@ extension GetItInjectableX on _i1.GetIt {
     gh.singleton<_i7.LocalStorageInterface>(registerModule.localStorageHive);
     gh.lazySingleton<_i8.LoginBloc>(() => _i8.LoginBloc());
     gh.lazySingleton<_i9.ProfileBloc>(() => _i9.ProfileBloc());
-    gh.singleton<_i10.SIGRepository>(registerModule.sigRepository);
-    gh.lazySingleton<_i11.SIGsBloc>(
-        () => _i11.SIGsBloc(sigRepository: gh<_i10.SIGRepository>()));
-    gh.lazySingleton<_i12.SettingsBloc>(() => _i12.SettingsBloc());
+    gh.lazySingleton<_i10.SettingsBloc>(() => _i10.SettingsBloc());
+    gh.singleton<_i11.SigRepository>(registerModule.sigRepository);
+    gh.lazySingleton<_i12.SigsBloc>(
+        () => _i12.SigsBloc(sigRepository: gh<_i11.SigRepository>()));
     gh.singleton<_i13.UserRepository>(registerModule.userRepository);
     gh.singleton<_i14.AuthenticationBloc>(
       _i14.AuthenticationBloc(
@@ -102,7 +102,7 @@ class _$RegisterModule extends _i4.RegisterModule {
   @override
   _i13.UserRepository get userRepository => _i13.UserRepository();
   @override
-  _i10.SIGRepository get sigRepository => _i10.SIGRepository(
+  _i11.SigRepository get sigRepository => _i11.SigRepository(
         backendApiInterface: _getIt<_i5.BackendApiInterface>(),
         localStorageInterface: _getIt<_i7.LocalStorageInterface>(),
       );

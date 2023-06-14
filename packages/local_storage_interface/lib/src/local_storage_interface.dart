@@ -3,13 +3,13 @@
 /// {@endtemplate}
 abstract interface class LocalStorageInterface {
   // SIGs //
-  List<String> getFavoritedSIGs();
-  void favoriteSIG(String sigId);
-  void unfavoriteSIG(String sigId);
+  List<String> getFavoritedSigs();
+  void favoriteSig(String sigId);
+  void unfavoriteSig(String sigId);
 
-  List<String> getNotificationEnabledSIGs();
-  void enableNotificationsForSIG(String sigId);
-  void disableNotificationsForSIG(String sigId);
+  List<String> getNotificationEnabledSigs();
+  void enableNotificationsForSig(String sigId);
+  void disableNotificationsForSig(String sigId);
 
   // Events //
   List<String> getFavoritedEvents();

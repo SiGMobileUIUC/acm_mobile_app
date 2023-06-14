@@ -8,9 +8,9 @@ import 'package:sig_repository/src/models/models.dart';
 /// {@template sig_repository}
 /// Repository to manage the SIG domain
 /// {@endtemplate}
-class SIGRepository {
+class SigRepository {
   /// {@macro sig_repository}
-  const SIGRepository({
+  const SigRepository({
     required BackendApiInterface backendApiInterface,
     required LocalStorageInterface localStorageInterface,
   })  : _backendApiInterface = backendApiInterface,
@@ -19,27 +19,27 @@ class SIGRepository {
   final BackendApiInterface _backendApiInterface;
   final LocalStorageInterface _localStorageInterface;
 
-  Future<Either<NetworkFailure, List<SIG>>> getAllSIGs() async {
-    final failureOrSIGDtos = await _backendApiInterface.getAllSIGs();
-    return failureOrSIGDtos.fold(
+  Future<Either<NetworkFailure, List<Sig>>> getAllSigs() async {
+    final failureOrSigDtos = await _backendApiInterface.getAllSigs();
+    return failureOrSigDtos.fold(
       left,
-      (sigDtos) => right(sigDtos.map(SIG.fromDto).toList()),
+      (sigDtos) => right(sigDtos.map(Sig.fromDto).toList()),
     );
   }
 
-  void toggleFavorite({required SIG sig}) {
+  void toggleFavorite({required Sig sig}) {
     if (sig.favorite) {
-      _localStorageInterface.favoriteSIG(sig.id);
+      _localStorageInterface.favoriteSig(sig.id);
     } else {
-      _localStorageInterface.unfavoriteSIG(sig.id);
+      _localStorageInterface.unfavoriteSig(sig.id);
     }
   }
 
-  void toggleNotifications({required SIG sig}) {
+  void toggleNotifications({required Sig sig}) {
     if (sig.notificationsEnabled) {
-      _localStorageInterface.enableNotificationsForSIG(sig.id);
+      _localStorageInterface.enableNotificationsForSig(sig.id);
     } else {
-      _localStorageInterface.disableNotificationsForSIG(sig.id);
+      _localStorageInterface.disableNotificationsForSig(sig.id);
     }
   }
 }

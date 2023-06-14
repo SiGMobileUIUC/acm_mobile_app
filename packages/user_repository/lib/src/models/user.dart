@@ -10,7 +10,7 @@ class User with _$User {
     required String id,
     required String name,
     @Default([]) List<Event> eventsAttended,
-    @Default([]) List<SIG> favoriteSIGs,
+    @Default([]) List<Sig> favoriteSigs,
   }) = _User;
 
   factory User.guest() = _UserGuest;

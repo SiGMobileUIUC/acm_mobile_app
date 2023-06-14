@@ -1,9 +1,9 @@
 part of 'sigs_bloc.dart';
 
 @freezed
-class SIGsState with _$SIGsState {
-  const factory SIGsState.initial() = _Initial;
-  const factory SIGsState.loading() = _Loading;
-  const factory SIGsState.loaded({required List<SIG> sigs}) = _Loaded;
-  const factory SIGsState.error({required NetworkFailure failure}) = _Error;
+class SigsState with _$SigsState {
+  const factory SigsState.initial() = _Initial;
+  const factory SigsState.loading() = _Loading;
+  const factory SigsState.loaded({required List<Sig> sigs}) = _Loaded;
+  const factory SigsState.error({required NetworkFailure failure}) = _Error;
 }

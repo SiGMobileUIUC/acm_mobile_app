@@ -24,39 +24,39 @@ class LocalStorageHive implements LocalStorageInterface {
   late final Box<List<String>> _eventBox;
 
   @override
-  List<String> getFavoritedSIGs() {
+  List<String> getFavoritedSigs() {
     return _sigBox.get(_favoritedSigsListKey) ?? [];
   }
 
   @override
-  void favoriteSIG(String sigId) {
-    final favoriteSIGs = getFavoritedSIGs().toSet()..add(sigId);
-    _sigBox.put(_favoritedSigsListKey, favoriteSIGs.toList());
+  void favoriteSig(String sigId) {
+    final favoriteSigs = getFavoritedSigs().toSet()..add(sigId);
+    _sigBox.put(_favoritedSigsListKey, favoriteSigs.toList());
   }
 
   @override
-  void unfavoriteSIG(String sigId) {
-    final favoriteSIGs = getFavoritedSIGs().toSet()..remove(sigId);
-    _sigBox.put(_favoritedSigsListKey, favoriteSIGs.toList());
+  void unfavoriteSig(String sigId) {
+    final favoriteSigs = getFavoritedSigs().toSet()..remove(sigId);
+    _sigBox.put(_favoritedSigsListKey, favoriteSigs.toList());
   }
 
   @override
-  List<String> getNotificationEnabledSIGs() {
+  List<String> getNotificationEnabledSigs() {
     return _sigBox.get(_notificationEnabledSigsListKey) ?? [];
   }
 
   @override
-  void enableNotificationsForSIG(String sigId) {
-    final notificationEnabledSIGs = getNotificationEnabledSIGs().toSet()
+  void enableNotificationsForSig(String sigId) {
+    final notificationEnabledSigs = getNotificationEnabledSigs().toSet()
       ..add(sigId);
-    _sigBox.put(_favoritedSigsListKey, notificationEnabledSIGs.toList());
+    _sigBox.put(_favoritedSigsListKey, notificationEnabledSigs.toList());
   }
 
   @override
-  void disableNotificationsForSIG(String sigId) {
-    final notificationEnabledSIGs = getNotificationEnabledSIGs().toSet()
+  void disableNotificationsForSig(String sigId) {
+    final notificationEnabledSigs = getNotificationEnabledSigs().toSet()
       ..remove(sigId);
-    _sigBox.put(_favoritedSigsListKey, notificationEnabledSIGs.toList());
+    _sigBox.put(_favoritedSigsListKey, notificationEnabledSigs.toList());
   }
 
   @override

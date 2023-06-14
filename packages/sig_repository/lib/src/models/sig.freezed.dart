@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$SIG {
+mixin _$Sig {
   String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get smallDescription => throw _privateConstructorUsedError;
@@ -25,13 +25,13 @@ mixin _$SIG {
   bool get notificationsEnabled => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $SIGCopyWith<SIG> get copyWith => throw _privateConstructorUsedError;
+  $SigCopyWith<Sig> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SIGCopyWith<$Res> {
-  factory $SIGCopyWith(SIG value, $Res Function(SIG) then) =
-      _$SIGCopyWithImpl<$Res, SIG>;
+abstract class $SigCopyWith<$Res> {
+  factory $SigCopyWith(Sig value, $Res Function(Sig) then) =
+      _$SigCopyWithImpl<$Res, Sig>;
   @useResult
   $Res call(
       {String id,
@@ -44,8 +44,8 @@ abstract class $SIGCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SIGCopyWithImpl<$Res, $Val extends SIG> implements $SIGCopyWith<$Res> {
-  _$SIGCopyWithImpl(this._value, this._then);
+class _$SigCopyWithImpl<$Res, $Val extends Sig> implements $SigCopyWith<$Res> {
+  _$SigCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -97,9 +97,9 @@ class _$SIGCopyWithImpl<$Res, $Val extends SIG> implements $SIGCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_SIGCopyWith<$Res> implements $SIGCopyWith<$Res> {
-  factory _$$_SIGCopyWith(_$_SIG value, $Res Function(_$_SIG) then) =
-      __$$_SIGCopyWithImpl<$Res>;
+abstract class _$$_SigCopyWith<$Res> implements $SigCopyWith<$Res> {
+  factory _$$_SigCopyWith(_$_Sig value, $Res Function(_$_Sig) then) =
+      __$$_SigCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -113,9 +113,9 @@ abstract class _$$_SIGCopyWith<$Res> implements $SIGCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_SIGCopyWithImpl<$Res> extends _$SIGCopyWithImpl<$Res, _$_SIG>
-    implements _$$_SIGCopyWith<$Res> {
-  __$$_SIGCopyWithImpl(_$_SIG _value, $Res Function(_$_SIG) _then)
+class __$$_SigCopyWithImpl<$Res> extends _$SigCopyWithImpl<$Res, _$_Sig>
+    implements _$$_SigCopyWith<$Res> {
+  __$$_SigCopyWithImpl(_$_Sig _value, $Res Function(_$_Sig) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -129,7 +129,7 @@ class __$$_SIGCopyWithImpl<$Res> extends _$SIGCopyWithImpl<$Res, _$_SIG>
     Object? favorite = null,
     Object? notificationsEnabled = null,
   }) {
-    return _then(_$_SIG(
+    return _then(_$_Sig(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -164,8 +164,8 @@ class __$$_SIGCopyWithImpl<$Res> extends _$SIGCopyWithImpl<$Res, _$_SIG>
 
 /// @nodoc
 
-class _$_SIG implements _SIG {
-  const _$_SIG(
+class _$_Sig implements _Sig {
+  const _$_Sig(
       {required this.id,
       required this.name,
       required this.smallDescription,
@@ -193,14 +193,14 @@ class _$_SIG implements _SIG {
 
   @override
   String toString() {
-    return 'SIG(id: $id, name: $name, smallDescription: $smallDescription, description: $description, imageUrl: $imageUrl, favorite: $favorite, notificationsEnabled: $notificationsEnabled)';
+    return 'Sig(id: $id, name: $name, smallDescription: $smallDescription, description: $description, imageUrl: $imageUrl, favorite: $favorite, notificationsEnabled: $notificationsEnabled)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SIG &&
+            other is _$_Sig &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.smallDescription, smallDescription) ||
@@ -222,19 +222,19 @@ class _$_SIG implements _SIG {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SIGCopyWith<_$_SIG> get copyWith =>
-      __$$_SIGCopyWithImpl<_$_SIG>(this, _$identity);
+  _$$_SigCopyWith<_$_Sig> get copyWith =>
+      __$$_SigCopyWithImpl<_$_Sig>(this, _$identity);
 }
 
-abstract class _SIG implements SIG {
-  const factory _SIG(
+abstract class _Sig implements Sig {
+  const factory _Sig(
       {required final String id,
       required final String name,
       required final String smallDescription,
       required final String description,
       required final String imageUrl,
       final bool favorite,
-      final bool notificationsEnabled}) = _$_SIG;
+      final bool notificationsEnabled}) = _$_Sig;
 
   @override
   String get id;
@@ -252,5 +252,5 @@ abstract class _SIG implements SIG {
   bool get notificationsEnabled;
   @override
   @JsonKey(ignore: true)
-  _$$_SIGCopyWith<_$_SIG> get copyWith => throw _privateConstructorUsedError;
+  _$$_SigCopyWith<_$_Sig> get copyWith => throw _privateConstructorUsedError;
 }

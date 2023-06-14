@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:sig_repository/sig_repository.dart';
 
 @RoutePage()
-class SIGDetailsPage extends StatelessWidget {
-  const SIGDetailsPage({
+class SigDetailsPage extends StatelessWidget {
+  const SigDetailsPage({
     required this.sig,
     super.key,
   });
 
-  final SIG sig;
+  final Sig sig;
 
   @override
   Widget build(BuildContext context) {

@@ -39,11 +39,11 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const LoginPage(),
       );
     },
-    SIGDetailsRoute.name: (routeData) {
-      final args = routeData.argsAs<SIGDetailsRouteArgs>();
+    SigDetailsRoute.name: (routeData) {
+      final args = routeData.argsAs<SigDetailsRouteArgs>();
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: SIGDetailsPage(
+        child: SigDetailsPage(
           sig: args.sig,
           key: args.key,
         ),
@@ -109,39 +109,39 @@ class LoginRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [SIGDetailsPage]
-class SIGDetailsRoute extends PageRouteInfo<SIGDetailsRouteArgs> {
-  SIGDetailsRoute({
-    required SIG sig,
+/// [SigDetailsPage]
+class SigDetailsRoute extends PageRouteInfo<SigDetailsRouteArgs> {
+  SigDetailsRoute({
+    required Sig sig,
     Key? key,
     List<PageRouteInfo>? children,
   }) : super(
-          SIGDetailsRoute.name,
-          args: SIGDetailsRouteArgs(
+          SigDetailsRoute.name,
+          args: SigDetailsRouteArgs(
             sig: sig,
             key: key,
           ),
           initialChildren: children,
         );
 
-  static const String name = 'SIGDetailsRoute';
+  static const String name = 'SigDetailsRoute';
 
-  static const PageInfo<SIGDetailsRouteArgs> page =
-      PageInfo<SIGDetailsRouteArgs>(name);
+  static const PageInfo<SigDetailsRouteArgs> page =
+      PageInfo<SigDetailsRouteArgs>(name);
 }
 
-class SIGDetailsRouteArgs {
-  const SIGDetailsRouteArgs({
+class SigDetailsRouteArgs {
+  const SigDetailsRouteArgs({
     required this.sig,
     this.key,
   });
 
-  final SIG sig;
+  final Sig sig;
 
   final Key? key;
 
   @override
   String toString() {
-    return 'SIGDetailsRouteArgs{sig: $sig, key: $key}';
+    return 'SigDetailsRouteArgs{sig: $sig, key: $key}';
   }
 }

@@ -97,10 +97,10 @@ class BackendApiDio implements BackendApiInterface {
   }
 
   @override
-  Future<Either<NetworkFailure, List<SIGDto>>> getAllSIGs() {
-    return _getListRequest<SIGDto>(
+  Future<Either<NetworkFailure, List<SigDto>>> getAllSigs() {
+    return _getListRequest<SigDto>(
       endpoint: '/all-sigs',
-      fromJson: SIGDto.fromJson,
+      fromJson: SigDto.fromJson,
     );
   }
 
@@ -116,13 +116,13 @@ class BackendApiDio implements BackendApiInterface {
   }
 
   @override
-  Future<Either<NetworkFailure, SIGDto>> getSIG(String sigId) {
-    return _getRequest<SIGDto>(
+  Future<Either<NetworkFailure, SigDto>> getSig(String sigId) {
+    return _getRequest<SigDto>(
       endpoint: '/sig',
       queryParameters: {
         'sigId': sigId,
       },
-      fromJson: SIGDto.fromJson,
+      fromJson: SigDto.fromJson,
     );
   }
 }

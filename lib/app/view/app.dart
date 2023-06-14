@@ -18,7 +18,7 @@ class App extends StatelessWidget {
       providers: [
         BlocProvider(create: (_) => getIt<AuthenticationBloc>()),
         BlocProvider(create: (_) => getIt<HomeBloc>()),
-        BlocProvider(create: (_) => getIt<SIGsBloc>())
+        BlocProvider(create: (_) => getIt<SigsBloc>())
       ],
       child: MaterialApp.router(
         routerConfig: _appRouter.config(),

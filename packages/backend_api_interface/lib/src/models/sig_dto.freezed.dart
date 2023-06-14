@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-SIGDto _$SIGDtoFromJson(Map<String, dynamic> json) {
-  return _SIGDto.fromJson(json);
+SigDto _$SigDtoFromJson(Map<String, dynamic> json) {
+  return _SigDto.fromJson(json);
 }
 
 /// @nodoc
-mixin _$SIGDto {
+mixin _$SigDto {
   String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get smallDescription => throw _privateConstructorUsedError;
@@ -28,13 +28,13 @@ mixin _$SIGDto {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SIGDtoCopyWith<SIGDto> get copyWith => throw _privateConstructorUsedError;
+  $SigDtoCopyWith<SigDto> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SIGDtoCopyWith<$Res> {
-  factory $SIGDtoCopyWith(SIGDto value, $Res Function(SIGDto) then) =
-      _$SIGDtoCopyWithImpl<$Res, SIGDto>;
+abstract class $SigDtoCopyWith<$Res> {
+  factory $SigDtoCopyWith(SigDto value, $Res Function(SigDto) then) =
+      _$SigDtoCopyWithImpl<$Res, SigDto>;
   @useResult
   $Res call(
       {String id,
@@ -45,9 +45,9 @@ abstract class $SIGDtoCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SIGDtoCopyWithImpl<$Res, $Val extends SIGDto>
-    implements $SIGDtoCopyWith<$Res> {
-  _$SIGDtoCopyWithImpl(this._value, this._then);
+class _$SigDtoCopyWithImpl<$Res, $Val extends SigDto>
+    implements $SigDtoCopyWith<$Res> {
+  _$SigDtoCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -89,9 +89,9 @@ class _$SIGDtoCopyWithImpl<$Res, $Val extends SIGDto>
 }
 
 /// @nodoc
-abstract class _$$_SIGDtoCopyWith<$Res> implements $SIGDtoCopyWith<$Res> {
-  factory _$$_SIGDtoCopyWith(_$_SIGDto value, $Res Function(_$_SIGDto) then) =
-      __$$_SIGDtoCopyWithImpl<$Res>;
+abstract class _$$_SigDtoCopyWith<$Res> implements $SigDtoCopyWith<$Res> {
+  factory _$$_SigDtoCopyWith(_$_SigDto value, $Res Function(_$_SigDto) then) =
+      __$$_SigDtoCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -103,10 +103,10 @@ abstract class _$$_SIGDtoCopyWith<$Res> implements $SIGDtoCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_SIGDtoCopyWithImpl<$Res>
-    extends _$SIGDtoCopyWithImpl<$Res, _$_SIGDto>
-    implements _$$_SIGDtoCopyWith<$Res> {
-  __$$_SIGDtoCopyWithImpl(_$_SIGDto _value, $Res Function(_$_SIGDto) _then)
+class __$$_SigDtoCopyWithImpl<$Res>
+    extends _$SigDtoCopyWithImpl<$Res, _$_SigDto>
+    implements _$$_SigDtoCopyWith<$Res> {
+  __$$_SigDtoCopyWithImpl(_$_SigDto _value, $Res Function(_$_SigDto) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -118,7 +118,7 @@ class __$$_SIGDtoCopyWithImpl<$Res>
     Object? description = null,
     Object? imageUrl = null,
   }) {
-    return _then(_$_SIGDto(
+    return _then(_$_SigDto(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -145,16 +145,16 @@ class __$$_SIGDtoCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SIGDto implements _SIGDto {
-  const _$_SIGDto(
+class _$_SigDto implements _SigDto {
+  const _$_SigDto(
       {required this.id,
       required this.name,
       required this.smallDescription,
       required this.description,
       required this.imageUrl});
 
-  factory _$_SIGDto.fromJson(Map<String, dynamic> json) =>
-      _$$_SIGDtoFromJson(json);
+  factory _$_SigDto.fromJson(Map<String, dynamic> json) =>
+      _$$_SigDtoFromJson(json);
 
   @override
   final String id;
@@ -169,14 +169,14 @@ class _$_SIGDto implements _SIGDto {
 
   @override
   String toString() {
-    return 'SIGDto(id: $id, name: $name, smallDescription: $smallDescription, description: $description, imageUrl: $imageUrl)';
+    return 'SigDto(id: $id, name: $name, smallDescription: $smallDescription, description: $description, imageUrl: $imageUrl)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SIGDto &&
+            other is _$_SigDto &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.smallDescription, smallDescription) ||
@@ -195,26 +195,26 @@ class _$_SIGDto implements _SIGDto {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SIGDtoCopyWith<_$_SIGDto> get copyWith =>
-      __$$_SIGDtoCopyWithImpl<_$_SIGDto>(this, _$identity);
+  _$$_SigDtoCopyWith<_$_SigDto> get copyWith =>
+      __$$_SigDtoCopyWithImpl<_$_SigDto>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SIGDtoToJson(
+    return _$$_SigDtoToJson(
       this,
     );
   }
 }
 
-abstract class _SIGDto implements SIGDto {
-  const factory _SIGDto(
+abstract class _SigDto implements SigDto {
+  const factory _SigDto(
       {required final String id,
       required final String name,
       required final String smallDescription,
       required final String description,
-      required final String imageUrl}) = _$_SIGDto;
+      required final String imageUrl}) = _$_SigDto;
 
-  factory _SIGDto.fromJson(Map<String, dynamic> json) = _$_SIGDto.fromJson;
+  factory _SigDto.fromJson(Map<String, dynamic> json) = _$_SigDto.fromJson;
 
   @override
   String get id;
@@ -228,6 +228,6 @@ abstract class _SIGDto implements SIGDto {
   String get imageUrl;
   @override
   @JsonKey(ignore: true)
-  _$$_SIGDtoCopyWith<_$_SIGDto> get copyWith =>
+  _$$_SigDtoCopyWith<_$_SigDto> get copyWith =>
       throw _privateConstructorUsedError;
 }

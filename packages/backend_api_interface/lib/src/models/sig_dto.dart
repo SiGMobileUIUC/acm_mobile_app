@@ -4,14 +4,14 @@ part 'sig_dto.freezed.dart';
 part 'sig_dto.g.dart';
 
 @freezed
-class SIGDto with _$SIGDto {
-  const factory SIGDto({
+class SigDto with _$SigDto {
+  const factory SigDto({
     required String id,
     required String name,
     required String smallDescription,
     required String description,
     required String imageUrl,
-  }) = _SIGDto;
+  }) = _SigDto;
 
-  factory SIGDto.fromJson(Map<String, dynamic> json) => _$SIGDtoFromJson(json);
+  factory SigDto.fromJson(Map<String, dynamic> json) => _$SigDtoFromJson(json);
 }

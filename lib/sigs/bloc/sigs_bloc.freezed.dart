@@ -15,49 +15,49 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$SIGsEvent {
+mixin _$SigsEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() loadSIGs,
-    required TResult Function(SIG sig) favoriteSIGClicked,
-    required TResult Function(SIG sig) toggleNotificationsClicked,
+    required TResult Function() loadSigs,
+    required TResult Function(Sig sig) favoriteSigClicked,
+    required TResult Function(Sig sig) toggleNotificationsClicked,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? loadSIGs,
-    TResult? Function(SIG sig)? favoriteSIGClicked,
-    TResult? Function(SIG sig)? toggleNotificationsClicked,
+    TResult? Function()? loadSigs,
+    TResult? Function(Sig sig)? favoriteSigClicked,
+    TResult? Function(Sig sig)? toggleNotificationsClicked,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loadSIGs,
-    TResult Function(SIG sig)? favoriteSIGClicked,
-    TResult Function(SIG sig)? toggleNotificationsClicked,
+    TResult Function()? loadSigs,
+    TResult Function(Sig sig)? favoriteSigClicked,
+    TResult Function(Sig sig)? toggleNotificationsClicked,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_LoadSIGs value) loadSIGs,
-    required TResult Function(_FavoriteSIGClicked value) favoriteSIGClicked,
+    required TResult Function(_LoadSigs value) loadSigs,
+    required TResult Function(_FavoriteSigClicked value) favoriteSigClicked,
     required TResult Function(_ToggleNotificationsClicked value)
         toggleNotificationsClicked,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_LoadSIGs value)? loadSIGs,
-    TResult? Function(_FavoriteSIGClicked value)? favoriteSIGClicked,
+    TResult? Function(_LoadSigs value)? loadSigs,
+    TResult? Function(_FavoriteSigClicked value)? favoriteSigClicked,
     TResult? Function(_ToggleNotificationsClicked value)?
         toggleNotificationsClicked,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_LoadSIGs value)? loadSIGs,
-    TResult Function(_FavoriteSIGClicked value)? favoriteSIGClicked,
+    TResult Function(_LoadSigs value)? loadSigs,
+    TResult Function(_FavoriteSigClicked value)? favoriteSigClicked,
     TResult Function(_ToggleNotificationsClicked value)?
         toggleNotificationsClicked,
     required TResult orElse(),
@@ -66,15 +66,15 @@ mixin _$SIGsEvent {
 }
 
 /// @nodoc
-abstract class $SIGsEventCopyWith<$Res> {
-  factory $SIGsEventCopyWith(SIGsEvent value, $Res Function(SIGsEvent) then) =
-      _$SIGsEventCopyWithImpl<$Res, SIGsEvent>;
+abstract class $SigsEventCopyWith<$Res> {
+  factory $SigsEventCopyWith(SigsEvent value, $Res Function(SigsEvent) then) =
+      _$SigsEventCopyWithImpl<$Res, SigsEvent>;
 }
 
 /// @nodoc
-class _$SIGsEventCopyWithImpl<$Res, $Val extends SIGsEvent>
-    implements $SIGsEventCopyWith<$Res> {
-  _$SIGsEventCopyWithImpl(this._value, this._then);
+class _$SigsEventCopyWithImpl<$Res, $Val extends SigsEvent>
+    implements $SigsEventCopyWith<$Res> {
+  _$SigsEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -83,35 +83,35 @@ class _$SIGsEventCopyWithImpl<$Res, $Val extends SIGsEvent>
 }
 
 /// @nodoc
-abstract class _$$_LoadSIGsCopyWith<$Res> {
-  factory _$$_LoadSIGsCopyWith(
-          _$_LoadSIGs value, $Res Function(_$_LoadSIGs) then) =
-      __$$_LoadSIGsCopyWithImpl<$Res>;
+abstract class _$$_LoadSigsCopyWith<$Res> {
+  factory _$$_LoadSigsCopyWith(
+          _$_LoadSigs value, $Res Function(_$_LoadSigs) then) =
+      __$$_LoadSigsCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_LoadSIGsCopyWithImpl<$Res>
-    extends _$SIGsEventCopyWithImpl<$Res, _$_LoadSIGs>
-    implements _$$_LoadSIGsCopyWith<$Res> {
-  __$$_LoadSIGsCopyWithImpl(
-      _$_LoadSIGs _value, $Res Function(_$_LoadSIGs) _then)
+class __$$_LoadSigsCopyWithImpl<$Res>
+    extends _$SigsEventCopyWithImpl<$Res, _$_LoadSigs>
+    implements _$$_LoadSigsCopyWith<$Res> {
+  __$$_LoadSigsCopyWithImpl(
+      _$_LoadSigs _value, $Res Function(_$_LoadSigs) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_LoadSIGs implements _LoadSIGs {
-  const _$_LoadSIGs();
+class _$_LoadSigs implements _LoadSigs {
+  const _$_LoadSigs();
 
   @override
   String toString() {
-    return 'SIGsEvent.loadSIGs()';
+    return 'SigsEvent.loadSigs()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_LoadSIGs);
+        (other.runtimeType == runtimeType && other is _$_LoadSigs);
   }
 
   @override
@@ -120,33 +120,33 @@ class _$_LoadSIGs implements _LoadSIGs {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() loadSIGs,
-    required TResult Function(SIG sig) favoriteSIGClicked,
-    required TResult Function(SIG sig) toggleNotificationsClicked,
+    required TResult Function() loadSigs,
+    required TResult Function(Sig sig) favoriteSigClicked,
+    required TResult Function(Sig sig) toggleNotificationsClicked,
   }) {
-    return loadSIGs();
+    return loadSigs();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? loadSIGs,
-    TResult? Function(SIG sig)? favoriteSIGClicked,
-    TResult? Function(SIG sig)? toggleNotificationsClicked,
+    TResult? Function()? loadSigs,
+    TResult? Function(Sig sig)? favoriteSigClicked,
+    TResult? Function(Sig sig)? toggleNotificationsClicked,
   }) {
-    return loadSIGs?.call();
+    return loadSigs?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loadSIGs,
-    TResult Function(SIG sig)? favoriteSIGClicked,
-    TResult Function(SIG sig)? toggleNotificationsClicked,
+    TResult Function()? loadSigs,
+    TResult Function(Sig sig)? favoriteSigClicked,
+    TResult Function(Sig sig)? toggleNotificationsClicked,
     required TResult orElse(),
   }) {
-    if (loadSIGs != null) {
-      return loadSIGs();
+    if (loadSigs != null) {
+      return loadSigs();
     }
     return orElse();
   }
@@ -154,62 +154,62 @@ class _$_LoadSIGs implements _LoadSIGs {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_LoadSIGs value) loadSIGs,
-    required TResult Function(_FavoriteSIGClicked value) favoriteSIGClicked,
+    required TResult Function(_LoadSigs value) loadSigs,
+    required TResult Function(_FavoriteSigClicked value) favoriteSigClicked,
     required TResult Function(_ToggleNotificationsClicked value)
         toggleNotificationsClicked,
   }) {
-    return loadSIGs(this);
+    return loadSigs(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_LoadSIGs value)? loadSIGs,
-    TResult? Function(_FavoriteSIGClicked value)? favoriteSIGClicked,
+    TResult? Function(_LoadSigs value)? loadSigs,
+    TResult? Function(_FavoriteSigClicked value)? favoriteSigClicked,
     TResult? Function(_ToggleNotificationsClicked value)?
         toggleNotificationsClicked,
   }) {
-    return loadSIGs?.call(this);
+    return loadSigs?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_LoadSIGs value)? loadSIGs,
-    TResult Function(_FavoriteSIGClicked value)? favoriteSIGClicked,
+    TResult Function(_LoadSigs value)? loadSigs,
+    TResult Function(_FavoriteSigClicked value)? favoriteSigClicked,
     TResult Function(_ToggleNotificationsClicked value)?
         toggleNotificationsClicked,
     required TResult orElse(),
   }) {
-    if (loadSIGs != null) {
-      return loadSIGs(this);
+    if (loadSigs != null) {
+      return loadSigs(this);
     }
     return orElse();
   }
 }
 
-abstract class _LoadSIGs implements SIGsEvent {
-  const factory _LoadSIGs() = _$_LoadSIGs;
+abstract class _LoadSigs implements SigsEvent {
+  const factory _LoadSigs() = _$_LoadSigs;
 }
 
 /// @nodoc
-abstract class _$$_FavoriteSIGClickedCopyWith<$Res> {
-  factory _$$_FavoriteSIGClickedCopyWith(_$_FavoriteSIGClicked value,
-          $Res Function(_$_FavoriteSIGClicked) then) =
-      __$$_FavoriteSIGClickedCopyWithImpl<$Res>;
+abstract class _$$_FavoriteSigClickedCopyWith<$Res> {
+  factory _$$_FavoriteSigClickedCopyWith(_$_FavoriteSigClicked value,
+          $Res Function(_$_FavoriteSigClicked) then) =
+      __$$_FavoriteSigClickedCopyWithImpl<$Res>;
   @useResult
-  $Res call({SIG sig});
+  $Res call({Sig sig});
 
-  $SIGCopyWith<$Res> get sig;
+  $SigCopyWith<$Res> get sig;
 }
 
 /// @nodoc
-class __$$_FavoriteSIGClickedCopyWithImpl<$Res>
-    extends _$SIGsEventCopyWithImpl<$Res, _$_FavoriteSIGClicked>
-    implements _$$_FavoriteSIGClickedCopyWith<$Res> {
-  __$$_FavoriteSIGClickedCopyWithImpl(
-      _$_FavoriteSIGClicked _value, $Res Function(_$_FavoriteSIGClicked) _then)
+class __$$_FavoriteSigClickedCopyWithImpl<$Res>
+    extends _$SigsEventCopyWithImpl<$Res, _$_FavoriteSigClicked>
+    implements _$$_FavoriteSigClickedCopyWith<$Res> {
+  __$$_FavoriteSigClickedCopyWithImpl(
+      _$_FavoriteSigClicked _value, $Res Function(_$_FavoriteSigClicked) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -217,18 +217,18 @@ class __$$_FavoriteSIGClickedCopyWithImpl<$Res>
   $Res call({
     Object? sig = null,
   }) {
-    return _then(_$_FavoriteSIGClicked(
+    return _then(_$_FavoriteSigClicked(
       sig: null == sig
           ? _value.sig
           : sig // ignore: cast_nullable_to_non_nullable
-              as SIG,
+              as Sig,
     ));
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $SIGCopyWith<$Res> get sig {
-    return $SIGCopyWith<$Res>(_value.sig, (value) {
+  $SigCopyWith<$Res> get sig {
+    return $SigCopyWith<$Res>(_value.sig, (value) {
       return _then(_value.copyWith(sig: value));
     });
   }
@@ -236,22 +236,22 @@ class __$$_FavoriteSIGClickedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FavoriteSIGClicked implements _FavoriteSIGClicked {
-  const _$_FavoriteSIGClicked({required this.sig});
+class _$_FavoriteSigClicked implements _FavoriteSigClicked {
+  const _$_FavoriteSigClicked({required this.sig});
 
   @override
-  final SIG sig;
+  final Sig sig;
 
   @override
   String toString() {
-    return 'SIGsEvent.favoriteSIGClicked(sig: $sig)';
+    return 'SigsEvent.favoriteSigClicked(sig: $sig)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FavoriteSIGClicked &&
+            other is _$_FavoriteSigClicked &&
             (identical(other.sig, sig) || other.sig == sig));
   }
 
@@ -261,40 +261,40 @@ class _$_FavoriteSIGClicked implements _FavoriteSIGClicked {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FavoriteSIGClickedCopyWith<_$_FavoriteSIGClicked> get copyWith =>
-      __$$_FavoriteSIGClickedCopyWithImpl<_$_FavoriteSIGClicked>(
+  _$$_FavoriteSigClickedCopyWith<_$_FavoriteSigClicked> get copyWith =>
+      __$$_FavoriteSigClickedCopyWithImpl<_$_FavoriteSigClicked>(
           this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() loadSIGs,
-    required TResult Function(SIG sig) favoriteSIGClicked,
-    required TResult Function(SIG sig) toggleNotificationsClicked,
+    required TResult Function() loadSigs,
+    required TResult Function(Sig sig) favoriteSigClicked,
+    required TResult Function(Sig sig) toggleNotificationsClicked,
   }) {
-    return favoriteSIGClicked(sig);
+    return favoriteSigClicked(sig);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? loadSIGs,
-    TResult? Function(SIG sig)? favoriteSIGClicked,
-    TResult? Function(SIG sig)? toggleNotificationsClicked,
+    TResult? Function()? loadSigs,
+    TResult? Function(Sig sig)? favoriteSigClicked,
+    TResult? Function(Sig sig)? toggleNotificationsClicked,
   }) {
-    return favoriteSIGClicked?.call(sig);
+    return favoriteSigClicked?.call(sig);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loadSIGs,
-    TResult Function(SIG sig)? favoriteSIGClicked,
-    TResult Function(SIG sig)? toggleNotificationsClicked,
+    TResult Function()? loadSigs,
+    TResult Function(Sig sig)? favoriteSigClicked,
+    TResult Function(Sig sig)? toggleNotificationsClicked,
     required TResult orElse(),
   }) {
-    if (favoriteSIGClicked != null) {
-      return favoriteSIGClicked(sig);
+    if (favoriteSigClicked != null) {
+      return favoriteSigClicked(sig);
     }
     return orElse();
   }
@@ -302,48 +302,48 @@ class _$_FavoriteSIGClicked implements _FavoriteSIGClicked {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_LoadSIGs value) loadSIGs,
-    required TResult Function(_FavoriteSIGClicked value) favoriteSIGClicked,
+    required TResult Function(_LoadSigs value) loadSigs,
+    required TResult Function(_FavoriteSigClicked value) favoriteSigClicked,
     required TResult Function(_ToggleNotificationsClicked value)
         toggleNotificationsClicked,
   }) {
-    return favoriteSIGClicked(this);
+    return favoriteSigClicked(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_LoadSIGs value)? loadSIGs,
-    TResult? Function(_FavoriteSIGClicked value)? favoriteSIGClicked,
+    TResult? Function(_LoadSigs value)? loadSigs,
+    TResult? Function(_FavoriteSigClicked value)? favoriteSigClicked,
     TResult? Function(_ToggleNotificationsClicked value)?
         toggleNotificationsClicked,
   }) {
-    return favoriteSIGClicked?.call(this);
+    return favoriteSigClicked?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_LoadSIGs value)? loadSIGs,
-    TResult Function(_FavoriteSIGClicked value)? favoriteSIGClicked,
+    TResult Function(_LoadSigs value)? loadSigs,
+    TResult Function(_FavoriteSigClicked value)? favoriteSigClicked,
     TResult Function(_ToggleNotificationsClicked value)?
         toggleNotificationsClicked,
     required TResult orElse(),
   }) {
-    if (favoriteSIGClicked != null) {
-      return favoriteSIGClicked(this);
+    if (favoriteSigClicked != null) {
+      return favoriteSigClicked(this);
     }
     return orElse();
   }
 }
 
-abstract class _FavoriteSIGClicked implements SIGsEvent {
-  const factory _FavoriteSIGClicked({required final SIG sig}) =
-      _$_FavoriteSIGClicked;
+abstract class _FavoriteSigClicked implements SigsEvent {
+  const factory _FavoriteSigClicked({required final Sig sig}) =
+      _$_FavoriteSigClicked;
 
-  SIG get sig;
+  Sig get sig;
   @JsonKey(ignore: true)
-  _$$_FavoriteSIGClickedCopyWith<_$_FavoriteSIGClicked> get copyWith =>
+  _$$_FavoriteSigClickedCopyWith<_$_FavoriteSigClicked> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -354,14 +354,14 @@ abstract class _$$_ToggleNotificationsClickedCopyWith<$Res> {
           $Res Function(_$_ToggleNotificationsClicked) then) =
       __$$_ToggleNotificationsClickedCopyWithImpl<$Res>;
   @useResult
-  $Res call({SIG sig});
+  $Res call({Sig sig});
 
-  $SIGCopyWith<$Res> get sig;
+  $SigCopyWith<$Res> get sig;
 }
 
 /// @nodoc
 class __$$_ToggleNotificationsClickedCopyWithImpl<$Res>
-    extends _$SIGsEventCopyWithImpl<$Res, _$_ToggleNotificationsClicked>
+    extends _$SigsEventCopyWithImpl<$Res, _$_ToggleNotificationsClicked>
     implements _$$_ToggleNotificationsClickedCopyWith<$Res> {
   __$$_ToggleNotificationsClickedCopyWithImpl(
       _$_ToggleNotificationsClicked _value,
@@ -377,14 +377,14 @@ class __$$_ToggleNotificationsClickedCopyWithImpl<$Res>
       sig: null == sig
           ? _value.sig
           : sig // ignore: cast_nullable_to_non_nullable
-              as SIG,
+              as Sig,
     ));
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $SIGCopyWith<$Res> get sig {
-    return $SIGCopyWith<$Res>(_value.sig, (value) {
+  $SigCopyWith<$Res> get sig {
+    return $SigCopyWith<$Res>(_value.sig, (value) {
       return _then(_value.copyWith(sig: value));
     });
   }
@@ -396,11 +396,11 @@ class _$_ToggleNotificationsClicked implements _ToggleNotificationsClicked {
   const _$_ToggleNotificationsClicked({required this.sig});
 
   @override
-  final SIG sig;
+  final Sig sig;
 
   @override
   String toString() {
-    return 'SIGsEvent.toggleNotificationsClicked(sig: $sig)';
+    return 'SigsEvent.toggleNotificationsClicked(sig: $sig)';
   }
 
   @override
@@ -424,9 +424,9 @@ class _$_ToggleNotificationsClicked implements _ToggleNotificationsClicked {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() loadSIGs,
-    required TResult Function(SIG sig) favoriteSIGClicked,
-    required TResult Function(SIG sig) toggleNotificationsClicked,
+    required TResult Function() loadSigs,
+    required TResult Function(Sig sig) favoriteSigClicked,
+    required TResult Function(Sig sig) toggleNotificationsClicked,
   }) {
     return toggleNotificationsClicked(sig);
   }
@@ -434,9 +434,9 @@ class _$_ToggleNotificationsClicked implements _ToggleNotificationsClicked {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? loadSIGs,
-    TResult? Function(SIG sig)? favoriteSIGClicked,
-    TResult? Function(SIG sig)? toggleNotificationsClicked,
+    TResult? Function()? loadSigs,
+    TResult? Function(Sig sig)? favoriteSigClicked,
+    TResult? Function(Sig sig)? toggleNotificationsClicked,
   }) {
     return toggleNotificationsClicked?.call(sig);
   }
@@ -444,9 +444,9 @@ class _$_ToggleNotificationsClicked implements _ToggleNotificationsClicked {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loadSIGs,
-    TResult Function(SIG sig)? favoriteSIGClicked,
-    TResult Function(SIG sig)? toggleNotificationsClicked,
+    TResult Function()? loadSigs,
+    TResult Function(Sig sig)? favoriteSigClicked,
+    TResult Function(Sig sig)? toggleNotificationsClicked,
     required TResult orElse(),
   }) {
     if (toggleNotificationsClicked != null) {
@@ -458,8 +458,8 @@ class _$_ToggleNotificationsClicked implements _ToggleNotificationsClicked {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_LoadSIGs value) loadSIGs,
-    required TResult Function(_FavoriteSIGClicked value) favoriteSIGClicked,
+    required TResult Function(_LoadSigs value) loadSigs,
+    required TResult Function(_FavoriteSigClicked value) favoriteSigClicked,
     required TResult Function(_ToggleNotificationsClicked value)
         toggleNotificationsClicked,
   }) {
@@ -469,8 +469,8 @@ class _$_ToggleNotificationsClicked implements _ToggleNotificationsClicked {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_LoadSIGs value)? loadSIGs,
-    TResult? Function(_FavoriteSIGClicked value)? favoriteSIGClicked,
+    TResult? Function(_LoadSigs value)? loadSigs,
+    TResult? Function(_FavoriteSigClicked value)? favoriteSigClicked,
     TResult? Function(_ToggleNotificationsClicked value)?
         toggleNotificationsClicked,
   }) {
@@ -480,8 +480,8 @@ class _$_ToggleNotificationsClicked implements _ToggleNotificationsClicked {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_LoadSIGs value)? loadSIGs,
-    TResult Function(_FavoriteSIGClicked value)? favoriteSIGClicked,
+    TResult Function(_LoadSigs value)? loadSigs,
+    TResult Function(_FavoriteSigClicked value)? favoriteSigClicked,
     TResult Function(_ToggleNotificationsClicked value)?
         toggleNotificationsClicked,
     required TResult orElse(),
@@ -493,23 +493,23 @@ class _$_ToggleNotificationsClicked implements _ToggleNotificationsClicked {
   }
 }
 
-abstract class _ToggleNotificationsClicked implements SIGsEvent {
-  const factory _ToggleNotificationsClicked({required final SIG sig}) =
+abstract class _ToggleNotificationsClicked implements SigsEvent {
+  const factory _ToggleNotificationsClicked({required final Sig sig}) =
       _$_ToggleNotificationsClicked;
 
-  SIG get sig;
+  Sig get sig;
   @JsonKey(ignore: true)
   _$$_ToggleNotificationsClickedCopyWith<_$_ToggleNotificationsClicked>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-mixin _$SIGsState {
+mixin _$SigsState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<SIG> sigs) loaded,
+    required TResult Function(List<Sig> sigs) loaded,
     required TResult Function(NetworkFailure failure) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -517,7 +517,7 @@ mixin _$SIGsState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<SIG> sigs)? loaded,
+    TResult? Function(List<Sig> sigs)? loaded,
     TResult? Function(NetworkFailure failure)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -525,7 +525,7 @@ mixin _$SIGsState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<SIG> sigs)? loaded,
+    TResult Function(List<Sig> sigs)? loaded,
     TResult Function(NetworkFailure failure)? error,
     required TResult orElse(),
   }) =>
@@ -558,15 +558,15 @@ mixin _$SIGsState {
 }
 
 /// @nodoc
-abstract class $SIGsStateCopyWith<$Res> {
-  factory $SIGsStateCopyWith(SIGsState value, $Res Function(SIGsState) then) =
-      _$SIGsStateCopyWithImpl<$Res, SIGsState>;
+abstract class $SigsStateCopyWith<$Res> {
+  factory $SigsStateCopyWith(SigsState value, $Res Function(SigsState) then) =
+      _$SigsStateCopyWithImpl<$Res, SigsState>;
 }
 
 /// @nodoc
-class _$SIGsStateCopyWithImpl<$Res, $Val extends SIGsState>
-    implements $SIGsStateCopyWith<$Res> {
-  _$SIGsStateCopyWithImpl(this._value, this._then);
+class _$SigsStateCopyWithImpl<$Res, $Val extends SigsState>
+    implements $SigsStateCopyWith<$Res> {
+  _$SigsStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -583,7 +583,7 @@ abstract class _$$_InitialCopyWith<$Res> {
 
 /// @nodoc
 class __$$_InitialCopyWithImpl<$Res>
-    extends _$SIGsStateCopyWithImpl<$Res, _$_Initial>
+    extends _$SigsStateCopyWithImpl<$Res, _$_Initial>
     implements _$$_InitialCopyWith<$Res> {
   __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
       : super(_value, _then);
@@ -596,7 +596,7 @@ class _$_Initial implements _Initial {
 
   @override
   String toString() {
-    return 'SIGsState.initial()';
+    return 'SigsState.initial()';
   }
 
   @override
@@ -613,7 +613,7 @@ class _$_Initial implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<SIG> sigs) loaded,
+    required TResult Function(List<Sig> sigs) loaded,
     required TResult Function(NetworkFailure failure) error,
   }) {
     return initial();
@@ -624,7 +624,7 @@ class _$_Initial implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<SIG> sigs)? loaded,
+    TResult? Function(List<Sig> sigs)? loaded,
     TResult? Function(NetworkFailure failure)? error,
   }) {
     return initial?.call();
@@ -635,7 +635,7 @@ class _$_Initial implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<SIG> sigs)? loaded,
+    TResult Function(List<Sig> sigs)? loaded,
     TResult Function(NetworkFailure failure)? error,
     required TResult orElse(),
   }) {
@@ -683,7 +683,7 @@ class _$_Initial implements _Initial {
   }
 }
 
-abstract class _Initial implements SIGsState {
+abstract class _Initial implements SigsState {
   const factory _Initial() = _$_Initial;
 }
 
@@ -696,7 +696,7 @@ abstract class _$$_LoadingCopyWith<$Res> {
 
 /// @nodoc
 class __$$_LoadingCopyWithImpl<$Res>
-    extends _$SIGsStateCopyWithImpl<$Res, _$_Loading>
+    extends _$SigsStateCopyWithImpl<$Res, _$_Loading>
     implements _$$_LoadingCopyWith<$Res> {
   __$$_LoadingCopyWithImpl(_$_Loading _value, $Res Function(_$_Loading) _then)
       : super(_value, _then);
@@ -709,7 +709,7 @@ class _$_Loading implements _Loading {
 
   @override
   String toString() {
-    return 'SIGsState.loading()';
+    return 'SigsState.loading()';
   }
 
   @override
@@ -726,7 +726,7 @@ class _$_Loading implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<SIG> sigs) loaded,
+    required TResult Function(List<Sig> sigs) loaded,
     required TResult Function(NetworkFailure failure) error,
   }) {
     return loading();
@@ -737,7 +737,7 @@ class _$_Loading implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<SIG> sigs)? loaded,
+    TResult? Function(List<Sig> sigs)? loaded,
     TResult? Function(NetworkFailure failure)? error,
   }) {
     return loading?.call();
@@ -748,7 +748,7 @@ class _$_Loading implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<SIG> sigs)? loaded,
+    TResult Function(List<Sig> sigs)? loaded,
     TResult Function(NetworkFailure failure)? error,
     required TResult orElse(),
   }) {
@@ -796,7 +796,7 @@ class _$_Loading implements _Loading {
   }
 }
 
-abstract class _Loading implements SIGsState {
+abstract class _Loading implements SigsState {
   const factory _Loading() = _$_Loading;
 }
 
@@ -805,12 +805,12 @@ abstract class _$$_LoadedCopyWith<$Res> {
   factory _$$_LoadedCopyWith(_$_Loaded value, $Res Function(_$_Loaded) then) =
       __$$_LoadedCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<SIG> sigs});
+  $Res call({List<Sig> sigs});
 }
 
 /// @nodoc
 class __$$_LoadedCopyWithImpl<$Res>
-    extends _$SIGsStateCopyWithImpl<$Res, _$_Loaded>
+    extends _$SigsStateCopyWithImpl<$Res, _$_Loaded>
     implements _$$_LoadedCopyWith<$Res> {
   __$$_LoadedCopyWithImpl(_$_Loaded _value, $Res Function(_$_Loaded) _then)
       : super(_value, _then);
@@ -824,7 +824,7 @@ class __$$_LoadedCopyWithImpl<$Res>
       sigs: null == sigs
           ? _value._sigs
           : sigs // ignore: cast_nullable_to_non_nullable
-              as List<SIG>,
+              as List<Sig>,
     ));
   }
 }
@@ -832,11 +832,11 @@ class __$$_LoadedCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_Loaded implements _Loaded {
-  const _$_Loaded({required final List<SIG> sigs}) : _sigs = sigs;
+  const _$_Loaded({required final List<Sig> sigs}) : _sigs = sigs;
 
-  final List<SIG> _sigs;
+  final List<Sig> _sigs;
   @override
-  List<SIG> get sigs {
+  List<Sig> get sigs {
     if (_sigs is EqualUnmodifiableListView) return _sigs;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_sigs);
@@ -844,7 +844,7 @@ class _$_Loaded implements _Loaded {
 
   @override
   String toString() {
-    return 'SIGsState.loaded(sigs: $sigs)';
+    return 'SigsState.loaded(sigs: $sigs)';
   }
 
   @override
@@ -870,7 +870,7 @@ class _$_Loaded implements _Loaded {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<SIG> sigs) loaded,
+    required TResult Function(List<Sig> sigs) loaded,
     required TResult Function(NetworkFailure failure) error,
   }) {
     return loaded(sigs);
@@ -881,7 +881,7 @@ class _$_Loaded implements _Loaded {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<SIG> sigs)? loaded,
+    TResult? Function(List<Sig> sigs)? loaded,
     TResult? Function(NetworkFailure failure)? error,
   }) {
     return loaded?.call(sigs);
@@ -892,7 +892,7 @@ class _$_Loaded implements _Loaded {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<SIG> sigs)? loaded,
+    TResult Function(List<Sig> sigs)? loaded,
     TResult Function(NetworkFailure failure)? error,
     required TResult orElse(),
   }) {
@@ -940,10 +940,10 @@ class _$_Loaded implements _Loaded {
   }
 }
 
-abstract class _Loaded implements SIGsState {
-  const factory _Loaded({required final List<SIG> sigs}) = _$_Loaded;
+abstract class _Loaded implements SigsState {
+  const factory _Loaded({required final List<Sig> sigs}) = _$_Loaded;
 
-  List<SIG> get sigs;
+  List<Sig> get sigs;
   @JsonKey(ignore: true)
   _$$_LoadedCopyWith<_$_Loaded> get copyWith =>
       throw _privateConstructorUsedError;
@@ -961,7 +961,7 @@ abstract class _$$_ErrorCopyWith<$Res> {
 
 /// @nodoc
 class __$$_ErrorCopyWithImpl<$Res>
-    extends _$SIGsStateCopyWithImpl<$Res, _$_Error>
+    extends _$SigsStateCopyWithImpl<$Res, _$_Error>
     implements _$$_ErrorCopyWith<$Res> {
   __$$_ErrorCopyWithImpl(_$_Error _value, $Res Function(_$_Error) _then)
       : super(_value, _then);
@@ -998,7 +998,7 @@ class _$_Error implements _Error {
 
   @override
   String toString() {
-    return 'SIGsState.error(failure: $failure)';
+    return 'SigsState.error(failure: $failure)';
   }
 
   @override
@@ -1023,7 +1023,7 @@ class _$_Error implements _Error {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<SIG> sigs) loaded,
+    required TResult Function(List<Sig> sigs) loaded,
     required TResult Function(NetworkFailure failure) error,
   }) {
     return error(failure);
@@ -1034,7 +1034,7 @@ class _$_Error implements _Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<SIG> sigs)? loaded,
+    TResult? Function(List<Sig> sigs)? loaded,
     TResult? Function(NetworkFailure failure)? error,
   }) {
     return error?.call(failure);
@@ -1045,7 +1045,7 @@ class _$_Error implements _Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<SIG> sigs)? loaded,
+    TResult Function(List<Sig> sigs)? loaded,
     TResult Function(NetworkFailure failure)? error,
     required TResult orElse(),
   }) {
@@ -1093,7 +1093,7 @@ class _$_Error implements _Error {
   }
 }
 
-abstract class _Error implements SIGsState {
+abstract class _Error implements SigsState {
   const factory _Error({required final NetworkFailure failure}) = _$_Error;
 
   NetworkFailure get failure;

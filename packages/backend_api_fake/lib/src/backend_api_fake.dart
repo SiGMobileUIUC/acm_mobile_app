@@ -9,7 +9,7 @@ class BackendApiFake implements BackendApiInterface {
   /// {@macro backend_api_fake}
   BackendApiFake();
 
-  static const _fakeSIGDto = SIGDto(
+  static const _fakeSigDto = SigDto(
     id: 'id',
     name: 'SIGMobile',
     smallDescription: '',
@@ -33,8 +33,8 @@ class BackendApiFake implements BackendApiInterface {
   }
 
   @override
-  Future<Either<NetworkFailure, List<SIGDto>>> getAllSIGs() async {
-    return right([_fakeSIGDto]);
+  Future<Either<NetworkFailure, List<SigDto>>> getAllSigs() async {
+    return right([_fakeSigDto]);
   }
 
   @override
@@ -43,7 +43,7 @@ class BackendApiFake implements BackendApiInterface {
   }
 
   @override
-  Future<Either<NetworkFailure, SIGDto>> getSIG(String sigId) async {
-    return right(_fakeSIGDto);
+  Future<Either<NetworkFailure, SigDto>> getSig(String sigId) async {
+    return right(_fakeSigDto);
   }
 }

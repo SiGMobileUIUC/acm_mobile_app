@@ -9,20 +9,20 @@ part 'sigs_state.dart';
 part 'sigs_bloc.freezed.dart';
 
 @lazySingleton
-class SIGsBloc extends Bloc<SIGsEvent, SIGsState> {
-  SIGsBloc({required SIGRepository sigRepository})
-      : super(const SIGsState.initial()) {
-    on<SIGsEvent>((event, emit) {
+class SigsBloc extends Bloc<SigsEvent, SigsState> {
+  SigsBloc({required SigRepository sigRepository})
+      : super(const SigsState.initial()) {
+    on<SigsEvent>((event, emit) {
       event.map(
-        loadSIGs: (_) async {
-          emit(const SIGsState.loading());
-          final failureOrSIGs = await sigRepository.getAllSIGs();
-          failureOrSIGs.fold(
-            (failure) => emit(SIGsState.error(failure: failure)),
-            (sigs) => emit(SIGsState.loaded(sigs: sigs)),
+        loadSigs: (_) async {
+          emit(const SigsState.loading());
+          final failureOrSigs = await sigRepository.getAllSigs();
+          failureOrSigs.fold(
+            (failure) => emit(SigsState.error(failure: failure)),
+            (sigs) => emit(SigsState.loaded(sigs: sigs)),
           );
         },
-        favoriteSIGClicked: (event) {
+        favoriteSigClicked: (event) {
           sigRepository.toggleFavorite(sig: event.sig);
         },
         toggleNotificationsClicked: (event) {

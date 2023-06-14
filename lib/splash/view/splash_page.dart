@@ -37,7 +37,7 @@ class _SplashPageState extends State<SplashPage> {
           unknown: (_) {},
           authenticated: (_) {
             context.replaceRoute(const HomeRoute());
-            context.read<SIGsBloc>().add(const SIGsEvent.loadSIGs());
+            context.read<SigsBloc>().add(const SigsEvent.loadSigs());
           },
           unauthenticated: (_) {
             context.replaceRoute(const LoginRoute());

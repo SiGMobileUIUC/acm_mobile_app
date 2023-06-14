@@ -18,32 +18,32 @@ abstract class _$AppRouter extends RootStackRouter {
     SettingsRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const SettingsPage(),
+        child: const SettingsScreen(),
       );
     },
     HomeRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const HomePage(),
+        child: const HomeScreen(),
       );
     },
     SplashRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const SplashPage(),
+        child: const SplashScreen(),
       );
     },
     LoginRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const LoginPage(),
+        child: const LoginScreen(),
       );
     },
     SigDetailsRoute.name: (routeData) {
       final args = routeData.argsAs<SigDetailsRouteArgs>();
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: SigDetailsPage(
+        child: SigDetailsScreen(
           sig: args.sig,
           key: args.key,
         ),
@@ -53,7 +53,7 @@ abstract class _$AppRouter extends RootStackRouter {
 }
 
 /// generated route for
-/// [SettingsPage]
+/// [SettingsScreen]
 class SettingsRoute extends PageRouteInfo<void> {
   const SettingsRoute({List<PageRouteInfo>? children})
       : super(
@@ -67,7 +67,7 @@ class SettingsRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [HomePage]
+/// [HomeScreen]
 class HomeRoute extends PageRouteInfo<void> {
   const HomeRoute({List<PageRouteInfo>? children})
       : super(
@@ -81,7 +81,7 @@ class HomeRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [SplashPage]
+/// [SplashScreen]
 class SplashRoute extends PageRouteInfo<void> {
   const SplashRoute({List<PageRouteInfo>? children})
       : super(
@@ -95,7 +95,7 @@ class SplashRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [LoginPage]
+/// [LoginScreen]
 class LoginRoute extends PageRouteInfo<void> {
   const LoginRoute({List<PageRouteInfo>? children})
       : super(
@@ -109,7 +109,7 @@ class LoginRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [SigDetailsPage]
+/// [SigDetailsScreen]
 class SigDetailsRoute extends PageRouteInfo<SigDetailsRouteArgs> {
   SigDetailsRoute({
     required Sig sig,

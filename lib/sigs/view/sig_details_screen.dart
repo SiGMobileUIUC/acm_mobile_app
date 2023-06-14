@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:sig_repository/sig_repository.dart';
 
 @RoutePage()
-class SigDetailsPage extends StatelessWidget {
-  const SigDetailsPage({
+class SigDetailsScreen extends StatelessWidget {
+  const SigDetailsScreen({
     required this.sig,
     super.key,
   });

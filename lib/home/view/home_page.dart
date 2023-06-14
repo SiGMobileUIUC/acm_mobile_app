@@ -1,4 +1,4 @@
-import 'package:acm_mobile_app/events/view/events.dart';
+import 'package:acm_mobile_app/events/view/events_page.dart';
 import 'package:acm_mobile_app/home/bloc/home_bloc.dart';
 import 'package:acm_mobile_app/profile/profile.dart';
 import 'package:acm_mobile_app/sigs/sigs.dart';
@@ -7,14 +7,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 @RoutePage()
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomeScreenState extends State<HomeScreen> {
   final PageController _pageController = PageController();
 
   int _currentPageIndex = 0;
@@ -66,9 +66,9 @@ class _HomePageState extends State<HomePage> {
               });
             },
             children: const [
-              SigsTab(),
-              EventsTab(),
-              ProfileTab(),
+              SigsPage(),
+              EventsPage(),
+              ProfilePage(),
             ],
           ),
         ),

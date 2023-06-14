@@ -5,6 +5,7 @@ import 'package:authentication_repository/authentication_repository.dart';
 import 'package:backend_api_dio/backend_api_dio.dart';
 import 'package:backend_api_fake/backend_api_fake.dart';
 import 'package:backend_api_interface/backend_api_interface.dart';
+import 'package:events_repository/events_repository.dart';
 import 'package:injectable/injectable.dart' hide dev, prod;
 import 'package:local_storage_hive/local_storage_hive.dart';
 import 'package:local_storage_interface/local_storage_interface.dart';
@@ -33,6 +34,9 @@ abstract class RegisterModule {
 
   @singleton
   SIGRepository get sigRepository;
+
+  @singleton
+  EventsRepository get eventsRepository;
 }
 
 FutureOr<void> disposeAuthenticationRepository(

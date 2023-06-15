@@ -18,7 +18,8 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    // TODO: Change this to actually check the authentication and navigate correctly
+    // TODO: Change this to actually check the authentication
+    // and navigate correctly
     context.read<AuthenticationBloc>().authenticate();
   }
 

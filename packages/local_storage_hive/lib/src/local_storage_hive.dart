@@ -21,12 +21,15 @@ class LocalStorageHive implements LocalStorageInterface {
     _eventBox = await Hive.openBox(_eventBoxName);
   }
 
-  late final Box<List<String>> _sigBox;
-  late final Box<List<String>> _eventBox;
+  late final Box<List<dynamic>> _sigBox;
+  late final Box<List<dynamic>> _eventBox;
 
   @override
   List<String> getFavoritedSigs() {
-    return (_sigBox.get(_favoritedSigsListKey) ?? []).cast<String>();
+    return _sigBox.get(
+      _favoritedSigsListKey,
+      defaultValue: [],
+    )!.cast<String>();
   }
 
   @override
@@ -43,7 +46,10 @@ class LocalStorageHive implements LocalStorageInterface {
 
   @override
   List<String> getNotificationEnabledSigs() {
-    return (_sigBox.get(_notificationEnabledSigsListKey) ?? []).cast<String>();
+    return _sigBox.get(
+      _notificationEnabledSigsListKey,
+      defaultValue: [],
+    )!.cast<String>();
   }
 
   @override
@@ -62,7 +68,10 @@ class LocalStorageHive implements LocalStorageInterface {
 
   @override
   List<String> getFavoritedEvents() {
-    return (_eventBox.get(_favoritedEventsListKey) ?? []).cast<String>();
+    return _eventBox.get(
+      _favoritedEventsListKey,
+      defaultValue: [],
+    )!.cast<String>();
   }
 
   @override
@@ -79,8 +88,10 @@ class LocalStorageHive implements LocalStorageInterface {
 
   @override
   List<String> getNotificationEnabledEvents() {
-    return (_eventBox.get(_notificationEnabledEventsListKey) ?? [])
-        .cast<String>();
+    return _eventBox.get(
+      _notificationEnabledEventsListKey,
+      defaultValue: [],
+    )!.cast<String>();
   }
 
   @override

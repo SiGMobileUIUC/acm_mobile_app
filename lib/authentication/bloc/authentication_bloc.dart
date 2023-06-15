@@ -65,12 +65,4 @@ class AuthenticationBloc
       ),
     );
   }
-
-  void unauthenticate() {
-    add(
-      const AuthenticationEvent.authenticationStatusChanged(
-        status: AuthenticationStatus.unauthenticated,
-      ),
-    );
-  }
 }

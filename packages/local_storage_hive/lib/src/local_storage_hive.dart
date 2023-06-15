@@ -14,6 +14,7 @@ class LocalStorageHive implements LocalStorageInterface {
   static const _notificationEnabledEventsListKey =
       'notification enabled events';
 
+  @override
   Future<void> init() async {
     await Hive.initFlutter();
     _sigBox = await Hive.openBox(_sigBoxName);
@@ -25,7 +26,7 @@ class LocalStorageHive implements LocalStorageInterface {
 
   @override
   List<String> getFavoritedSigs() {
-    return _sigBox.get(_favoritedSigsListKey) ?? [];
+    return (_sigBox.get(_favoritedSigsListKey) ?? []).cast<String>();
   }
 
   @override
@@ -42,7 +43,7 @@ class LocalStorageHive implements LocalStorageInterface {
 
   @override
   List<String> getNotificationEnabledSigs() {
-    return _sigBox.get(_notificationEnabledSigsListKey) ?? [];
+    return (_sigBox.get(_notificationEnabledSigsListKey) ?? []).cast<String>();
   }
 
   @override
@@ -61,7 +62,7 @@ class LocalStorageHive implements LocalStorageInterface {
 
   @override
   List<String> getFavoritedEvents() {
-    return _sigBox.get(_favoritedEventsListKey) ?? [];
+    return (_eventBox.get(_favoritedEventsListKey) ?? []).cast<String>();
   }
 
   @override
@@ -78,7 +79,8 @@ class LocalStorageHive implements LocalStorageInterface {
 
   @override
   List<String> getNotificationEnabledEvents() {
-    return _eventBox.get(_notificationEnabledEventsListKey) ?? [];
+    return (_eventBox.get(_notificationEnabledEventsListKey) ?? [])
+        .cast<String>();
   }
 
   @override

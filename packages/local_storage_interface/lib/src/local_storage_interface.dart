@@ -2,6 +2,8 @@
 /// Interface for local storage
 /// {@endtemplate}
 abstract interface class LocalStorageInterface {
+  Future<void> init();
+
   // SIGs //
   List<String> getFavoritedSigs();
   void favoriteSig(String sigId);

@@ -1,0 +1,21 @@
+name: backend_api_dio
+description: Implementation of the backend API interface using Dio for HTTP requests
+version: 0.1.0+1
+publish_to: none
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies: 
+  backend_api_interface:
+    path: ../backend_api_interface
+  dartz: ^0.10.1
+  dio: ^5.2.1
+  failure_models:
+    path: ../failure_models
+  pretty_dio_logger: ^1.3.1
+
+dev_dependencies:
+  mocktail: ^0.3.0
+  test: ^1.19.2
+  very_good_analysis: ^5.0.0

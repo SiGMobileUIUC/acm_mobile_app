@@ -11,7 +11,7 @@ part 'sigs_bloc.freezed.dart';
 @lazySingleton
 class SigsBloc extends Bloc<SigsEvent, SigsState> {
   SigsBloc({required SigRepository sigRepository})
-      : super(const SigsState.initial()) {
+      : super(const SigsState.loading()) {
     on<SigsEvent>((event, emit) {
       event.map(
         loadSigs: (_) async {
@@ -20,21 +20,53 @@ class SigsBloc extends Bloc<SigsEvent, SigsState> {
           emit(
             failureOrSigs.fold(
               (failure) => SigsState.error(failure: failure),
-              (sigs) => SigsState.loaded(sigs: sigs),
+              (newSigs) {
+                sigs = newSigs;
+                return SigsState.loaded(sigs: newSigs);
+              },
             ),
           );
         },
-        favoriteSigClicked: (event) {
+        toggleFavorite: (event) {
           sigRepository.toggleFavorite(sig: event.sig);
+          final index =
+              sigs.indexWhere((element) => element.id == event.sig.id);
+          if (index == -1) return;
+          final newSigs = List.of(sigs);
+          newSigs[index] = sigs[index].copyWith(favorite: !event.sig.favorite);
+          emit(SigsState.loaded(sigs: newSigs));
+          sigs = newSigs;
         },
-        toggleNotificationsClicked: (event) {
+        toggleNotifications: (event) {
           sigRepository.toggleNotifications(sig: event.sig);
+          final index =
+              sigs.indexWhere((element) => element.id == event.sig.id);
+          if (index == -1) return;
+          final newSigs = List.of(sigs);
+          newSigs[index] = sigs[index]
+              .copyWith(notificationsEnabled: !event.sig.notificationsEnabled);
+          emit(SigsState.loaded(sigs: newSigs));
+          sigs = newSigs;
         },
       );
     });
   }
 
+  List<Sig> sigs = [];
+
   void loadIfNecessary() {
     if (state is! _Loaded) add(const SigsEvent.loadSigs());
+  }
+
+  void loadSigs() {
+    add(const SigsEvent.loadSigs());
+  }
+
+  void toggleNotifications(Sig sig) {
+    add(SigsEvent.toggleNotifications(sig: sig));
+  }
+
+  void toggleFavorite(Sig sig) {
+    add(SigsEvent.toggleFavorite(sig: sig));
   }
 }

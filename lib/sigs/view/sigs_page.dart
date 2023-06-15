@@ -23,13 +23,17 @@ class _SigsPageState extends State<SigsPage> {
     return BlocBuilder<SigsBloc, SigsState>(
       builder: (context, state) {
         return state.map(
-          initial: (_) => const LoadingProgressIndicator(),
           loading: (_) => const LoadingProgressIndicator(),
           loaded: (state) {
             final sigs = state.sigs;
-            return ListView.builder(
-              itemBuilder: (_, index) => SigCard(sig: sigs[index]),
-              itemCount: sigs.length,
+            return RefreshIndicator(
+              onRefresh: () async {
+                context.read<SigsBloc>().loadSigs();
+              },
+              child: ListView.builder(
+                itemBuilder: (_, index) => SigCard(sig: sigs[index]),
+                itemCount: sigs.length,
+              ),
             );
           },
           error: (failure) => Container(),

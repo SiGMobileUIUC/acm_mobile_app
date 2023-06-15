@@ -1,6 +1,8 @@
 import 'package:acm_mobile_app/routing/app_router.dart';
+import 'package:acm_mobile_app/sigs/bloc/sigs_bloc.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sig_repository/sig_repository.dart';
 
 class SigCard extends StatelessWidget {
@@ -47,16 +49,26 @@ class SigCard extends StatelessWidget {
                         ),
                         const Spacer(),
                         IconButton(
-                          icon: const Icon(Icons.notification_add),
+                          icon: Icon(
+                            sig.notificationsEnabled
+                                ? Icons.notifications_active
+                                : Icons.notification_add,
+                          ),
                           padding: EdgeInsets.zero,
                           visualDensity: VisualDensity.compact,
-                          onPressed: () {},
+                          onPressed: () {
+                            context.read<SigsBloc>().toggleNotifications(sig);
+                          },
                         ),
                         IconButton(
-                          icon: const Icon(Icons.star_border),
+                          icon: Icon(
+                            sig.favorite ? Icons.star : Icons.star_border,
+                          ),
                           padding: EdgeInsets.zero,
                           visualDensity: VisualDensity.compact,
-                          onPressed: () {},
+                          onPressed: () {
+                            context.read<SigsBloc>().toggleFavorite(sig);
+                          },
                         ),
                       ],
                     ),

@@ -2,7 +2,6 @@ import 'dart:developer';
 
 import 'package:acm_mobile_app/authentication/bloc/authentication_bloc.dart';
 import 'package:acm_mobile_app/routing/app_router.dart';
-import 'package:authentication_repository/authentication_repository.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -20,11 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     // TODO: Change this to actually check the authentication and navigate correctly
-    context.read<AuthenticationBloc>().add(
-          const AuthenticationEvent.authenticationStatusChanged(
-            status: AuthenticationStatus.authenticated,
-          ),
-        );
+    context.read<AuthenticationBloc>().authenticate();
   }
 
   @override

@@ -57,4 +57,20 @@ class AuthenticationBloc
     _authenticationStatusSubscription.cancel();
     return super.close();
   }
+
+  void authenticate() {
+    add(
+      const AuthenticationEvent.authenticationStatusChanged(
+        status: AuthenticationStatus.authenticated,
+      ),
+    );
+  }
+
+  void unauthenticate() {
+    add(
+      const AuthenticationEvent.authenticationStatusChanged(
+        status: AuthenticationStatus.unauthenticated,
+      ),
+    );
+  }
 }

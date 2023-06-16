@@ -54,7 +54,7 @@ abstract class _$AppRouter extends RootStackRouter {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: EventDetailsScreen(
-          event: args.event,
+          eventId: args.eventId,
           key: args.key,
         ),
       );
@@ -160,13 +160,13 @@ class SigDetailsRouteArgs {
 /// [EventDetailsScreen]
 class EventDetailsRoute extends PageRouteInfo<EventDetailsRouteArgs> {
   EventDetailsRoute({
-    required Event event,
+    required String eventId,
     Key? key,
     List<PageRouteInfo>? children,
   }) : super(
           EventDetailsRoute.name,
           args: EventDetailsRouteArgs(
-            event: event,
+            eventId: eventId,
             key: key,
           ),
           initialChildren: children,
@@ -180,16 +180,16 @@ class EventDetailsRoute extends PageRouteInfo<EventDetailsRouteArgs> {
 
 class EventDetailsRouteArgs {
   const EventDetailsRouteArgs({
-    required this.event,
+    required this.eventId,
     this.key,
   });
 
-  final Event event;
+  final String eventId;
 
   final Key? key;
 
   @override
   String toString() {
-    return 'EventDetailsRouteArgs{event: $event, key: $key}';
+    return 'EventDetailsRouteArgs{eventId: $eventId, key: $key}';
   }
 }

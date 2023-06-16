@@ -5,7 +5,6 @@ import 'package:acm_mobile_app/settings/settings.dart';
 import 'package:acm_mobile_app/sigs/sigs.dart';
 import 'package:acm_mobile_app/splash/splash.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:events_repository/events_repository.dart';
 import 'package:flutter/foundation.dart';
 
 part 'app_router.gr.dart';

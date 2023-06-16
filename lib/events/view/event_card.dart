@@ -19,7 +19,7 @@ class EventCard extends StatelessWidget {
       child: InkWell(
         borderRadius: BorderRadius.circular(4),
         onTap: () {
-          context.pushRoute(EventDetailsRoute(event: event));
+          context.pushRoute(EventDetailsRoute(eventId: event.id));
         },
         child: Padding(
           padding: const EdgeInsets.all(8),

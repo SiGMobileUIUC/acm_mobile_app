@@ -3,8 +3,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'event.freezed.dart';
 
+/// {@template event}
+/// Event model
+/// {@endtemplate}
 @freezed
 class Event with _$Event {
+  /// {@macro event}
   const factory Event({
     required String id,
     required String name,
@@ -18,6 +22,7 @@ class Event with _$Event {
     @Default(false) bool favorite,
   }) = _Event;
 
+  /// {@macro event}
   factory Event.fromDto(EventDto dto) => Event(
         id: dto.id,
         name: dto.name,

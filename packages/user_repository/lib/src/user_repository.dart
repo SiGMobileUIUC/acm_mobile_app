@@ -10,6 +10,7 @@ class UserRepository {
 
   Option<User> _user = none();
 
+  /// Get the current user
   Future<Option<User>> getUser() async {
     if (_user.isSome()) return _user;
 

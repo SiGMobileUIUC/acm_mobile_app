@@ -3,8 +3,12 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'sig.freezed.dart';
 
+/// {@template sig}
+/// SIG model
+/// {@endtemplate}
 @freezed
 class Sig with _$Sig {
+  /// {@macro sig}
   const factory Sig({
     required String id,
     required String name,
@@ -15,6 +19,7 @@ class Sig with _$Sig {
     @Default(false) bool notificationsEnabled,
   }) = _Sig;
 
+  /// {@macro sig}
   factory Sig.fromDto(SigDto dto) => Sig(
         id: dto.id,
         name: dto.name,

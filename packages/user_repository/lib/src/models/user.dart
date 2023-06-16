@@ -4,8 +4,12 @@ import 'package:sig_repository/sig_repository.dart';
 
 part 'user.freezed.dart';
 
+/// {@template user}
+/// User model
+/// {@endtemplate}
 @freezed
 class User with _$User {
+  /// {@macro user}
   const factory User({
     required String id,
     required String name,
@@ -13,5 +17,6 @@ class User with _$User {
     @Default([]) List<Sig> favoriteSigs,
   }) = _User;
 
+  /// Guest user model
   factory User.guest() = _UserGuest;
 }

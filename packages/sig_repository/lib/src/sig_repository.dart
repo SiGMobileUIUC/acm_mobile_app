@@ -19,8 +19,10 @@ class SigRepository {
   final BackendApiInterface _backendApiInterface;
   final LocalStorageInterface _localStorageInterface;
 
+  /// All the SIGs
   List<Sig> sigs = [];
 
+  /// Get all the SIGs from the backend
   Future<Either<NetworkFailure, List<Sig>>> getAllSigsFromBackend() async {
     final failureOrSigDtos = await _backendApiInterface.getAllSigs();
     return failureOrSigDtos.fold(
@@ -46,6 +48,7 @@ class SigRepository {
         .toList();
   }
 
+  /// Toggle the favorite status of a SIG
   void toggleFavorite({required Sig sig}) {
     if (!sig.favorite) {
       _localStorageInterface.favoriteSig(sig.id);
@@ -55,6 +58,7 @@ class SigRepository {
     _getAllSigsFromLocalStorage(sigs);
   }
 
+  /// Toggle the notification status of a SIG
   void toggleNotifications({required Sig sig}) {
     if (!sig.notificationsEnabled) {
       _localStorageInterface.enableNotificationsForSig(sig.id);

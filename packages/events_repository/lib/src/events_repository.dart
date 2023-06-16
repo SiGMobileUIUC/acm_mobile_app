@@ -18,8 +18,10 @@ class EventsRepository {
   final BackendApiInterface _backendApiInterface;
   final LocalStorageInterface _localStorageInterface;
 
+  /// All the events
   List<Event> events = [];
 
+  /// Get all the events from the backend
   Future<Either<NetworkFailure, List<Event>>> getAllEventsFromBackend() async {
     final failureOrEventDtos = await _backendApiInterface.getAllEvents();
     return failureOrEventDtos.fold(
@@ -45,6 +47,7 @@ class EventsRepository {
         .toList();
   }
 
+  /// Toggle the favorite status of an event
   void toggleFavorite({required Event event}) {
     if (!event.favorite) {
       _localStorageInterface.favoriteEvent(event.id);
@@ -54,6 +57,7 @@ class EventsRepository {
     _getAllEventsFromLocalStorage(events);
   }
 
+  /// Toggle the notification status of an event
   void toggleNotifications({required Event event}) {
     if (!event.notificationsEnabled) {
       _localStorageInterface.enableNotificationsForEvent(event.id);

@@ -19,7 +19,9 @@ mixin _$Event {
   String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
+  String get location => throw _privateConstructorUsedError;
   String get organizationId => throw _privateConstructorUsedError;
+  String get imageUrl => throw _privateConstructorUsedError;
   DateTime get startTime => throw _privateConstructorUsedError;
   DateTime get endTime => throw _privateConstructorUsedError;
   bool get notificationsEnabled => throw _privateConstructorUsedError;
@@ -38,7 +40,9 @@ abstract class $EventCopyWith<$Res> {
       {String id,
       String name,
       String description,
+      String location,
       String organizationId,
+      String imageUrl,
       DateTime startTime,
       DateTime endTime,
       bool notificationsEnabled,
@@ -61,7 +65,9 @@ class _$EventCopyWithImpl<$Res, $Val extends Event>
     Object? id = null,
     Object? name = null,
     Object? description = null,
+    Object? location = null,
     Object? organizationId = null,
+    Object? imageUrl = null,
     Object? startTime = null,
     Object? endTime = null,
     Object? notificationsEnabled = null,
@@ -80,9 +86,17 @@ class _$EventCopyWithImpl<$Res, $Val extends Event>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
+      location: null == location
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as String,
       organizationId: null == organizationId
           ? _value.organizationId
           : organizationId // ignore: cast_nullable_to_non_nullable
+              as String,
+      imageUrl: null == imageUrl
+          ? _value.imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
               as String,
       startTime: null == startTime
           ? _value.startTime
@@ -114,7 +128,9 @@ abstract class _$$_EventCopyWith<$Res> implements $EventCopyWith<$Res> {
       {String id,
       String name,
       String description,
+      String location,
       String organizationId,
+      String imageUrl,
       DateTime startTime,
       DateTime endTime,
       bool notificationsEnabled,
@@ -133,7 +149,9 @@ class __$$_EventCopyWithImpl<$Res> extends _$EventCopyWithImpl<$Res, _$_Event>
     Object? id = null,
     Object? name = null,
     Object? description = null,
+    Object? location = null,
     Object? organizationId = null,
+    Object? imageUrl = null,
     Object? startTime = null,
     Object? endTime = null,
     Object? notificationsEnabled = null,
@@ -152,9 +170,17 @@ class __$$_EventCopyWithImpl<$Res> extends _$EventCopyWithImpl<$Res, _$_Event>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
+      location: null == location
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as String,
       organizationId: null == organizationId
           ? _value.organizationId
           : organizationId // ignore: cast_nullable_to_non_nullable
+              as String,
+      imageUrl: null == imageUrl
+          ? _value.imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
               as String,
       startTime: null == startTime
           ? _value.startTime
@@ -183,7 +209,9 @@ class _$_Event implements _Event {
       {required this.id,
       required this.name,
       required this.description,
+      required this.location,
       required this.organizationId,
+      required this.imageUrl,
       required this.startTime,
       required this.endTime,
       this.notificationsEnabled = false,
@@ -196,7 +224,11 @@ class _$_Event implements _Event {
   @override
   final String description;
   @override
+  final String location;
+  @override
   final String organizationId;
+  @override
+  final String imageUrl;
   @override
   final DateTime startTime;
   @override
@@ -210,7 +242,7 @@ class _$_Event implements _Event {
 
   @override
   String toString() {
-    return 'Event(id: $id, name: $name, description: $description, organizationId: $organizationId, startTime: $startTime, endTime: $endTime, notificationsEnabled: $notificationsEnabled, favorite: $favorite)';
+    return 'Event(id: $id, name: $name, description: $description, location: $location, organizationId: $organizationId, imageUrl: $imageUrl, startTime: $startTime, endTime: $endTime, notificationsEnabled: $notificationsEnabled, favorite: $favorite)';
   }
 
   @override
@@ -222,8 +254,12 @@ class _$_Event implements _Event {
             (identical(other.name, name) || other.name == name) &&
             (identical(other.description, description) ||
                 other.description == description) &&
+            (identical(other.location, location) ||
+                other.location == location) &&
             (identical(other.organizationId, organizationId) ||
                 other.organizationId == organizationId) &&
+            (identical(other.imageUrl, imageUrl) ||
+                other.imageUrl == imageUrl) &&
             (identical(other.startTime, startTime) ||
                 other.startTime == startTime) &&
             (identical(other.endTime, endTime) || other.endTime == endTime) &&
@@ -234,8 +270,18 @@ class _$_Event implements _Event {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id, name, description,
-      organizationId, startTime, endTime, notificationsEnabled, favorite);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      name,
+      description,
+      location,
+      organizationId,
+      imageUrl,
+      startTime,
+      endTime,
+      notificationsEnabled,
+      favorite);
 
   @JsonKey(ignore: true)
   @override
@@ -249,7 +295,9 @@ abstract class _Event implements Event {
       {required final String id,
       required final String name,
       required final String description,
+      required final String location,
       required final String organizationId,
+      required final String imageUrl,
       required final DateTime startTime,
       required final DateTime endTime,
       final bool notificationsEnabled,
@@ -262,7 +310,11 @@ abstract class _Event implements Event {
   @override
   String get description;
   @override
+  String get location;
+  @override
   String get organizationId;
+  @override
+  String get imageUrl;
   @override
   DateTime get startTime;
   @override

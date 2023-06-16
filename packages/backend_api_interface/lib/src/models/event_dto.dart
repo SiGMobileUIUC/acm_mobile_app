@@ -11,6 +11,7 @@ class EventDto with _$EventDto {
     required String description,
     required String location,
     required String organizationId,
+    required String imageUrl,
     required DateTime startTime,
     required DateTime endTime,
   }) = _EventDto;

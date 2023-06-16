@@ -25,6 +25,7 @@ mixin _$EventDto {
   String get description => throw _privateConstructorUsedError;
   String get location => throw _privateConstructorUsedError;
   String get organizationId => throw _privateConstructorUsedError;
+  String get imageUrl => throw _privateConstructorUsedError;
   DateTime get startTime => throw _privateConstructorUsedError;
   DateTime get endTime => throw _privateConstructorUsedError;
 
@@ -45,6 +46,7 @@ abstract class $EventDtoCopyWith<$Res> {
       String description,
       String location,
       String organizationId,
+      String imageUrl,
       DateTime startTime,
       DateTime endTime});
 }
@@ -67,6 +69,7 @@ class _$EventDtoCopyWithImpl<$Res, $Val extends EventDto>
     Object? description = null,
     Object? location = null,
     Object? organizationId = null,
+    Object? imageUrl = null,
     Object? startTime = null,
     Object? endTime = null,
   }) {
@@ -90,6 +93,10 @@ class _$EventDtoCopyWithImpl<$Res, $Val extends EventDto>
       organizationId: null == organizationId
           ? _value.organizationId
           : organizationId // ignore: cast_nullable_to_non_nullable
+              as String,
+      imageUrl: null == imageUrl
+          ? _value.imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
               as String,
       startTime: null == startTime
           ? _value.startTime
@@ -116,6 +123,7 @@ abstract class _$$_EventDtoCopyWith<$Res> implements $EventDtoCopyWith<$Res> {
       String description,
       String location,
       String organizationId,
+      String imageUrl,
       DateTime startTime,
       DateTime endTime});
 }
@@ -136,6 +144,7 @@ class __$$_EventDtoCopyWithImpl<$Res>
     Object? description = null,
     Object? location = null,
     Object? organizationId = null,
+    Object? imageUrl = null,
     Object? startTime = null,
     Object? endTime = null,
   }) {
@@ -160,6 +169,10 @@ class __$$_EventDtoCopyWithImpl<$Res>
           ? _value.organizationId
           : organizationId // ignore: cast_nullable_to_non_nullable
               as String,
+      imageUrl: null == imageUrl
+          ? _value.imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
+              as String,
       startTime: null == startTime
           ? _value.startTime
           : startTime // ignore: cast_nullable_to_non_nullable
@@ -181,6 +194,7 @@ class _$_EventDto implements _EventDto {
       required this.description,
       required this.location,
       required this.organizationId,
+      required this.imageUrl,
       required this.startTime,
       required this.endTime});
 
@@ -198,13 +212,15 @@ class _$_EventDto implements _EventDto {
   @override
   final String organizationId;
   @override
+  final String imageUrl;
+  @override
   final DateTime startTime;
   @override
   final DateTime endTime;
 
   @override
   String toString() {
-    return 'EventDto(id: $id, name: $name, description: $description, location: $location, organizationId: $organizationId, startTime: $startTime, endTime: $endTime)';
+    return 'EventDto(id: $id, name: $name, description: $description, location: $location, organizationId: $organizationId, imageUrl: $imageUrl, startTime: $startTime, endTime: $endTime)';
   }
 
   @override
@@ -220,6 +236,8 @@ class _$_EventDto implements _EventDto {
                 other.location == location) &&
             (identical(other.organizationId, organizationId) ||
                 other.organizationId == organizationId) &&
+            (identical(other.imageUrl, imageUrl) ||
+                other.imageUrl == imageUrl) &&
             (identical(other.startTime, startTime) ||
                 other.startTime == startTime) &&
             (identical(other.endTime, endTime) || other.endTime == endTime));
@@ -228,7 +246,7 @@ class _$_EventDto implements _EventDto {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, name, description, location,
-      organizationId, startTime, endTime);
+      organizationId, imageUrl, startTime, endTime);
 
   @JsonKey(ignore: true)
   @override
@@ -251,6 +269,7 @@ abstract class _EventDto implements EventDto {
       required final String description,
       required final String location,
       required final String organizationId,
+      required final String imageUrl,
       required final DateTime startTime,
       required final DateTime endTime}) = _$_EventDto;
 
@@ -266,6 +285,8 @@ abstract class _EventDto implements EventDto {
   String get location;
   @override
   String get organizationId;
+  @override
+  String get imageUrl;
   @override
   DateTime get startTime;
   @override

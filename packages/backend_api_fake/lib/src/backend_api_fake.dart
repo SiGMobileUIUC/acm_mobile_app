@@ -23,6 +23,7 @@ class BackendApiFake implements BackendApiInterface {
     description: 'description',
     location: 'location',
     organizationId: 'organizationId',
+    imageUrl: 'imageUrl',
     startTime: DateTime.now(),
     endTime: DateTime.now().add(const Duration(hours: 1)),
   );

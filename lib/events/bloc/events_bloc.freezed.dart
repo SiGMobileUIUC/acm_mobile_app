@@ -19,19 +19,22 @@ mixin _$EventsEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loadEvents,
-    required TResult Function(Event event) toggleNotificationsClicked,
+    required TResult Function(Event event) toggleNotifications,
+    required TResult Function(Event event) toggleFavorite,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loadEvents,
-    TResult? Function(Event event)? toggleNotificationsClicked,
+    TResult? Function(Event event)? toggleNotifications,
+    TResult? Function(Event event)? toggleFavorite,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loadEvents,
-    TResult Function(Event event)? toggleNotificationsClicked,
+    TResult Function(Event event)? toggleNotifications,
+    TResult Function(Event event)? toggleFavorite,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,21 +42,22 @@ mixin _$EventsEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) loadEvents,
     required TResult Function(_ToggleNotificationsClicked value)
-        toggleNotificationsClicked,
+        toggleNotifications,
+    required TResult Function(_ToggleFavorited value) toggleFavorite,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? loadEvents,
-    TResult? Function(_ToggleNotificationsClicked value)?
-        toggleNotificationsClicked,
+    TResult? Function(_ToggleNotificationsClicked value)? toggleNotifications,
+    TResult? Function(_ToggleFavorited value)? toggleFavorite,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? loadEvents,
-    TResult Function(_ToggleNotificationsClicked value)?
-        toggleNotificationsClicked,
+    TResult Function(_ToggleNotificationsClicked value)? toggleNotifications,
+    TResult Function(_ToggleFavorited value)? toggleFavorite,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -115,7 +119,8 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loadEvents,
-    required TResult Function(Event event) toggleNotificationsClicked,
+    required TResult Function(Event event) toggleNotifications,
+    required TResult Function(Event event) toggleFavorite,
   }) {
     return loadEvents();
   }
@@ -124,7 +129,8 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loadEvents,
-    TResult? Function(Event event)? toggleNotificationsClicked,
+    TResult? Function(Event event)? toggleNotifications,
+    TResult? Function(Event event)? toggleFavorite,
   }) {
     return loadEvents?.call();
   }
@@ -133,7 +139,8 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loadEvents,
-    TResult Function(Event event)? toggleNotificationsClicked,
+    TResult Function(Event event)? toggleNotifications,
+    TResult Function(Event event)? toggleFavorite,
     required TResult orElse(),
   }) {
     if (loadEvents != null) {
@@ -147,7 +154,8 @@ class _$_Started implements _Started {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) loadEvents,
     required TResult Function(_ToggleNotificationsClicked value)
-        toggleNotificationsClicked,
+        toggleNotifications,
+    required TResult Function(_ToggleFavorited value) toggleFavorite,
   }) {
     return loadEvents(this);
   }
@@ -156,8 +164,8 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? loadEvents,
-    TResult? Function(_ToggleNotificationsClicked value)?
-        toggleNotificationsClicked,
+    TResult? Function(_ToggleNotificationsClicked value)? toggleNotifications,
+    TResult? Function(_ToggleFavorited value)? toggleFavorite,
   }) {
     return loadEvents?.call(this);
   }
@@ -166,8 +174,8 @@ class _$_Started implements _Started {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? loadEvents,
-    TResult Function(_ToggleNotificationsClicked value)?
-        toggleNotificationsClicked,
+    TResult Function(_ToggleNotificationsClicked value)? toggleNotifications,
+    TResult Function(_ToggleFavorited value)? toggleFavorite,
     required TResult orElse(),
   }) {
     if (loadEvents != null) {
@@ -234,7 +242,7 @@ class _$_ToggleNotificationsClicked implements _ToggleNotificationsClicked {
 
   @override
   String toString() {
-    return 'EventsEvent.toggleNotificationsClicked(event: $event)';
+    return 'EventsEvent.toggleNotifications(event: $event)';
   }
 
   @override
@@ -259,29 +267,32 @@ class _$_ToggleNotificationsClicked implements _ToggleNotificationsClicked {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loadEvents,
-    required TResult Function(Event event) toggleNotificationsClicked,
+    required TResult Function(Event event) toggleNotifications,
+    required TResult Function(Event event) toggleFavorite,
   }) {
-    return toggleNotificationsClicked(event);
+    return toggleNotifications(event);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loadEvents,
-    TResult? Function(Event event)? toggleNotificationsClicked,
+    TResult? Function(Event event)? toggleNotifications,
+    TResult? Function(Event event)? toggleFavorite,
   }) {
-    return toggleNotificationsClicked?.call(event);
+    return toggleNotifications?.call(event);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loadEvents,
-    TResult Function(Event event)? toggleNotificationsClicked,
+    TResult Function(Event event)? toggleNotifications,
+    TResult Function(Event event)? toggleFavorite,
     required TResult orElse(),
   }) {
-    if (toggleNotificationsClicked != null) {
-      return toggleNotificationsClicked(event);
+    if (toggleNotifications != null) {
+      return toggleNotifications(event);
     }
     return orElse();
   }
@@ -291,31 +302,32 @@ class _$_ToggleNotificationsClicked implements _ToggleNotificationsClicked {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) loadEvents,
     required TResult Function(_ToggleNotificationsClicked value)
-        toggleNotificationsClicked,
+        toggleNotifications,
+    required TResult Function(_ToggleFavorited value) toggleFavorite,
   }) {
-    return toggleNotificationsClicked(this);
+    return toggleNotifications(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? loadEvents,
-    TResult? Function(_ToggleNotificationsClicked value)?
-        toggleNotificationsClicked,
+    TResult? Function(_ToggleNotificationsClicked value)? toggleNotifications,
+    TResult? Function(_ToggleFavorited value)? toggleFavorite,
   }) {
-    return toggleNotificationsClicked?.call(this);
+    return toggleNotifications?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? loadEvents,
-    TResult Function(_ToggleNotificationsClicked value)?
-        toggleNotificationsClicked,
+    TResult Function(_ToggleNotificationsClicked value)? toggleNotifications,
+    TResult Function(_ToggleFavorited value)? toggleFavorite,
     required TResult orElse(),
   }) {
-    if (toggleNotificationsClicked != null) {
-      return toggleNotificationsClicked(this);
+    if (toggleNotifications != null) {
+      return toggleNotifications(this);
     }
     return orElse();
   }
@@ -332,10 +344,160 @@ abstract class _ToggleNotificationsClicked implements EventsEvent {
 }
 
 /// @nodoc
+abstract class _$$_ToggleFavoritedCopyWith<$Res> {
+  factory _$$_ToggleFavoritedCopyWith(
+          _$_ToggleFavorited value, $Res Function(_$_ToggleFavorited) then) =
+      __$$_ToggleFavoritedCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Event event});
+
+  $EventCopyWith<$Res> get event;
+}
+
+/// @nodoc
+class __$$_ToggleFavoritedCopyWithImpl<$Res>
+    extends _$EventsEventCopyWithImpl<$Res, _$_ToggleFavorited>
+    implements _$$_ToggleFavoritedCopyWith<$Res> {
+  __$$_ToggleFavoritedCopyWithImpl(
+      _$_ToggleFavorited _value, $Res Function(_$_ToggleFavorited) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? event = null,
+  }) {
+    return _then(_$_ToggleFavorited(
+      event: null == event
+          ? _value.event
+          : event // ignore: cast_nullable_to_non_nullable
+              as Event,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $EventCopyWith<$Res> get event {
+    return $EventCopyWith<$Res>(_value.event, (value) {
+      return _then(_value.copyWith(event: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$_ToggleFavorited implements _ToggleFavorited {
+  const _$_ToggleFavorited({required this.event});
+
+  @override
+  final Event event;
+
+  @override
+  String toString() {
+    return 'EventsEvent.toggleFavorite(event: $event)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ToggleFavorited &&
+            (identical(other.event, event) || other.event == event));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, event);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ToggleFavoritedCopyWith<_$_ToggleFavorited> get copyWith =>
+      __$$_ToggleFavoritedCopyWithImpl<_$_ToggleFavorited>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() loadEvents,
+    required TResult Function(Event event) toggleNotifications,
+    required TResult Function(Event event) toggleFavorite,
+  }) {
+    return toggleFavorite(event);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? loadEvents,
+    TResult? Function(Event event)? toggleNotifications,
+    TResult? Function(Event event)? toggleFavorite,
+  }) {
+    return toggleFavorite?.call(event);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loadEvents,
+    TResult Function(Event event)? toggleNotifications,
+    TResult Function(Event event)? toggleFavorite,
+    required TResult orElse(),
+  }) {
+    if (toggleFavorite != null) {
+      return toggleFavorite(event);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) loadEvents,
+    required TResult Function(_ToggleNotificationsClicked value)
+        toggleNotifications,
+    required TResult Function(_ToggleFavorited value) toggleFavorite,
+  }) {
+    return toggleFavorite(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? loadEvents,
+    TResult? Function(_ToggleNotificationsClicked value)? toggleNotifications,
+    TResult? Function(_ToggleFavorited value)? toggleFavorite,
+  }) {
+    return toggleFavorite?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? loadEvents,
+    TResult Function(_ToggleNotificationsClicked value)? toggleNotifications,
+    TResult Function(_ToggleFavorited value)? toggleFavorite,
+    required TResult orElse(),
+  }) {
+    if (toggleFavorite != null) {
+      return toggleFavorite(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ToggleFavorited implements EventsEvent {
+  const factory _ToggleFavorited({required final Event event}) =
+      _$_ToggleFavorited;
+
+  Event get event;
+  @JsonKey(ignore: true)
+  _$$_ToggleFavoritedCopyWith<_$_ToggleFavorited> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$EventsState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(List<Event> events) loaded,
     required TResult Function(NetworkFailure failure) error,
@@ -343,7 +505,6 @@ mixin _$EventsState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(List<Event> events)? loaded,
     TResult? Function(NetworkFailure failure)? error,
@@ -351,7 +512,6 @@ mixin _$EventsState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(List<Event> events)? loaded,
     TResult Function(NetworkFailure failure)? error,
@@ -360,7 +520,6 @@ mixin _$EventsState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_Error value) error,
@@ -368,7 +527,6 @@ mixin _$EventsState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_Error value)? error,
@@ -376,7 +534,6 @@ mixin _$EventsState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_Error value)? error,
@@ -401,119 +558,6 @@ class _$EventsStateCopyWithImpl<$Res, $Val extends EventsState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-}
-
-/// @nodoc
-abstract class _$$_InitialCopyWith<$Res> {
-  factory _$$_InitialCopyWith(
-          _$_Initial value, $Res Function(_$_Initial) then) =
-      __$$_InitialCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$_InitialCopyWithImpl<$Res>
-    extends _$EventsStateCopyWithImpl<$Res, _$_Initial>
-    implements _$$_InitialCopyWith<$Res> {
-  __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$_Initial implements _Initial {
-  const _$_Initial();
-
-  @override
-  String toString() {
-    return 'EventsState.initial()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Initial);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(List<Event> events) loaded,
-    required TResult Function(NetworkFailure failure) error,
-  }) {
-    return initial();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(List<Event> events)? loaded,
-    TResult? Function(NetworkFailure failure)? error,
-  }) {
-    return initial?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(List<Event> events)? loaded,
-    TResult Function(NetworkFailure failure)? error,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
-  }) {
-    return initial?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Initial implements EventsState {
-  const factory _Initial() = _$_Initial;
 }
 
 /// @nodoc
@@ -553,7 +597,6 @@ class _$_Loading implements _Loading {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(List<Event> events) loaded,
     required TResult Function(NetworkFailure failure) error,
@@ -564,7 +607,6 @@ class _$_Loading implements _Loading {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(List<Event> events)? loaded,
     TResult? Function(NetworkFailure failure)? error,
@@ -575,7 +617,6 @@ class _$_Loading implements _Loading {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(List<Event> events)? loaded,
     TResult Function(NetworkFailure failure)? error,
@@ -590,7 +631,6 @@ class _$_Loading implements _Loading {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_Error value) error,
@@ -601,7 +641,6 @@ class _$_Loading implements _Loading {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_Error value)? error,
@@ -612,7 +651,6 @@ class _$_Loading implements _Loading {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_Error value)? error,
@@ -697,7 +735,6 @@ class _$_Loaded implements _Loaded {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(List<Event> events) loaded,
     required TResult Function(NetworkFailure failure) error,
@@ -708,7 +745,6 @@ class _$_Loaded implements _Loaded {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(List<Event> events)? loaded,
     TResult? Function(NetworkFailure failure)? error,
@@ -719,7 +755,6 @@ class _$_Loaded implements _Loaded {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(List<Event> events)? loaded,
     TResult Function(NetworkFailure failure)? error,
@@ -734,7 +769,6 @@ class _$_Loaded implements _Loaded {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_Error value) error,
@@ -745,7 +779,6 @@ class _$_Loaded implements _Loaded {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_Error value)? error,
@@ -756,7 +789,6 @@ class _$_Loaded implements _Loaded {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_Error value)? error,
@@ -850,7 +882,6 @@ class _$_Error implements _Error {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(List<Event> events) loaded,
     required TResult Function(NetworkFailure failure) error,
@@ -861,7 +892,6 @@ class _$_Error implements _Error {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(List<Event> events)? loaded,
     TResult? Function(NetworkFailure failure)? error,
@@ -872,7 +902,6 @@ class _$_Error implements _Error {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(List<Event> events)? loaded,
     TResult Function(NetworkFailure failure)? error,
@@ -887,7 +916,6 @@ class _$_Error implements _Error {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_Error value) error,
@@ -898,7 +926,6 @@ class _$_Error implements _Error {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_Error value)? error,
@@ -909,7 +936,6 @@ class _$_Error implements _Error {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_Error value)? error,

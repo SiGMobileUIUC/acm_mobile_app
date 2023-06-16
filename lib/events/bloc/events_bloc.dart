@@ -12,12 +12,13 @@ part 'events_state.dart';
 class EventsBloc extends Bloc<EventsEvent, EventsState> {
   EventsBloc({
     required EventsRepository eventsRepository,
-  }) : super(const EventsState.initial()) {
+  }) : super(const EventsState.loading()) {
     on<EventsEvent>((event, emit) {
       event.map(
         loadEvents: (_) async {
           emit(const EventsState.loading());
-          final failureOrEvents = await eventsRepository.getAllEvents();
+          final failureOrEvents =
+              await eventsRepository.getAllEventsFromBackend();
           emit(
             failureOrEvents.fold(
               (failure) => EventsState.error(failure: failure),
@@ -25,8 +26,13 @@ class EventsBloc extends Bloc<EventsEvent, EventsState> {
             ),
           );
         },
-        toggleNotificationsClicked: (state) {
+        toggleNotifications: (state) {
           eventsRepository.toggleNotifications(event: state.event);
+          emit(EventsState.loaded(events: eventsRepository.events));
+        },
+        toggleFavorite: (state) {
+          eventsRepository.toggleFavorite(event: state.event);
+          emit(EventsState.loaded(events: eventsRepository.events));
         },
       );
     });
@@ -34,5 +40,17 @@ class EventsBloc extends Bloc<EventsEvent, EventsState> {
 
   void loadIfNecessary() {
     if (state is! _Loaded) add(const EventsEvent.loadEvents());
+  }
+
+  void loadEvents() {
+    add(const EventsEvent.loadEvents());
+  }
+
+  void toggleNotifications(Event event) {
+    add(EventsEvent.toggleNotifications(event: event));
+  }
+
+  void toggleFavorite(Event event) {
+    add(EventsEvent.toggleFavorite(event: event));
   }
 }

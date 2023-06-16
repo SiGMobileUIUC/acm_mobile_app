@@ -23,7 +23,6 @@ class _EventsPageState extends State<EventsPage> {
     return BlocBuilder<EventsBloc, EventsState>(
       builder: (context, state) {
         return state.map(
-          initial: (_) => const LoadingProgressIndicator(),
           loading: (_) => const LoadingProgressIndicator(),
           loaded: (state) {
             final events = state.events;

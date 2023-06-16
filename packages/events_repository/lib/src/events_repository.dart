@@ -1,7 +1,7 @@
 import 'package:backend_api_interface/backend_api_interface.dart';
+import 'package:common/common.dart';
 import 'package:dartz/dartz.dart';
 import 'package:events_repository/src/models/models.dart';
-import 'package:common/common.dart';
 import 'package:local_storage_interface/local_storage_interface.dart';
 
 /// {@template events_repository}
@@ -9,7 +9,7 @@ import 'package:local_storage_interface/local_storage_interface.dart';
 /// {@endtemplate}
 class EventsRepository {
   /// {@macro events_repository}
-  const EventsRepository({
+  EventsRepository({
     required BackendApiInterface backendApiInterface,
     required LocalStorageInterface localStorageInterface,
   })  : _backendApiInterface = backendApiInterface,
@@ -18,19 +18,48 @@ class EventsRepository {
   final BackendApiInterface _backendApiInterface;
   final LocalStorageInterface _localStorageInterface;
 
-  Future<Either<NetworkFailure, List<Event>>> getAllEvents() async {
+  List<Event> events = [];
+
+  Future<Either<NetworkFailure, List<Event>>> getAllEventsFromBackend() async {
     final failureOrEventDtos = await _backendApiInterface.getAllEvents();
     return failureOrEventDtos.fold(
       left,
-      (eventDtos) => right(eventDtos.map(Event.fromDto).toList()),
+      (eventDtos) {
+        _getAllEventsFromLocalStorage(eventDtos.map(Event.fromDto).toList());
+        return right(events);
+      },
     );
   }
 
+  void _getAllEventsFromLocalStorage(List<Event> rawEvents) {
+    final favoriteEvents = _localStorageInterface.getFavoritedEvents().toSet();
+    final notificationsEnabledEvents =
+        _localStorageInterface.getNotificationEnabledEvents().toSet();
+    events = rawEvents
+        .map(
+          (event) => event.copyWith(
+            favorite: favoriteEvents.contains(event.id),
+            notificationsEnabled: notificationsEnabledEvents.contains(event.id),
+          ),
+        )
+        .toList();
+  }
+
+  void toggleFavorite({required Event event}) {
+    if (!event.favorite) {
+      _localStorageInterface.favoriteEvent(event.id);
+    } else {
+      _localStorageInterface.unfavoriteEvent(event.id);
+    }
+    _getAllEventsFromLocalStorage(events);
+  }
+
   void toggleNotifications({required Event event}) {
-    if (event.notificationsEnabled) {
+    if (!event.notificationsEnabled) {
       _localStorageInterface.enableNotificationsForEvent(event.id);
     } else {
       _localStorageInterface.disableNotificationsForEvent(event.id);
     }
+    _getAllEventsFromLocalStorage(events);
   }
 }

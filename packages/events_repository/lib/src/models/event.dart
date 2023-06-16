@@ -13,7 +13,7 @@ class Event with _$Event {
     required DateTime startTime,
     required DateTime endTime,
     @Default(false) bool notificationsEnabled,
-    @Default(false) bool favoritedEvent,
+    @Default(false) bool favorite,
   }) = _Event;
 
   factory Event.fromDto(EventDto dto) => Event(

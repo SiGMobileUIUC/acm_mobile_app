@@ -23,7 +23,7 @@ mixin _$Event {
   DateTime get startTime => throw _privateConstructorUsedError;
   DateTime get endTime => throw _privateConstructorUsedError;
   bool get notificationsEnabled => throw _privateConstructorUsedError;
-  bool get favoritedEvent => throw _privateConstructorUsedError;
+  bool get favorite => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $EventCopyWith<Event> get copyWith => throw _privateConstructorUsedError;
@@ -42,7 +42,7 @@ abstract class $EventCopyWith<$Res> {
       DateTime startTime,
       DateTime endTime,
       bool notificationsEnabled,
-      bool favoritedEvent});
+      bool favorite});
 }
 
 /// @nodoc
@@ -65,7 +65,7 @@ class _$EventCopyWithImpl<$Res, $Val extends Event>
     Object? startTime = null,
     Object? endTime = null,
     Object? notificationsEnabled = null,
-    Object? favoritedEvent = null,
+    Object? favorite = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -96,9 +96,9 @@ class _$EventCopyWithImpl<$Res, $Val extends Event>
           ? _value.notificationsEnabled
           : notificationsEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
-      favoritedEvent: null == favoritedEvent
-          ? _value.favoritedEvent
-          : favoritedEvent // ignore: cast_nullable_to_non_nullable
+      favorite: null == favorite
+          ? _value.favorite
+          : favorite // ignore: cast_nullable_to_non_nullable
               as bool,
     ) as $Val);
   }
@@ -118,7 +118,7 @@ abstract class _$$_EventCopyWith<$Res> implements $EventCopyWith<$Res> {
       DateTime startTime,
       DateTime endTime,
       bool notificationsEnabled,
-      bool favoritedEvent});
+      bool favorite});
 }
 
 /// @nodoc
@@ -137,7 +137,7 @@ class __$$_EventCopyWithImpl<$Res> extends _$EventCopyWithImpl<$Res, _$_Event>
     Object? startTime = null,
     Object? endTime = null,
     Object? notificationsEnabled = null,
-    Object? favoritedEvent = null,
+    Object? favorite = null,
   }) {
     return _then(_$_Event(
       id: null == id
@@ -168,9 +168,9 @@ class __$$_EventCopyWithImpl<$Res> extends _$EventCopyWithImpl<$Res, _$_Event>
           ? _value.notificationsEnabled
           : notificationsEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
-      favoritedEvent: null == favoritedEvent
-          ? _value.favoritedEvent
-          : favoritedEvent // ignore: cast_nullable_to_non_nullable
+      favorite: null == favorite
+          ? _value.favorite
+          : favorite // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }
@@ -187,7 +187,7 @@ class _$_Event implements _Event {
       required this.startTime,
       required this.endTime,
       this.notificationsEnabled = false,
-      this.favoritedEvent = false});
+      this.favorite = false});
 
   @override
   final String id;
@@ -206,11 +206,11 @@ class _$_Event implements _Event {
   final bool notificationsEnabled;
   @override
   @JsonKey()
-  final bool favoritedEvent;
+  final bool favorite;
 
   @override
   String toString() {
-    return 'Event(id: $id, name: $name, description: $description, organizationId: $organizationId, startTime: $startTime, endTime: $endTime, notificationsEnabled: $notificationsEnabled, favoritedEvent: $favoritedEvent)';
+    return 'Event(id: $id, name: $name, description: $description, organizationId: $organizationId, startTime: $startTime, endTime: $endTime, notificationsEnabled: $notificationsEnabled, favorite: $favorite)';
   }
 
   @override
@@ -229,13 +229,13 @@ class _$_Event implements _Event {
             (identical(other.endTime, endTime) || other.endTime == endTime) &&
             (identical(other.notificationsEnabled, notificationsEnabled) ||
                 other.notificationsEnabled == notificationsEnabled) &&
-            (identical(other.favoritedEvent, favoritedEvent) ||
-                other.favoritedEvent == favoritedEvent));
+            (identical(other.favorite, favorite) ||
+                other.favorite == favorite));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, id, name, description,
-      organizationId, startTime, endTime, notificationsEnabled, favoritedEvent);
+      organizationId, startTime, endTime, notificationsEnabled, favorite);
 
   @JsonKey(ignore: true)
   @override
@@ -253,7 +253,7 @@ abstract class _Event implements Event {
       required final DateTime startTime,
       required final DateTime endTime,
       final bool notificationsEnabled,
-      final bool favoritedEvent}) = _$_Event;
+      final bool favorite}) = _$_Event;
 
   @override
   String get id;
@@ -270,7 +270,7 @@ abstract class _Event implements Event {
   @override
   bool get notificationsEnabled;
   @override
-  bool get favoritedEvent;
+  bool get favorite;
   @override
   @JsonKey(ignore: true)
   _$$_EventCopyWith<_$_Event> get copyWith =>

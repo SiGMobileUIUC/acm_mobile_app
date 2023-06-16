@@ -20,39 +20,21 @@ class SigsBloc extends Bloc<SigsEvent, SigsState> {
           emit(
             failureOrSigs.fold(
               (failure) => SigsState.error(failure: failure),
-              (newSigs) {
-                sigs = newSigs;
-                return SigsState.loaded(sigs: newSigs);
-              },
+              (newSigs) => SigsState.loaded(sigs: newSigs),
             ),
           );
         },
         toggleFavorite: (event) {
           sigRepository.toggleFavorite(sig: event.sig);
-          final index =
-              sigs.indexWhere((element) => element.id == event.sig.id);
-          if (index == -1) return;
-          final newSigs = List.of(sigs);
-          newSigs[index] = sigs[index].copyWith(favorite: !event.sig.favorite);
-          emit(SigsState.loaded(sigs: newSigs));
-          sigs = newSigs;
+          emit(SigsState.loaded(sigs: sigRepository.sigs));
         },
         toggleNotifications: (event) {
           sigRepository.toggleNotifications(sig: event.sig);
-          final index =
-              sigs.indexWhere((element) => element.id == event.sig.id);
-          if (index == -1) return;
-          final newSigs = List.of(sigs);
-          newSigs[index] = sigs[index]
-              .copyWith(notificationsEnabled: !event.sig.notificationsEnabled);
-          emit(SigsState.loaded(sigs: newSigs));
-          sigs = newSigs;
+          emit(SigsState.loaded(sigs: sigRepository.sigs));
         },
       );
     });
   }
-
-  List<Sig> sigs = [];
 
   void loadIfNecessary() {
     if (state is! _Loaded) add(const SigsEvent.loadSigs());

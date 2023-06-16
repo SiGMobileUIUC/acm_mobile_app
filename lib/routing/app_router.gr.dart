@@ -44,7 +44,7 @@ abstract class _$AppRouter extends RootStackRouter {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: SigDetailsScreen(
-          sig: args.sig,
+          sigId: args.sigId,
           key: args.key,
         ),
       );
@@ -112,13 +112,13 @@ class LoginRoute extends PageRouteInfo<void> {
 /// [SigDetailsScreen]
 class SigDetailsRoute extends PageRouteInfo<SigDetailsRouteArgs> {
   SigDetailsRoute({
-    required Sig sig,
+    required String sigId,
     Key? key,
     List<PageRouteInfo>? children,
   }) : super(
           SigDetailsRoute.name,
           args: SigDetailsRouteArgs(
-            sig: sig,
+            sigId: sigId,
             key: key,
           ),
           initialChildren: children,
@@ -132,16 +132,16 @@ class SigDetailsRoute extends PageRouteInfo<SigDetailsRouteArgs> {
 
 class SigDetailsRouteArgs {
   const SigDetailsRouteArgs({
-    required this.sig,
+    required this.sigId,
     this.key,
   });
 
-  final Sig sig;
+  final String sigId;
 
   final Key? key;
 
   @override
   String toString() {
-    return 'SigDetailsRouteArgs{sig: $sig, key: $key}';
+    return 'SigDetailsRouteArgs{sigId: $sigId, key: $key}';
   }
 }

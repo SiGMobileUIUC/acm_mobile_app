@@ -19,7 +19,7 @@ class SigCard extends StatelessWidget {
       child: InkWell(
         borderRadius: BorderRadius.circular(4),
         onTap: () {
-          context.pushRoute(SigDetailsRoute(sig: sig));
+          context.pushRoute(SigDetailsRoute(sigId: sig.id));
         },
         child: Padding(
           padding: const EdgeInsets.all(8),

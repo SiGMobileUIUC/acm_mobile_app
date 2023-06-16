@@ -19,34 +19,48 @@ class SigRepository {
   final BackendApiInterface _backendApiInterface;
   final LocalStorageInterface _localStorageInterface;
 
-  Option<List<Sig>> _sigs = none();
-
-  Option<List<Sig>> get sigs => _sigs;
+  List<Sig> sigs = [];
 
   Future<Either<NetworkFailure, List<Sig>>> getAllSigsFromBackend() async {
     final failureOrSigDtos = await _backendApiInterface.getAllSigs();
     return failureOrSigDtos.fold(
       left,
       (sigDtos) {
-        _sigs = some(sigDtos.map(Sig.fromDto).toList());
-        return right(_sigs.getOrCrash());
+        _getAllSigsFromLocalStorage(sigDtos.map(Sig.fromDto).toList());
+        return right(sigs);
       },
     );
   }
 
+  void _getAllSigsFromLocalStorage(List<Sig> rawSigs) {
+    final favoriteSigs = _localStorageInterface.getFavoritedSigs().toSet();
+    final notificationsEnabledSigs =
+        _localStorageInterface.getNotificationEnabledSigs().toSet();
+    sigs = rawSigs
+        .map(
+          (sig) => sig.copyWith(
+            favorite: favoriteSigs.contains(sig.id),
+            notificationsEnabled: notificationsEnabledSigs.contains(sig.id),
+          ),
+        )
+        .toList();
+  }
+
   void toggleFavorite({required Sig sig}) {
-    if (sig.favorite) {
+    if (!sig.favorite) {
       _localStorageInterface.favoriteSig(sig.id);
     } else {
       _localStorageInterface.unfavoriteSig(sig.id);
     }
+    _getAllSigsFromLocalStorage(sigs);
   }
 
   void toggleNotifications({required Sig sig}) {
-    if (sig.notificationsEnabled) {
+    if (!sig.notificationsEnabled) {
       _localStorageInterface.enableNotificationsForSig(sig.id);
     } else {
       _localStorageInterface.disableNotificationsForSig(sig.id);
     }
+    _getAllSigsFromLocalStorage(sigs);
   }
 }

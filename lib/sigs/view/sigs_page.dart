@@ -24,6 +24,7 @@ class _SigsPageState extends State<SigsPage> {
       builder: (context, state) {
         return state.map(
           loading: (_) => const LoadingProgressIndicator(),
+          error: (failure) => Container(),
           loaded: (state) {
             final sigs = state.sigs;
             return RefreshIndicator(
@@ -36,7 +37,6 @@ class _SigsPageState extends State<SigsPage> {
               ),
             );
           },
-          error: (failure) => Container(),
         );
       },
     );

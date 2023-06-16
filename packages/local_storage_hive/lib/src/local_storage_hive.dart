@@ -56,14 +56,20 @@ class LocalStorageHive implements LocalStorageInterface {
   void enableNotificationsForSig(String sigId) {
     final notificationEnabledSigs = getNotificationEnabledSigs().toSet()
       ..add(sigId);
-    _sigBox.put(_favoritedSigsListKey, notificationEnabledSigs.toList());
+    _sigBox.put(
+      _notificationEnabledSigsListKey,
+      notificationEnabledSigs.toList(),
+    );
   }
 
   @override
   void disableNotificationsForSig(String sigId) {
     final notificationEnabledSigs = getNotificationEnabledSigs().toSet()
       ..remove(sigId);
-    _sigBox.put(_favoritedSigsListKey, notificationEnabledSigs.toList());
+    _sigBox.put(
+      _notificationEnabledSigsListKey,
+      notificationEnabledSigs.toList(),
+    );
   }
 
   @override
@@ -98,13 +104,19 @@ class LocalStorageHive implements LocalStorageInterface {
   void enableNotificationsForEvent(String eventId) {
     final notificationEnabledEvents = getNotificationEnabledEvents().toSet()
       ..add(eventId);
-    _eventBox.put(_favoritedEventsListKey, notificationEnabledEvents.toList());
+    _eventBox.put(
+      _notificationEnabledEventsListKey,
+      notificationEnabledEvents.toList(),
+    );
   }
 
   @override
   void disableNotificationsForEvent(String eventId) {
     final notificationEnabledEvents = getNotificationEnabledEvents().toSet()
       ..remove(eventId);
-    _eventBox.put(_favoritedEventsListKey, notificationEnabledEvents.toList());
+    _eventBox.put(
+      _notificationEnabledEventsListKey,
+      notificationEnabledEvents.toList(),
+    );
   }
 }

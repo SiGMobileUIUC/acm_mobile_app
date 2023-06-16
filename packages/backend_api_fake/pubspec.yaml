@@ -9,8 +9,8 @@ environment:
 dependencies:
   backend_api_interface:
     path: ../backend_api_interface
-  failure_models:
-    path: ../failure_models
+  common:
+    path: ../common
   dartz: ^0.10.1
 
 dev_dependencies:

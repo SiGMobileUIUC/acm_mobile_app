@@ -1,7 +1,7 @@
 import 'package:backend_api_interface/backend_api_interface.dart';
+import 'package:common/common.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
-import 'package:failure_models/failure_models.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 /// {@template backend_api_dio}

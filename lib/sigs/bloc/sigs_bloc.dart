@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:failure_models/failure_models.dart';
+import 'package:common/common.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:sig_repository/sig_repository.dart';
@@ -16,7 +16,7 @@ class SigsBloc extends Bloc<SigsEvent, SigsState> {
       event.map(
         loadSigs: (_) async {
           emit(const SigsState.loading());
-          final failureOrSigs = await sigRepository.getAllSigs();
+          final failureOrSigs = await sigRepository.getAllSigsFromBackend();
           emit(
             failureOrSigs.fold(
               (failure) => SigsState.error(failure: failure),

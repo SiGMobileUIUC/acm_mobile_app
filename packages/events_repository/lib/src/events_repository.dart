@@ -1,7 +1,7 @@
 import 'package:backend_api_interface/backend_api_interface.dart';
 import 'package:dartz/dartz.dart';
 import 'package:events_repository/src/models/models.dart';
-import 'package:failure_models/failure_models.dart';
+import 'package:common/common.dart';
 import 'package:local_storage_interface/local_storage_interface.dart';
 
 /// {@template events_repository}

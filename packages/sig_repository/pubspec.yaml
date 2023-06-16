@@ -9,9 +9,9 @@ environment:
 dependencies:
   backend_api_interface:
     path: ../backend_api_interface
+  common:
+    path: ../common
   dartz: ^0.10.1
-  failure_models:
-    path: ../failure_models
   freezed_annotation: ^2.2.0
   local_storage_interface:
     path: ../local_storage_interface

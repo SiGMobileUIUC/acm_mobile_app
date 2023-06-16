@@ -1,6 +1,6 @@
 import 'package:backend_api_interface/backend_api_interface.dart';
+import 'package:common/common.dart';
 import 'package:dartz/dartz.dart';
-import 'package:failure_models/failure_models.dart';
 import 'package:local_storage_interface/local_storage_interface.dart';
 
 import 'package:sig_repository/src/models/models.dart';
@@ -10,7 +10,7 @@ import 'package:sig_repository/src/models/models.dart';
 /// {@endtemplate}
 class SigRepository {
   /// {@macro sig_repository}
-  const SigRepository({
+  SigRepository({
     required BackendApiInterface backendApiInterface,
     required LocalStorageInterface localStorageInterface,
   })  : _backendApiInterface = backendApiInterface,
@@ -19,11 +19,18 @@ class SigRepository {
   final BackendApiInterface _backendApiInterface;
   final LocalStorageInterface _localStorageInterface;
 
-  Future<Either<NetworkFailure, List<Sig>>> getAllSigs() async {
+  Option<List<Sig>> _sigs = none();
+
+  Option<List<Sig>> get sigs => _sigs;
+
+  Future<Either<NetworkFailure, List<Sig>>> getAllSigsFromBackend() async {
     final failureOrSigDtos = await _backendApiInterface.getAllSigs();
     return failureOrSigDtos.fold(
       left,
-      (sigDtos) => right(sigDtos.map(Sig.fromDto).toList()),
+      (sigDtos) {
+        _sigs = some(sigDtos.map(Sig.fromDto).toList());
+        return right(_sigs.getOrCrash());
+      },
     );
   }
 

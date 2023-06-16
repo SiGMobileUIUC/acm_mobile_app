@@ -17,11 +17,11 @@ dependencies:
   backend_api_interface:
     path: packages/backend_api_interface
   bloc: ^8.1.2
+  common:
+    path: packages/common
   dartz: ^0.10.1
   events_repository:
     path: packages/events_repository
-  failure_models:
-    path: packages/failure_models
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.3

@@ -1,6 +1,6 @@
 import 'package:backend_api_interface/src/models/models.dart';
+import 'package:common/common.dart';
 import 'package:dartz/dartz.dart';
-import 'package:failure_models/failure_models.dart';
 
 /// {@template backend_api_interface}
 /// Interface and models for the backend API

@@ -205,6 +205,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.17.1"
+  common:
+    dependency: "direct main"
+    description:
+      path: "packages/common"
+      relative: true
+    source: path
+    version: "0.1.0+1"
   convert:
     dependency: transitive
     description:
@@ -273,13 +280,6 @@ packages:
     dependency: "direct main"
     description:
       path: "packages/events_repository"
-      relative: true
-    source: path
-    version: "0.1.0+1"
-  failure_models:
-    dependency: "direct main"
-    description:
-      path: "packages/failure_models"
       relative: true
     source: path
     version: "0.1.0+1"

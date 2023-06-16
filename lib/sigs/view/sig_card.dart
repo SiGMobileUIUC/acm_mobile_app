@@ -73,7 +73,11 @@ class SigCard extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Text(sig.description),
+                    Text(
+                      sig.smallDescription,
+                      maxLines: 3,
+                      overflow: TextOverflow.ellipsis,
+                    ),
                   ],
                 ),
               ),

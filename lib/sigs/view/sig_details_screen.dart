@@ -52,27 +52,30 @@ class SigDetailsScreen extends StatelessWidget {
               ),
               body: SafeArea(
                 child: Center(
-                  child: Column(
-                    children: [
-                      CachedNetworkImage(
-                        imageUrl: sig.imageUrl,
-                        height: 100,
-                        width: 100,
-                        errorWidget: (_, __, ___) => Container(
-                          color: Colors.red,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: Column(
+                      children: [
+                        CachedNetworkImage(
+                          imageUrl: sig.imageUrl,
                           height: 100,
                           width: 100,
+                          errorWidget: (_, __, ___) => Container(
+                            color: Colors.red,
+                            height: 100,
+                            width: 100,
+                          ),
                         ),
-                      ),
-                      Text(
-                        sig.name,
-                        style: Theme.of(context).textTheme.titleLarge,
-                      ),
-                      Text(
-                        sig.description,
-                        style: Theme.of(context).textTheme.bodyMedium,
-                      ),
-                    ],
+                        Text(
+                          sig.name,
+                          style: Theme.of(context).textTheme.titleLarge,
+                        ),
+                        Text(
+                          sig.description,
+                          style: Theme.of(context).textTheme.bodyMedium,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),

@@ -1,6 +1,7 @@
 import 'package:acm_mobile_app/events/bloc/events_bloc.dart';
 import 'package:acm_mobile_app/routing/app_router.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:events_repository/events_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -26,11 +27,11 @@ class EventCard extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.network(
-                event.imageUrl,
+              CachedNetworkImage(
+                imageUrl: event.imageUrl,
                 height: 100,
                 width: 100,
-                errorBuilder: (_, __, ___) => Container(
+                errorWidget: (_, __, ___) => Container(
                   color: Colors.red,
                   height: 100,
                   width: 100,

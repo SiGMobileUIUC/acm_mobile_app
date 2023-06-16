@@ -1,6 +1,7 @@
 import 'package:acm_mobile_app/common/widgets/loading_progress_indicator.dart';
 import 'package:acm_mobile_app/events/bloc/events_bloc.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -54,11 +55,11 @@ class EventDetailsScreen extends StatelessWidget {
                 child: Center(
                   child: Column(
                     children: [
-                      Image.network(
-                        sig.imageUrl,
+                      CachedNetworkImage(
+                        imageUrl: sig.imageUrl,
                         height: 100,
                         width: 100,
-                        errorBuilder: (_, __, ___) => Container(
+                        errorWidget: (_, __, ___) => Container(
                           color: Colors.red,
                           height: 100,
                           width: 100,

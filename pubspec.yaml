@@ -17,6 +17,7 @@ dependencies:
   backend_api_interface:
     path: packages/backend_api_interface
   bloc: ^8.1.2
+  cached_network_image: ^3.2.3
   common:
     path: packages/common
   dartz: ^0.10.1

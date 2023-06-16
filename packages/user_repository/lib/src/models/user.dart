@@ -1,6 +1,5 @@
-import 'package:events_repository/events_repository.dart';
+import 'package:common/common.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:sig_repository/sig_repository.dart';
 
 part 'user.freezed.dart';
 

@@ -2,9 +2,9 @@ import 'package:acm_mobile_app/routing/app_router.dart';
 import 'package:acm_mobile_app/sigs/bloc/sigs_bloc.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:common/common.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:sig_repository/sig_repository.dart';
 
 class SigCard extends StatelessWidget {
   const SigCard({

@@ -3,8 +3,6 @@ import 'package:common/common.dart';
 import 'package:dartz/dartz.dart';
 import 'package:local_storage_interface/local_storage_interface.dart';
 
-import 'package:sig_repository/src/models/models.dart';
-
 /// {@template sig_repository}
 /// Repository to manage the SIG domain
 /// {@endtemplate}
@@ -46,6 +44,18 @@ class SigRepository {
           ),
         )
         .toList();
+  }
+
+  /// Get all the events for a SIG with id `sigId` from the backend
+  Future<Either<NetworkFailure, List<Event>>> getEventsForSigFromBackend({
+    required String sigId,
+  }) async {
+    final failureOrEventDtos =
+        await _backendApiInterface.getEventsForSig(sigId: sigId);
+    return failureOrEventDtos.fold(
+      left,
+      (eventDtos) => right(eventDtos.map(Event.fromDto).toList()),
+    );
   }
 
   /// Toggle the favorite status of a SIG

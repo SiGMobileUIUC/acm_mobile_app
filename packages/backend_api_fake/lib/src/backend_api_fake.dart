@@ -12,8 +12,10 @@ class BackendApiFake implements BackendApiInterface {
   static const _fakeSigDto = SigDto(
     id: 'id',
     name: 'SIGMobile',
-    smallDescription: '',
-    description: '',
+    smallDescription:
+        'Dolore adipiscing consectetur aute aute nulla commodo consectetur laboris fugiat',
+    description:
+        'Labore ullamco est amet mollit reprehenderit sed fugiat dolore commodo ea exercitation culpa laboris officia culpa. Quis nostrud tempor pariatur do et reprehenderit ex adipiscing ipsum commodo ea. Nostrud culpa reprehenderit reprehenderit amet adipiscing reprehenderit exercitation do est aliqua voluptate anim.',
     imageUrl: '',
   );
 
@@ -39,12 +41,22 @@ class BackendApiFake implements BackendApiInterface {
   }
 
   @override
-  Future<Either<NetworkFailure, EventDto>> getEvent(String eventId) async {
+  Future<Either<NetworkFailure, EventDto>> getEvent({
+    required String eventId,
+  }) async {
     return right(_fakeEventDto);
   }
 
   @override
-  Future<Either<NetworkFailure, SigDto>> getSig(String sigId) async {
+  Future<Either<NetworkFailure, SigDto>> getSig({required String sigId}) async {
     return right(_fakeSigDto);
+  }
+
+  @override
+  Future<Either<NetworkFailure, List<EventDto>>> getEventsForSig({
+    required String sigId,
+  }) {
+    // TODO: implement getEventsForSig
+    throw UnimplementedError();
   }
 }

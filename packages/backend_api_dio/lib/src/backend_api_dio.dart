@@ -105,7 +105,7 @@ class BackendApiDio implements BackendApiInterface {
   }
 
   @override
-  Future<Either<NetworkFailure, EventDto>> getEvent(String eventId) {
+  Future<Either<NetworkFailure, EventDto>> getEvent({required String eventId}) {
     return _getRequest<EventDto>(
       endpoint: '/event',
       queryParameters: {
@@ -116,7 +116,7 @@ class BackendApiDio implements BackendApiInterface {
   }
 
   @override
-  Future<Either<NetworkFailure, SigDto>> getSig(String sigId) {
+  Future<Either<NetworkFailure, SigDto>> getSig({required String sigId}) {
     return _getRequest<SigDto>(
       endpoint: '/sig',
       queryParameters: {
@@ -124,5 +124,13 @@ class BackendApiDio implements BackendApiInterface {
       },
       fromJson: SigDto.fromJson,
     );
+  }
+
+  @override
+  Future<Either<NetworkFailure, List<EventDto>>> getEventsForSig({
+    required String sigId,
+  }) {
+    // TODO: implement getEventsForSig
+    throw UnimplementedError();
   }
 }

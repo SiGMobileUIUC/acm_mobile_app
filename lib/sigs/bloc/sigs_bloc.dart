@@ -24,13 +24,16 @@ class SigsBloc extends Bloc<SigsEvent, SigsState> {
             ),
           );
         },
-        toggleFavorite: (event) {
+        toggleFavoriteClicked: (event) {
           sigRepository.toggleFavorite(sig: event.sig);
           emit(SigsState.loaded(sigs: sigRepository.sigs));
         },
-        toggleNotifications: (event) {
+        toggleNotificationsClicked: (event) {
           sigRepository.toggleNotifications(sig: event.sig);
           emit(SigsState.loaded(sigs: sigRepository.sigs));
+        },
+        sigDetailsOpened: (event) {
+          sigRepository.getEventsForSigFromBackend(sigId: event.sig.id);
         },
       );
     });
@@ -45,10 +48,10 @@ class SigsBloc extends Bloc<SigsEvent, SigsState> {
   }
 
   void toggleNotifications(Sig sig) {
-    add(SigsEvent.toggleNotifications(sig: sig));
+    add(SigsEvent.toggleNotificationsClicked(sig: sig));
   }
 
   void toggleFavorite(Sig sig) {
-    add(SigsEvent.toggleFavorite(sig: sig));
+    add(SigsEvent.toggleFavoriteClicked(sig: sig));
   }
 }

@@ -33,6 +33,16 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const SplashScreen(),
       );
     },
+    EventDetailsRoute.name: (routeData) {
+      final args = routeData.argsAs<EventDetailsRouteArgs>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: EventDetailsScreen(
+          eventId: args.eventId,
+          key: args.key,
+        ),
+      );
+    },
     LoginRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -45,16 +55,6 @@ abstract class _$AppRouter extends RootStackRouter {
         routeData: routeData,
         child: SigDetailsScreen(
           sigId: args.sigId,
-          key: args.key,
-        ),
-      );
-    },
-    EventDetailsRoute.name: (routeData) {
-      final args = routeData.argsAs<EventDetailsRouteArgs>();
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: EventDetailsScreen(
-          eventId: args.eventId,
           key: args.key,
         ),
       );
@@ -102,6 +102,44 @@ class SplashRoute extends PageRouteInfo<void> {
   static const String name = 'SplashRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [EventDetailsScreen]
+class EventDetailsRoute extends PageRouteInfo<EventDetailsRouteArgs> {
+  EventDetailsRoute({
+    required String eventId,
+    Key? key,
+    List<PageRouteInfo>? children,
+  }) : super(
+          EventDetailsRoute.name,
+          args: EventDetailsRouteArgs(
+            eventId: eventId,
+            key: key,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'EventDetailsRoute';
+
+  static const PageInfo<EventDetailsRouteArgs> page =
+      PageInfo<EventDetailsRouteArgs>(name);
+}
+
+class EventDetailsRouteArgs {
+  const EventDetailsRouteArgs({
+    required this.eventId,
+    this.key,
+  });
+
+  final String eventId;
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'EventDetailsRouteArgs{eventId: $eventId, key: $key}';
+  }
 }
 
 /// generated route for
@@ -153,43 +191,5 @@ class SigDetailsRouteArgs {
   @override
   String toString() {
     return 'SigDetailsRouteArgs{sigId: $sigId, key: $key}';
-  }
-}
-
-/// generated route for
-/// [EventDetailsScreen]
-class EventDetailsRoute extends PageRouteInfo<EventDetailsRouteArgs> {
-  EventDetailsRoute({
-    required String eventId,
-    Key? key,
-    List<PageRouteInfo>? children,
-  }) : super(
-          EventDetailsRoute.name,
-          args: EventDetailsRouteArgs(
-            eventId: eventId,
-            key: key,
-          ),
-          initialChildren: children,
-        );
-
-  static const String name = 'EventDetailsRoute';
-
-  static const PageInfo<EventDetailsRouteArgs> page =
-      PageInfo<EventDetailsRouteArgs>(name);
-}
-
-class EventDetailsRouteArgs {
-  const EventDetailsRouteArgs({
-    required this.eventId,
-    this.key,
-  });
-
-  final String eventId;
-
-  final Key? key;
-
-  @override
-  String toString() {
-    return 'EventDetailsRouteArgs{eventId: $eventId, key: $key}';
   }
 }

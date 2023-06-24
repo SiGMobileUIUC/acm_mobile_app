@@ -23,6 +23,7 @@ mixin _$Sig {
   String get imageUrl => throw _privateConstructorUsedError;
   bool get favorite => throw _privateConstructorUsedError;
   bool get notificationsEnabled => throw _privateConstructorUsedError;
+  List<Event> get events => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $SigCopyWith<Sig> get copyWith => throw _privateConstructorUsedError;
@@ -40,7 +41,8 @@ abstract class $SigCopyWith<$Res> {
       String description,
       String imageUrl,
       bool favorite,
-      bool notificationsEnabled});
+      bool notificationsEnabled,
+      List<Event> events});
 }
 
 /// @nodoc
@@ -62,6 +64,7 @@ class _$SigCopyWithImpl<$Res, $Val extends Sig> implements $SigCopyWith<$Res> {
     Object? imageUrl = null,
     Object? favorite = null,
     Object? notificationsEnabled = null,
+    Object? events = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -92,6 +95,10 @@ class _$SigCopyWithImpl<$Res, $Val extends Sig> implements $SigCopyWith<$Res> {
           ? _value.notificationsEnabled
           : notificationsEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
+      events: null == events
+          ? _value.events
+          : events // ignore: cast_nullable_to_non_nullable
+              as List<Event>,
     ) as $Val);
   }
 }
@@ -109,7 +116,8 @@ abstract class _$$_SigCopyWith<$Res> implements $SigCopyWith<$Res> {
       String description,
       String imageUrl,
       bool favorite,
-      bool notificationsEnabled});
+      bool notificationsEnabled,
+      List<Event> events});
 }
 
 /// @nodoc
@@ -128,6 +136,7 @@ class __$$_SigCopyWithImpl<$Res> extends _$SigCopyWithImpl<$Res, _$_Sig>
     Object? imageUrl = null,
     Object? favorite = null,
     Object? notificationsEnabled = null,
+    Object? events = null,
   }) {
     return _then(_$_Sig(
       id: null == id
@@ -158,6 +167,10 @@ class __$$_SigCopyWithImpl<$Res> extends _$SigCopyWithImpl<$Res, _$_Sig>
           ? _value.notificationsEnabled
           : notificationsEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
+      events: null == events
+          ? _value._events
+          : events // ignore: cast_nullable_to_non_nullable
+              as List<Event>,
     ));
   }
 }
@@ -172,7 +185,9 @@ class _$_Sig implements _Sig {
       required this.description,
       required this.imageUrl,
       this.favorite = false,
-      this.notificationsEnabled = false});
+      this.notificationsEnabled = false,
+      final List<Event> events = const []})
+      : _events = events;
 
   @override
   final String id;
@@ -190,10 +205,18 @@ class _$_Sig implements _Sig {
   @override
   @JsonKey()
   final bool notificationsEnabled;
+  final List<Event> _events;
+  @override
+  @JsonKey()
+  List<Event> get events {
+    if (_events is EqualUnmodifiableListView) return _events;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_events);
+  }
 
   @override
   String toString() {
-    return 'Sig(id: $id, name: $name, smallDescription: $smallDescription, description: $description, imageUrl: $imageUrl, favorite: $favorite, notificationsEnabled: $notificationsEnabled)';
+    return 'Sig(id: $id, name: $name, smallDescription: $smallDescription, description: $description, imageUrl: $imageUrl, favorite: $favorite, notificationsEnabled: $notificationsEnabled, events: $events)';
   }
 
   @override
@@ -212,12 +235,21 @@ class _$_Sig implements _Sig {
             (identical(other.favorite, favorite) ||
                 other.favorite == favorite) &&
             (identical(other.notificationsEnabled, notificationsEnabled) ||
-                other.notificationsEnabled == notificationsEnabled));
+                other.notificationsEnabled == notificationsEnabled) &&
+            const DeepCollectionEquality().equals(other._events, _events));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id, name, smallDescription,
-      description, imageUrl, favorite, notificationsEnabled);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      name,
+      smallDescription,
+      description,
+      imageUrl,
+      favorite,
+      notificationsEnabled,
+      const DeepCollectionEquality().hash(_events));
 
   @JsonKey(ignore: true)
   @override
@@ -234,7 +266,8 @@ abstract class _Sig implements Sig {
       required final String description,
       required final String imageUrl,
       final bool favorite,
-      final bool notificationsEnabled}) = _$_Sig;
+      final bool notificationsEnabled,
+      final List<Event> events}) = _$_Sig;
 
   @override
   String get id;
@@ -250,6 +283,8 @@ abstract class _Sig implements Sig {
   bool get favorite;
   @override
   bool get notificationsEnabled;
+  @override
+  List<Event> get events;
   @override
   @JsonKey(ignore: true)
   _$$_SigCopyWith<_$_Sig> get copyWith => throw _privateConstructorUsedError;
